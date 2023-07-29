@@ -94,6 +94,9 @@
 		731C3F852A5FB8B600A5277A /* meongmory_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				73600DED2A74ABAC00F9FE87 /* Data */,
+				73600DEC2A74ABA100F9FE87 /* Business */,
+				73600DEB2A74A90800F9FE87 /* Presentation */,
 				731C3F862A5FB8B600A5277A /* meongmory_iOSApp.swift */,
 				731C3F882A5FB8B600A5277A /* ContentView.swift */,
 				731C3F8A2A5FB8B800A5277A /* Assets.xcassets */,
@@ -125,6 +128,59 @@
 				731C3FA32A5FB8B800A5277A /* meongmory_iOSUITestsLaunchTests.swift */,
 			);
 			path = meongmory_iOSUITests;
+			sourceTree = "<group>";
+		};
+		73600DEB2A74A90800F9FE87 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				73600DF12A74ADAB00F9FE87 /* View */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		73600DEC2A74ABA100F9FE87 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				73600DEF2A74AD8C00F9FE87 /* AppState */,
+				73600DEE2A74AD7A00F9FE87 /* Interactor */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		73600DED2A74ABAC00F9FE87 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				73600DF02A74AD9A00F9FE87 /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		73600DEE2A74AD7A00F9FE87 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		73600DEF2A74AD8C00F9FE87 /* AppState */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppState;
+			sourceTree = "<group>";
+		};
+		73600DF02A74AD9A00F9FE87 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		73600DF12A74ADAB00F9FE87 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
