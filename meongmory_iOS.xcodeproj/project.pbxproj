@@ -16,6 +16,7 @@
 		731C3FA22A5FB8B800A5277A /* meongmory_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C3FA12A5FB8B800A5277A /* meongmory_iOSUITests.swift */; };
 		731C3FA42A5FB8B800A5277A /* meongmory_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C3FA32A5FB8B800A5277A /* meongmory_iOSUITestsLaunchTests.swift */; };
 		73600DF52A77721F00F9FE87 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73600DF42A77721F00F9FE87 /* MapView.swift */; };
+		73600DF82A781A1600F9FE87 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73600DF72A781A1600F9FE87 /* LocationManager.swift */; };
 		D8BEF14FE569A3F3909AE38F /* Pods_meongmory_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2F4AC8E5724A149F5C66E7 /* Pods_meongmory_iOS.framework */; };
 		F5BA66F9AD036CDF071C8E5D /* Pods_meongmory_iOS_meongmory_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93FDC77A1BECCB0F90006945 /* Pods_meongmory_iOS_meongmory_iOSUITests.framework */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,7 @@
 		731C3FA32A5FB8B800A5277A /* meongmory_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meongmory_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		73600DF32A76B23F00F9FE87 /* meongmory-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "meongmory-iOS-Info.plist"; sourceTree = SOURCE_ROOT; };
 		73600DF42A77721F00F9FE87 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		73600DF72A781A1600F9FE87 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		93FDC77A1BECCB0F90006945 /* Pods_meongmory_iOS_meongmory_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meongmory_iOS_meongmory_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B439906FE3EC14BFF245AE24 /* Pods-meongmory_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meongmory_iOS.debug.xcconfig"; path = "Target Support Files/Pods-meongmory_iOS/Pods-meongmory_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B5CAD722C7937D90B5C8123D /* Pods-meongmory_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meongmory_iOS.release.xcconfig"; path = "Target Support Files/Pods-meongmory_iOS/Pods-meongmory_iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 		73600DEE2A74AD7A00F9FE87 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				73600DF62A781A0600F9FE87 /* Map */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -222,6 +225,14 @@
 			isa = PBXGroup;
 			children = (
 				73600DF42A77721F00F9FE87 /* MapView.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		73600DF62A781A0600F9FE87 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				73600DF72A781A1600F9FE87 /* LocationManager.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -477,6 +488,7 @@
 				731C3F892A5FB8B600A5277A /* ContentView.swift in Sources */,
 				73600DF52A77721F00F9FE87 /* MapView.swift in Sources */,
 				731C3F872A5FB8B600A5277A /* meongmory_iOSApp.swift in Sources */,
+				73600DF82A781A1600F9FE87 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,7 +652,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "meongmory-iOS-Info.plist";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "사용자의 위치를 받습니다";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "위치";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "위치";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -672,7 +686,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "meongmory-iOS-Info.plist";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "사용자의 위치를 받습니다";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "위치";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "위치";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
