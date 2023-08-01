@@ -19,6 +19,7 @@ struct ValidatePhoneNumView: View {
     
     @State var phoneNum: String = ""
     @State var validationCode: String = ""
+    @State var sendValidationCode: Bool = false
     @State var isValidated: Bool = false
     
     
@@ -46,30 +47,42 @@ struct ValidatePhoneNumView: View {
                 
                 TextField("-없이 숫자만 입력", text: $phoneNum)
                     .font(Font.system(size: 12))
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .cornerRadius(4)
+                    .padding(.vertical, 8)
+                    .padding(.leading, 12)
+                    .background(Color(red: 249/255, green: 249/255, blue: 249/255))
+                    .overlay(RoundedRectangle(cornerRadius: 5)
+                            .stroke((phoneNum.count > 0)
+                                    ? Color(red: 128/255, green: 128/255, blue: 128/255)
+                                    : Color(red: 231/255, green: 231/255, blue: 231/255), lineWidth: 1))
                 
                 Button {
                     // TODO: 인증번호 발송 요청
+                    sendValidationCode.toggle()
                 } label: {
                     Text("인증번호 받기")
                         .font(Font.system(size: 12))
                         .fontWeight(.semibold)
                         .foregroundColor(Color.white)
-                        .padding(.vertical, 10)
+                        .padding(.vertical, 11)
                         .frame(maxWidth: .infinity)
                     
                 }.background((phoneNum.count > 0)
                              ? Color(red: 69/255, green: 69/255, blue: 69/255)
                              : Color(red: 217/255, green: 217/255, blue: 217/255))
                 .cornerRadius(8)
-                .padding(.bottom, 30)   //
+                .padding(.bottom, 30)
                 
                 HStack {
                     TextField("인증번호 입력", text: $validationCode)
                         .font(Font.system(size: 12))
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .cornerRadius(4)
+                        .padding(.vertical, 8)
+                        .padding(.leading, 12)
+                        .background(Color(red: 249/255, green: 249/255, blue: 249/255))
+                        .overlay(RoundedRectangle(cornerRadius: 5)
+                                .stroke((validationCode.count > 0)
+                                        ? Color(red: 128/255, green: 128/255, blue: 128/255)
+                                        : Color(red: 231/255, green: 231/255, blue: 231/255), lineWidth: 1)
+                        )
                     
                     Button {
                         // TODO: 인증요청 발송
@@ -98,14 +111,14 @@ struct ValidatePhoneNumView: View {
                 Text(guideForSendValidationCode)
                     .lineSpacing(4)
                     .font(Font.system(size: 11))
-                    .foregroundColor((validationCode.count > 0)
+                    .foregroundColor(sendValidationCode
                                      ? Color(red: 203/255, green: 93/255, blue: 91/255)
                                      : Color.white)
                 
                 Spacer()
                 
                 NavigationLink {
-                    ValidatePhoneNumView()
+                    // TODO: 약관 동의 화면으로 전환
                 } label: {
                     Text("다음")
                         .fontWeight(.bold)
