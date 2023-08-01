@@ -9,12 +9,14 @@ import SwiftUI
 
 struct LoginView: View {
     var body: some View {
-        ZStack {
-            backgroundGradient
-            
-            VStack {
-                mainIconStack
-                loginButton
+        NavigationView {
+            ZStack {
+                backgroundGradient
+                
+                VStack {
+                    mainIconStack
+                    loginButton
+                }
             }
         }
     }
@@ -46,8 +48,8 @@ struct LoginView: View {
     }
     
     var loginButton: some View {
-        Button {
-            // TODO: 화면 전환 이벤트 추가
+        NavigationLink {
+            ValidatePhoneNumView()
         } label: {
             HStack {
                 Image(systemName: "phone.fill")
