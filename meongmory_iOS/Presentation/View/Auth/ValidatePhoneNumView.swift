@@ -104,6 +104,7 @@ struct ValidatePhoneNumView: View {
                          : Color(red: 217/255, green: 217/255, blue: 217/255))
             .cornerRadius(8)
             .padding(.bottom, 30)
+            .disabled(phoneNum.isEmpty)
             
         })
     }
@@ -133,6 +134,7 @@ struct ValidatePhoneNumView: View {
                     .padding(.vertical, 10)
                     .frame(maxWidth: .infinity)
             }
+            .disabled(validationCode.isEmpty)
             .background((validationCode.count > 0)
                         ? Color(red: 69/255, green: 69/255, blue: 69/255)
                         : Color(red: 217/255, green: 217/255, blue: 217/255))
