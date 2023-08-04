@@ -17,6 +17,8 @@
 		A2AC24BF2A78B84D00D284A7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24BE2A78B84D00D284A7 /* LoginView.swift */; };
 		A2AC24C12A78C27E00D284A7 /* ValidatePhoneNumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24C02A78C27E00D284A7 /* ValidatePhoneNumView.swift */; };
 		A2AC24C32A7CCBBF00D284A7 /* AgreeToTermsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24C22A7CCBBF00D284A7 /* AgreeToTermsView.swift */; };
+		A2AC24C52A7CCFD800D284A7 /* SetNicknameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24C42A7CCFD800D284A7 /* SetNicknameView.swift */; };
+		A2AC24C72A7CD11D00D284A7 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24C62A7CD11D00D284A7 /* OnBoardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		A2AC24BE2A78B84D00D284A7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		A2AC24C02A78C27E00D284A7 /* ValidatePhoneNumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatePhoneNumView.swift; sourceTree = "<group>"; };
 		A2AC24C22A7CCBBF00D284A7 /* AgreeToTermsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreeToTermsView.swift; sourceTree = "<group>"; };
+		A2AC24C42A7CCFD800D284A7 /* SetNicknameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNicknameView.swift; sourceTree = "<group>"; };
+		A2AC24C62A7CD11D00D284A7 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +200,8 @@
 				A2AC24BE2A78B84D00D284A7 /* LoginView.swift */,
 				A2AC24C02A78C27E00D284A7 /* ValidatePhoneNumView.swift */,
 				A2AC24C22A7CCBBF00D284A7 /* AgreeToTermsView.swift */,
+				A2AC24C42A7CCFD800D284A7 /* SetNicknameView.swift */,
+				A2AC24C62A7CD11D00D284A7 /* OnBoardingView.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -332,7 +338,9 @@
 			files = (
 				A2AC24C12A78C27E00D284A7 /* ValidatePhoneNumView.swift in Sources */,
 				A2AC24BF2A78B84D00D284A7 /* LoginView.swift in Sources */,
+				A2AC24C72A7CD11D00D284A7 /* OnBoardingView.swift in Sources */,
 				A2AC24C32A7CCBBF00D284A7 /* AgreeToTermsView.swift in Sources */,
+				A2AC24C52A7CCFD800D284A7 /* SetNicknameView.swift in Sources */,
 				731C3F892A5FB8B600A5277A /* ContentView.swift in Sources */,
 				731C3F872A5FB8B600A5277A /* meongmory_iOSApp.swift in Sources */,
 			);
