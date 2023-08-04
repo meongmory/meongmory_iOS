@@ -132,22 +132,25 @@ struct OnBoardingView: View {
                 } else {
                     /// 1번째 온보딩 화면의 하단 이미지 포함 컨텐츠 렌더링
                     VStack {
-                        HStack(alignment: .center, content: {
+                        HStack {
                             VStack(alignment: .leading, content: {
                                 Text("사진")
                                     .font(Font.system(size: 20))
                                     .fontWeight(.medium)
                                     .padding(.bottom, 10)
-                                Text("일반 회원과 Pro 회원 모두 \n무제한으로 올릴 수 있어요!")
+                                Text("일반 회원과 Pro 회원")
+                                    .font(Font.system(size: 13))
+                                Text("모두 무제한으로 올릴 수 있어요!")
                                     .font(Font.system(size: 13))
                                     
                             })
-                            .padding(.leading, 30)
+                            .padding(.leading, 35)
                             
                             Spacer()
                             Image("onboard1")
-                        })
-                        .padding(.bottom, 10)
+                                .padding(.trailing, 20)
+                        }
+                        .padding(.bottom, 20)
                         
                         VStack(alignment: .trailing, content: {
                             Text("Video")
