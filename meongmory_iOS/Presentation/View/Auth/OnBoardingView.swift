@@ -19,6 +19,8 @@ struct OnBoardingContent {
 
 struct OnBoardingView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
+    @State var currentPage: Int = 0
 
     let onBoardingContents: [OnBoardingContent] = [
         OnBoardingContent(emoji: "📝",
@@ -49,7 +51,7 @@ struct OnBoardingView: View {
             Spacer()
             bottomButton
         }
-        .padding(.top, 40)
+        .padding(.top, 20)
         .padding(.horizontal, 20)
 
         .navigationBarBackButtonHidden(true)
@@ -67,11 +69,12 @@ struct OnBoardingView: View {
     
     func getMainContentsView() -> some View {
         var mainContentsView: some View {
-            iPages {
+            iPages(selection: $currentPage, content: {
                 getContentView(content: onBoardingContents[0])
                 getContentView(content: onBoardingContents[1])
                 getContentView(content: onBoardingContents[2])
-            }.dotsTintColors(currentPage: Color(red: 141/255, green: 93/255, blue: 25/255),
+            })
+            .dotsTintColors(currentPage: Color(red: 141/255, green: 93/255, blue: 25/255),
                              otherPages: Color(red: 141/255, green: 93/255, blue: 25/255, opacity: 0.2))
             .padding(.bottom, 50)
         }
@@ -129,22 +132,21 @@ struct OnBoardingView: View {
                 } else {
                     /// 1번째 온보딩 화면의 하단 이미지 포함 컨텐츠 렌더링
                     VStack {
-                        HStack {
+                        HStack(alignment: .center, content: {
                             VStack(alignment: .leading, content: {
                                 Text("사진")
                                     .font(Font.system(size: 20))
                                     .fontWeight(.medium)
                                     .padding(.bottom, 10)
-                                Text("일반 회원과 Pro 회원 모두 무제한으로 올릴 수 있어요!")
+                                Text("일반 회원과 Pro 회원 모두 \n무제한으로 올릴 수 있어요!")
                                     .font(Font.system(size: 13))
-                                    .lineLimit(2)
                                     
                             })
                             .padding(.leading, 30)
                             
                             Spacer()
                             Image("onboard1")
-                        }
+                        })
                         .padding(.bottom, 10)
                         
                         VStack(alignment: .trailing, content: {
@@ -171,8 +173,11 @@ struct OnBoardingView: View {
     
     
     var bottomButton: some View {
-        NavigationLink {
-//            OnBoardingView()
+        Button {
+            if currentPage < 2 { currentPage += 1 }
+            else {
+                // TODO: 홈으로 이동
+            }
         } label: {
             Text("다음")
                 .fontWeight(.bold)
