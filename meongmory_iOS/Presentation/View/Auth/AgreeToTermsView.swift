@@ -7,23 +7,25 @@
 
 import SwiftUI
 
-struct Term {
-    let condition: String
-    let content: String
-    @State var isAgree: Bool
-}
+
 
 struct AgreeToTermsView: View {
+    struct Term {
+        var forced: Bool
+        var content: String
+        @State var isAgree: Bool
+    }
+    
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
-    let guideTitle1 = "환영합니다!🎉";
+    let guideTitle1 = "환영합니다! 🎉";
     let guideTitle2 = "펫다이어리 서비스를 이용하기 위해서는 아래의 약관 동의 및 회원가입이 필요합니다.";
     
     @State var isAllAgree: Bool = false
     @State var terms: [Term] = [
-        Term(condition: "필수", content: "이용 약관 동의", isAgree: false),
-        Term(condition: "필수", content: "개인 정보 수집 및 이용 동의", isAgree: false),
-        Term(condition: "선택", content: "E-mail 및 SMS 광고성 정보 수신 동의", isAgree: false)
+        Term(forced: true, content: "이용 약관 동의", isAgree: false),
+        Term(forced: true, content: "개인 정보 수집 및 이용 동의", isAgree: false),
+        Term(forced: false, content: "E-mail 및 SMS 광고성 정보 수신 동의", isAgree: false)
     ]
     
     var body: some View {
@@ -84,15 +86,21 @@ struct AgreeToTermsView: View {
     var allAgreeView: some View {
         HStack(alignment: .firstTextBaseline, content: {
             Button {
-                // TODO: 필수 약관이 모두 동의됐으면 하단 버튼 활성화
+                terms.forEach { term in
+                    if !term.isAgree { term.isAgree.toggle() }
+                }
+                isAllAgree.toggle()
+                
             } label: {
                 Image(systemName: "checkmark.circle.fill")
-                    .foregroundColor(Color(red: 219/255, green: 219/255, blue: 219/255))
+                    .foregroundColor(isAllAgree
+                                     ? Color(red: 252/255, green: 156/255, blue: 19/255)
+                                     : Color(red: 219/255, green: 219/255, blue: 219/255))
             }
             .frame(width: 25.0, height: 25.0)
             
             VStack(alignment: .leading) {
-                Text("[필수?] 약관")
+                Text("약관 전체 동의")
                     .font(Font.system(size: 14))
                     .fontWeight(.medium)
                     .padding(.bottom, 2)
@@ -101,12 +109,41 @@ struct AgreeToTermsView: View {
                     .font(Font.system(size: 12))
                     .foregroundColor(Color(red: 69/255, green: 69/255, blue: 69/255))
                     .lineSpacing(4)
-            }
-            
+            }  
         })
-       
     }
     
+    func getAgreeOfTermView(term: Term) -> some View {
+        var agreeOfTerm: some View {
+            HStack(alignment: .firstTextBaseline, content: {
+                Button {
+                    term.isAgree.toggle()
+                    
+                    var result = false
+                    terms.forEach { term in
+                        if !(term.forced && term.isAgree) {
+                            result = false
+                        } else {
+                            result = true
+                        }
+                    }
+                    isAllAgree = result
+                    
+                    print("동의함? \(term.isAgree)")
+                } label: {
+                    Image(systemName: "checkmark.circle.fill")
+                        .foregroundColor(term.isAgree
+                                         ? Color(red: 252/255, green: 156/255, blue: 19/255)
+                                         : Color(red: 219/255, green: 219/255, blue: 219/255))
+                }
+                .frame(width: 25.0, height: 25.0)
+
+                Text("[\(term.forced ? "필수" : "선택")] \(term.content)")
+                    .font(Font.system(size: 14))
+            })
+        }
+        return agreeOfTerm
+    }
     
     var bottomButton: some View {
         NavigationLink {
@@ -125,26 +162,6 @@ struct AgreeToTermsView: View {
         .cornerRadius(10)
     }
     
-    func getAgreeOfTermView(term: Term) -> some View {
-        var agreeOfTerm: some View {
-            HStack(alignment: .firstTextBaseline, content: {
-                Button {
-                    term.isAgree.toggle()
-                    print("동의함? \(term.isAgree)")
-                } label: {
-                    Image(systemName: "checkmark.circle.fill")
-                        .foregroundColor(term.isAgree
-                                         ? Color(red: 252/255, green: 156/255, blue: 19/255)
-                                         : Color(red: 219/255, green: 219/255, blue: 219/255))
-                }
-                .frame(width: 25.0, height: 25.0)
-
-                Text("[\(term.condition)] \(term.content)")
-                    .font(Font.system(size: 14))
-            })
-        }
-        return agreeOfTerm
-    }
 }
 
 struct AgreeToTermsView_Previews: PreviewProvider {
