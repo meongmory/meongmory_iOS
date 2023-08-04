@@ -24,23 +24,22 @@ struct ValidatePhoneNumView: View {
     
     
     var body: some View {
-        NavigationView {
+
+        VStack(alignment: .leading, content: {
+            titleGuideStack
+            phoneNumInputView
             
-            VStack(alignment: .leading, content: {
-                titleGuideStack
-                phoneNumInputView
-                
-                inputValidationCodeView
-                    .padding(.bottom, 10)
-                validationCodeGuideView
-                
-                Spacer()
-                bottomButton
-                
-            })
-            .padding(.top, 40)
-            .padding(.horizontal, 20)
-        }
+            inputValidationCodeView
+                .padding(.bottom, 10)
+            validationCodeGuideView
+            
+            Spacer()
+            bottomButton
+            
+        })
+        .padding(.top, 40)
+        .padding(.horizontal, 20)
+
         .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
@@ -52,6 +51,7 @@ struct ValidatePhoneNumView: View {
                 }
             }
         }
+        
     }
     
     
@@ -157,7 +157,7 @@ struct ValidatePhoneNumView: View {
     
     var bottomButton: some View {
         NavigationLink {
-            // TODO: 약관 동의 화면으로 전환
+            AgreeToTermsView()
         } label: {
             Text("다음")
                 .fontWeight(.bold)
@@ -165,6 +165,7 @@ struct ValidatePhoneNumView: View {
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 10)
         }
+        .navigationBarBackButtonHidden(true)
         .background(isValidated
                     ? Color(red: 252/255, green: 156/255, blue: 19/255)
                     : Color(red: 217/255, green: 217/255, blue: 217/255))
