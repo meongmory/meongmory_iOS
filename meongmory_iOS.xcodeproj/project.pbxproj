@@ -19,7 +19,7 @@
 		A2AC24D32A80317E00D284A7 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24D22A80317E00D284A7 /* EditProfileView.swift */; };
 		A2AC24D52A80327D00D284A7 /* ProVersionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24D42A80327D00D284A7 /* ProVersionView.swift */; };
 		A2AC24D92A80D99100D284A7 /* EMenuDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24D82A80D99100D284A7 /* EMenuDetail.swift */; };
-		A2AC24DB2A80D9F700D284A7 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24DA2A80D9F700D284A7 /* NotificationView.swift */; };
+		A2AC24DB2A80D9F700D284A7 /* NoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24DA2A80D9F700D284A7 /* NoticeView.swift */; };
 		A2AC24DD2A80DA0000D284A7 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24DC2A80DA0000D284A7 /* ReportView.swift */; };
 		A2AC24DF2A80DA1400D284A7 /* TermWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24DE2A80DA1400D284A7 /* TermWebView.swift */; };
 /* End PBXBuildFile section */
@@ -57,7 +57,7 @@
 		A2AC24D22A80317E00D284A7 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		A2AC24D42A80327D00D284A7 /* ProVersionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProVersionView.swift; sourceTree = "<group>"; };
 		A2AC24D82A80D99100D284A7 /* EMenuDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EMenuDetail.swift; sourceTree = "<group>"; };
-		A2AC24DA2A80D9F700D284A7 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		A2AC24DA2A80D9F700D284A7 /* NoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeView.swift; sourceTree = "<group>"; };
 		A2AC24DC2A80DA0000D284A7 /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
 		A2AC24DE2A80DA1400D284A7 /* TermWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermWebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -216,7 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				A2AC24D42A80327D00D284A7 /* ProVersionView.swift */,
-				A2AC24DA2A80D9F700D284A7 /* NotificationView.swift */,
+				A2AC24DA2A80D9F700D284A7 /* NoticeView.swift */,
 				A2AC24DC2A80DA0000D284A7 /* ReportView.swift */,
 				A2AC24DE2A80DA1400D284A7 /* TermWebView.swift */,
 			);
@@ -357,7 +357,7 @@
 				A2AC24DF2A80DA1400D284A7 /* TermWebView.swift in Sources */,
 				A2AC24D32A80317E00D284A7 /* EditProfileView.swift in Sources */,
 				731C3F892A5FB8B600A5277A /* ContentView.swift in Sources */,
-				A2AC24DB2A80D9F700D284A7 /* NotificationView.swift in Sources */,
+				A2AC24DB2A80D9F700D284A7 /* NoticeView.swift in Sources */,
 				731C3F872A5FB8B600A5277A /* meongmory_iOSApp.swift in Sources */,
 				A2AC24DD2A80DA0000D284A7 /* ReportView.swift in Sources */,
 				A2AC24D12A80316F00D284A7 /* SetNotificationView.swift in Sources */,

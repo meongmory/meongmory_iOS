@@ -51,7 +51,7 @@ enum MenuDetail: String {
             ProVersionView()
             
         case .notification:
-            NotificationView()
+            NoticeView()
         case .report:
             ReportView()
             

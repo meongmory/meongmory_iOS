@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct NotificationView: View {
+struct NoticeView: View {
     var body: some View {
-        Text("NotificationView")
+        Text("NoticeView")
     }
 }
 
 struct NotificationView_Previews: PreviewProvider {
     static var previews: some View {
-        NotificationView()
+        NoticeView()
     }
 }
