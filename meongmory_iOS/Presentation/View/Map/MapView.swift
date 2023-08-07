@@ -18,8 +18,11 @@ struct MapView: View {
     }
     
     var body: some View {
-        ZStack {
+        ZStack(alignment: .top) {
             NaverMapView(coord: $coord)
+            
+            MapTypeLazyGrid()
+                .padding()
         }
     }
 }

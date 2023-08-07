@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "entypo_scissors.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
