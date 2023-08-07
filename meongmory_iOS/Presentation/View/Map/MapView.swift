@@ -16,10 +16,6 @@ struct MapView: View {
         ZStack {
             NaverMapView(coord: $coord)
                 .ignoresSafeArea()
-                .onAppear {
-                    coord = locationManger.getCoordinate()
-                }
-                
             VStack {
                 Button {
                     coord = locationManger.getCoordinate()
@@ -38,6 +34,7 @@ struct NaverMapView: UIViewRepresentable {
 
     func makeUIView(context: Context) -> NMFNaverMapView {
         let view = NMFNaverMapView()
+        view.mapView.touchDelegate = context.coordinator
         view.showZoomControls = false
         view.showLocationButton = true
         view.mapView.positionMode = .direction
@@ -51,6 +48,13 @@ struct NaverMapView: UIViewRepresentable {
         cameraMove.animation = .fly
         cameraMove.animationDuration = 1
         uiView.mapView.moveCamera(cameraMove)
+    }
+    
+    class Coordinator: NSObject, NMFMapViewTouchDelegate {
+    }
+    
+    func makeCoordinator() -> Coordinator {
+        return Coordinator()
     }
 }
 
