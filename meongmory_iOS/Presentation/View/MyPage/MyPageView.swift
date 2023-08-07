@@ -135,6 +135,7 @@ struct MyPageMenuListView: View {
                 .fontWeight(.semibold)
                 .foregroundColor(Color(red: 109/255, green: 109/255, blue: 109/255))
                 .frame(height: 0)
+                .listRowSeparator(.hidden)
                 .listRowBackground(Color.clear)
         }
         return header
@@ -147,9 +148,10 @@ struct MyPageMenuRow: View {
 //    var destinationView: View
     
     var body: some View {
-//        NavigationLink {
+        NavigationLink {
 //            destinationView
-//        } label: {
+            ProVersionView()
+        } label: {
             HStack {
                 HStack {
                     Image(iconName)
@@ -159,13 +161,12 @@ struct MyPageMenuRow: View {
                         .padding(.leading, 10)
                 }
                 Spacer()
-                Image("arrow-gray")
-                    .frame(width: 20, height: 20)
             }
             .frame(height: 20)
-            .listRowSeparator(.hidden)
-            .listRowBackground(Color.clear)
+            
         }
-//    }
+        .listRowSeparator(.hidden)
+        .listRowBackground(Color.clear)
+    }
     
 }
