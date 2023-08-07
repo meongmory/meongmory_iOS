@@ -96,7 +96,7 @@ struct ReportView: View {
                 VStack {
                     HStack {
                         Text(emailTail.isEmpty ? "선택" : emailTail)
-                            .foregroundColor(.gray.opacity(0.6))
+                            .foregroundColor(emailTail.isEmpty ? .gray.opacity(0.6) : .black)
                             .font(Font.system(size: 12))
                             .padding(.vertical, 12)
                             .padding(.leading, 12)
@@ -114,11 +114,11 @@ struct ReportView: View {
                     }
                 }
             }
-            .background(emailHead.isEmpty
+            .background(emailTail.isEmpty
                         ? Color(red: 249/255, green: 249/255, blue: 249/255)
                         : Color(red: 245/255, green: 244/255, blue: 242/255))
             .overlay(RoundedRectangle(cornerRadius: 5)
-                    .stroke(emailHead.isEmpty
+                    .stroke(emailTail.isEmpty
                             ? Color(red: 231/255, green: 231/255, blue: 231/255)
                             : Color(red: 190/255, green: 183/255, blue: 173/255), lineWidth: 1))
         }
