@@ -85,24 +85,23 @@ struct MyPageMenuListView: View {
                 getHeaderTitle(title: "계정 설정")
                     .padding(.top, 20)
                 Group {
-                    MyPageMenuRow(iconName: "pro-version", menuName: "Pro 버전")
-                    MyPageMenuRow(iconName: "log-out", menuName: "로그아웃")
-                    MyPageMenuRow(iconName: "sign-out", menuName: "회원 탈퇴")
+                    MyPageMenuRow(menuDetail: MenuDetail.proVersion)
+                    MyPageMenuRow(menuDetail: MenuDetail.logout)
+                    MyPageMenuRow(menuDetail: MenuDetail.signout)
                 }
                 divider
                 
                 getHeaderTitle(title: "고객 지원")
                 Group {
-                    MyPageMenuRow(iconName: "notice", menuName: "공지사항")
-                    MyPageMenuRow(iconName: "send", menuName: "로그아웃")
+                    MyPageMenuRow(menuDetail: MenuDetail.notification)
+                    MyPageMenuRow(menuDetail: MenuDetail.report)
                 }
-                
                 divider
 
                 getHeaderTitle(title: "앱 정보")
                 Group {
-                    MyPageMenuRow(iconName: "term", menuName: "약관 안내")
-                    MyPageMenuRow(iconName: "privacy-term", menuName: "개인정보 처리 방침")
+                    MyPageMenuRow(menuDetail: MenuDetail.term)
+                    MyPageMenuRow(menuDetail: MenuDetail.privacyTerm)
                 }
                 
             }
@@ -143,30 +142,28 @@ struct MyPageMenuListView: View {
 }
 
 struct MyPageMenuRow: View {
-    var iconName: String
-    var menuName: String
-//    var destinationView: View
+    var menuDetail: MenuDetail
     
     var body: some View {
         NavigationLink {
-//            destinationView
-            ProVersionView()
+            menuDetail.view
         } label: {
             HStack {
                 HStack {
-                    Image(iconName)
-                    Text(menuName)
+                    Image(menuDetail.iconName)
+                    Text(menuDetail.rawValue)
                         .font(Font.system(size: 12))
                         .fontWeight(.medium)
                         .padding(.leading, 10)
                 }
                 Spacer()
             }
-            .frame(height: 20)
-            
+            .frame(height: 20) 
         }
         .listRowSeparator(.hidden)
         .listRowBackground(Color.clear)
     }
+    
+    
     
 }
