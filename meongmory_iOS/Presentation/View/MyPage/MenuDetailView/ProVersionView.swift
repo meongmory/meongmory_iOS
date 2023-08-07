@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProVersionView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-
+    
     var body: some View {
         VStack {
             Text("Pro 버전에 가입해서\n나만의 펫다이어리를 완성하세요!")
@@ -27,7 +27,10 @@ struct ProVersionView: View {
                 .padding(.bottom, 50)
             
             VStack {
-                Text("Pro version 구독 시 누릴 수 있는")
+                Text(getAttributedStr(text: "Pro version",
+                                      color: Color(red: 252/255, green: 156/255, blue: 19/255),
+                                      fontStyle: Font.system(size: 14, weight: .bold))
+                    + " 구독 시 누릴 수 있는")
                     .font(Font.system(size: 14))
                     .foregroundColor(.gray)
                     .fontWeight(.medium)
@@ -38,21 +41,25 @@ struct ProVersionView: View {
                     .fontWeight(.medium)
                 
                 VStack(alignment: .leading) {
-                    HStack {
+                    HStack(alignment: .top, content: {
                         Image(systemName: "checkmark.circle.fill")
                             .foregroundColor(Color(red: 252/255, green: 156/255, blue: 19/255))
-                        Text("갤러리에 동영상 업로드 시,\n개수 제한없이 세심하게 기록")
+                        Text("갤러리에 동영상 업로드 시,\n"
+                             + getAttributedStr(text: "개수 제한없이 ", color: .black, fontStyle: Font.system(size: 14, weight: .semibold))
+                             + "세심하게 기록")
                             .font(Font.system(size: 14))
                             .lineSpacing(2)
-                    }
+                    })
                     .padding(.vertical, 10)
                     
-                    HStack {
+                    HStack(alignment: .top, content: {
                         Image(systemName: "checkmark.circle.fill")
                             .foregroundColor(Color(red: 252/255, green: 156/255, blue: 19/255))
-                        Text("메인화면 광고없이 내 다이어리에 집중")
+                        Text("메인화면 "
+                             + getAttributedStr(text: "광고없이 ", color: .black, fontStyle: Font.system(size: 14, weight: .semibold))
+                             + "내 다이어리에 집중")
                             .font(Font.system(size: 14))
-                    }
+                    })
                     .padding(.vertical, 10)
                 }
                 
@@ -99,20 +106,31 @@ struct ProVersionView: View {
     }
     
     var bottomButton: some View {
-           Button {
-               // TODO: 닉네임 수정 요청
-               
-           } label: {
-               Text("Pro 가입하기")
-                   .fontWeight(.medium)
-                   .foregroundColor(Color.white)
-                   .frame(maxWidth: .infinity)
-                   .padding(.vertical, 15)
-           }
-           .navigationBarBackButtonHidden(true)
-           .background(Color(red: 254/255, green: 194/255, blue: 61/255))
-           .cornerRadius(10)
+       Button {
+           // TODO: Pro 버전 결제 요청
+           
+       } label: {
+           Text("Pro 가입하기")
+               .fontWeight(.medium)
+               .foregroundColor(Color.white)
+               .frame(maxWidth: .infinity)
+               .padding(.vertical, 15)
        }
+       .navigationBarBackButtonHidden(true)
+       .background(Color(red: 254/255, green: 194/255, blue: 61/255))
+       .cornerRadius(10)
+   }
+    
+    
+    func getAttributedStr(text: String, color: Color?, fontStyle: Font?) -> AttributedString {
+        var attributed: AttributedString {
+            var result = AttributedString(text)
+            result.font = fontStyle ?? .none
+            result.foregroundColor = color ?? .black
+            return result
+       }
+        return attributed
+    }
 }
 
 struct ProVersionView_Previews: PreviewProvider {
