@@ -11,7 +11,7 @@ struct ContentView: View {
     @State private var selection = 1;
     
     var body: some View {
-        TabView(selection: $selection, content: {
+        TabView(selection: $selection,content: {
             MapView()    // TODO: 지도 view로 변경
                 .onTapGesture { selection = 0 }
                 .tabItem {
@@ -32,7 +32,9 @@ struct ContentView: View {
                     (selection == 2) ? Image("mypage.fill") : Image("mypage")
                 }
                 .tag(2)
-        })
+        }).onAppear {
+            UITabBar.appearance().backgroundColor = .white
+        }
         
     }
 }

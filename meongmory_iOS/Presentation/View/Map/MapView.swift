@@ -20,6 +20,8 @@ struct MapView: View {
     var body: some View {
         ZStack(alignment: .top) {
             NaverMapView(coord: $coord)
+                .ignoresSafeArea()
+                
             
             MapTypeLazyGrid()
                 .padding()
