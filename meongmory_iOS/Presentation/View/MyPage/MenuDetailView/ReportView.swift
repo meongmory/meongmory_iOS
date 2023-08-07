@@ -15,10 +15,11 @@ enum EmailTailType: String {
 
 struct ReportView: View {
     
+    private let contentPlaceholder: String = "각종 문의나 오류 제보에 있어 자유롭게 적어주세요."
+    
     @State var emailHead: String = ""
     @State var emailTail: String = "naver.com"
     @State var content: String = ""
-    @State var contentPlaceholder: String = "각종 문의나 오류 제보에 있어 자유롭게 적어주세요."
     
     @State var isDropdownTapped: Bool = false
     
@@ -66,27 +67,36 @@ struct ReportView: View {
     }
     
     var contentDetailView: some View {
-        ZStack {
+        ZStack(alignment: .topLeading, content: {
+            TextEditor(text: $content)
+                .font(Font.system(size: 12))
+                .padding(.vertical, 2)
+                .padding(.horizontal, 5)
+                .foregroundColor(content.isEmpty
+                                 ? Color.gray.opacity(0.6)
+                                 : Color.black)
+                .colorMultiply(content.isEmpty
+                               ? Color(red: 249/255, green: 249/255, blue: 249/255)
+                               : Color(red: 245/255, green: 244/255, blue: 242/255))
+                .background(content.isEmpty
+                            ? Color(red: 249/255, green: 249/255, blue: 249/255)
+                            : Color(red: 245/255, green: 244/255, blue: 242/255))
+                .overlay(RoundedRectangle(cornerRadius: 5)
+                    .stroke(content.isEmpty
+                            ? Color(red: 231/255, green: 231/255, blue: 231/255)
+                            : Color(red: 190/255, green: 183/255, blue: 173/255), lineWidth: 1))
+                .frame(height: 140)
+            
             if content.isEmpty {
-                TextEditor(text: $contentPlaceholder)
+                Text(contentPlaceholder)
                     .font(Font.system(size: 12))
-                    .padding(.vertical, 5)
-                    .padding(.horizontal, 10)
-                    .foregroundColor(content.isEmpty
-                                     ? Color.gray.opacity(0.6)
-                                     : Color.black)
-                    .background(content.isEmpty
-                                ? Color(red: 249/255, green: 249/255, blue: 249/255)
-                                : Color(red: 245/255, green: 244/255, blue: 242/255))
-                    .overlay(RoundedRectangle(cornerRadius: 5)
-                            .stroke(content.isEmpty
-                                    ? Color(red: 231/255, green: 231/255, blue: 231/255)
-                                    : Color(red: 190/255, green: 183/255, blue: 173/255), lineWidth: 1))
-                    .frame(height: 140)
+                    .foregroundColor(.gray.opacity(0.6))
+                    .padding(.top, 10)
+                    .padding(.leading, 12)
             }
-        }
-        
+        })
     }
+
     
     var emailTailDropDownButton: some View {
         VStack {
