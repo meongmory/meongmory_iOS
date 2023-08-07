@@ -11,7 +11,7 @@ import SwiftUI
 struct meongmory_iOSApp: App {
     var body: some Scene {
         WindowGroup {
-            MapView()
+            ContentView()
         }
     }
 }
