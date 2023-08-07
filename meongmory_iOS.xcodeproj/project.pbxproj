@@ -15,10 +15,17 @@
 		731C3F982A5FB8B800A5277A /* meongmory_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C3F972A5FB8B800A5277A /* meongmory_iOSTests.swift */; };
 		731C3FA22A5FB8B800A5277A /* meongmory_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C3FA12A5FB8B800A5277A /* meongmory_iOSUITests.swift */; };
 		731C3FA42A5FB8B800A5277A /* meongmory_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C3FA32A5FB8B800A5277A /* meongmory_iOSUITestsLaunchTests.swift */; };
+
 		73600DF52A77721F00F9FE87 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73600DF42A77721F00F9FE87 /* MapView.swift */; };
 		73600DF82A781A1600F9FE87 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73600DF72A781A1600F9FE87 /* LocationManager.swift */; };
 		D8BEF14FE569A3F3909AE38F /* Pods_meongmory_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2F4AC8E5724A149F5C66E7 /* Pods_meongmory_iOS.framework */; };
 		F5BA66F9AD036CDF071C8E5D /* Pods_meongmory_iOS_meongmory_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93FDC77A1BECCB0F90006945 /* Pods_meongmory_iOS_meongmory_iOSUITests.framework */; };
+
+		A2AC24CD2A801B1600D284A7 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24CC2A801B1600D284A7 /* MyPageView.swift */; };
+		A2AC24D12A80316F00D284A7 /* SetNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24D02A80316F00D284A7 /* SetNotificationView.swift */; };
+		A2AC24D32A80317E00D284A7 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24D22A80317E00D284A7 /* EditProfileView.swift */; };
+		A2AC24D52A80327D00D284A7 /* ProVersionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24D42A80327D00D284A7 /* ProVersionView.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +59,7 @@
 		731C3F9D2A5FB8B800A5277A /* meongmory_iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = meongmory_iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		731C3FA12A5FB8B800A5277A /* meongmory_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meongmory_iOSUITests.swift; sourceTree = "<group>"; };
 		731C3FA32A5FB8B800A5277A /* meongmory_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meongmory_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+
 		73600DF32A76B23F00F9FE87 /* meongmory-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "meongmory-iOS-Info.plist"; sourceTree = SOURCE_ROOT; };
 		73600DF42A77721F00F9FE87 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		73600DF72A781A1600F9FE87 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -61,6 +69,12 @@
 		DD50BCC2AA590E31A57AB3B0 /* Pods-meongmory_iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meongmory_iOSTests.release.xcconfig"; path = "Target Support Files/Pods-meongmory_iOSTests/Pods-meongmory_iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		E5E8D6DFEA04BB77DD322717 /* Pods-meongmory_iOS-meongmory_iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meongmory_iOS-meongmory_iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-meongmory_iOS-meongmory_iOSUITests/Pods-meongmory_iOS-meongmory_iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FEECB3B096E93B1177BD4A1B /* Pods-meongmory_iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meongmory_iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-meongmory_iOSTests/Pods-meongmory_iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+
+		A2AC24CC2A801B1600D284A7 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		A2AC24D02A80316F00D284A7 /* SetNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNotificationView.swift; sourceTree = "<group>"; };
+		A2AC24D22A80317E00D284A7 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		A2AC24D42A80327D00D284A7 /* ProVersionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProVersionView.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,11 +230,16 @@
 		73600DF12A74ADAB00F9FE87 /* View */ = {
 			isa = PBXGroup;
 			children = (
+
 				73600DF22A76B22000F9FE87 /* Map */,
+
+				A2AC24CB2A801B0B00D284A7 /* MyPage */,
+
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
+
 		73600DF22A76B22000F9FE87 /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +264,15 @@
 				393A83427B0AFE807FB4BEFF /* Pods_meongmory_iOSTests.framework */,
 			);
 			name = Frameworks;
+		A2AC24CB2A801B0B00D284A7 /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				A2AC24CC2A801B1600D284A7 /* MyPageView.swift */,
+				A2AC24D02A80316F00D284A7 /* SetNotificationView.swift */,
+				A2AC24D22A80317E00D284A7 /* EditProfileView.swift */,
+				A2AC24D42A80327D00D284A7 /* ProVersionView.swift */,
+			);
+			path = MyPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -485,10 +513,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2AC24D32A80317E00D284A7 /* EditProfileView.swift in Sources */,
 				731C3F892A5FB8B600A5277A /* ContentView.swift in Sources */,
 				73600DF52A77721F00F9FE87 /* MapView.swift in Sources */,
 				731C3F872A5FB8B600A5277A /* meongmory_iOSApp.swift in Sources */,
+
 				73600DF82A781A1600F9FE87 /* LocationManager.swift in Sources */,
+
+				A2AC24D12A80316F00D284A7 /* SetNotificationView.swift in Sources */,
+				A2AC24CD2A801B1600D284A7 /* MyPageView.swift in Sources */,
+				A2AC24D52A80327D00D284A7 /* ProVersionView.swift in Sources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -660,6 +695,8 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -694,6 +731,8 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
