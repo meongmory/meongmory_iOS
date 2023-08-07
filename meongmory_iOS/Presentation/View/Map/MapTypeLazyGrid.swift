@@ -28,12 +28,14 @@ struct MapTypeLazyGrid: View {
                         .cornerRadius(15)
                         
                         HStack(alignment: .center, spacing: 4) {
-                            Image(selected[item] ? selectedImage[item] : image[item])
-                                .frame(width: 15, height: 15)
-
-                            Text(title[item])
-                                .font(Font.custom("AppleSDGothicNeoM00", size: 12))
-                                .foregroundColor(selected[item] ? .white : .black)
+                            Label {
+                                Text(title[item])
+                                    .font(Font.custom("AppleSDGothicNeoM00", size: 12))
+                                    .foregroundColor(selected[item] ? .white : .black)
+                            } icon: {
+                                Image(selected[item] ? selectedImage[item] : image[item])
+                                    .frame(width: 15, height: 15)
+                            }
                         }
                     }.onTapGesture {
                         if selected[item] {

@@ -18,13 +18,23 @@ struct MapView: View {
     }
     
     var body: some View {
-        ZStack(alignment: .top) {
+        ZStack() {
             NaverMapView(coord: $coord)
                 .ignoresSafeArea()
+            
+            VStack {
+                MapTypeLazyGrid()
+                    .padding(.vertical, 11)
+                
+                Spacer()
+                
+                MapInfoView()
+                    .padding(.horizontal, 20)
+                    .padding(.bottom, 38)
+            }
                 
             
-            MapTypeLazyGrid()
-                .padding()
+           
         }
     }
 }
