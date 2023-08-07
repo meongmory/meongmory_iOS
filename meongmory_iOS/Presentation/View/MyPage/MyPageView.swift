@@ -9,13 +9,11 @@ import SwiftUI
 
 struct MyPageView: View {
     var body: some View {
-        NavigationView {
-            ScrollView {
-                UserProfilView()
-                MyPageMenuListView()
-            }
-            .navigationBarTitle("마이페이지", displayMode: .inline)
+        ScrollView {
+            UserProfilView()
+            MyPageMenuListView()
         }
+        .navigationBarTitle("마이페이지", displayMode: .inline)
     }
 }
 
