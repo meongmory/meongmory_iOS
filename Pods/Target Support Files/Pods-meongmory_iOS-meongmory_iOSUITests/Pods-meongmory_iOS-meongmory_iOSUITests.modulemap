@@ -1,0 +1,6 @@
+framework module Pods_meongmory_iOS_meongmory_iOSUITests {
+  umbrella header "Pods-meongmory_iOS-meongmory_iOSUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
