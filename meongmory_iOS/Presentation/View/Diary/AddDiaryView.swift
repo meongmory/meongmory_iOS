@@ -46,7 +46,7 @@ struct AddDiaryView: View {
                     }.padding(.leading, 16)
                    
                     
-                    TextField("초대 코드 입력", text: $diaryName)
+                    TextField("강아지네 이름 입력", text: $diaryName)
                         .frame(height: 39)
                         .background(Color(red: 0.98, green: 0.98, blue: 0.98))
                         .cornerRadius(10)
