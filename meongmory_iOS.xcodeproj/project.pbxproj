@@ -20,8 +20,9 @@
 		73600E0F2A80FBC600F9FE87 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73600E0E2A80FBC600F9FE87 /* LocationService.swift */; };
 		73D279482A813BF800B12C0C /* MapTypeLazyGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D279472A813BF800B12C0C /* MapTypeLazyGrid.swift */; };
 		73D2794A2A8154AD00B12C0C /* MapInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D279492A8154AD00B12C0C /* MapInfoView.swift */; };
-		73D2794D2A81BC5F00B12C0C /* AddDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D2794C2A81BC5F00B12C0C /* AddDiaryView.swift */; };
+		73D2794D2A81BC5F00B12C0C /* ChoiceAddDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D2794C2A81BC5F00B12C0C /* ChoiceAddDiaryView.swift */; };
 		73D2794F2A8219B600B12C0C /* InviteCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D2794E2A8219B600B12C0C /* InviteCodeView.swift */; };
+		73D279512A828F9700B12C0C /* AddDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D279502A828F9700B12C0C /* AddDiaryView.swift */; };
 		768BC0BAACFC50EE43CEE161 /* Pods_meongmory_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D318894BA7CDB8D4A30853 /* Pods_meongmory_iOSTests.framework */; };
 		A2AC24CD2A801B1600D284A7 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24CC2A801B1600D284A7 /* MyPageView.swift */; };
 		A2AC24D12A80316F00D284A7 /* SetNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24D02A80316F00D284A7 /* SetNotificationView.swift */; };
@@ -68,8 +69,9 @@
 		73600E0E2A80FBC600F9FE87 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		73D279472A813BF800B12C0C /* MapTypeLazyGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTypeLazyGrid.swift; sourceTree = "<group>"; };
 		73D279492A8154AD00B12C0C /* MapInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInfoView.swift; sourceTree = "<group>"; };
-		73D2794C2A81BC5F00B12C0C /* AddDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiaryView.swift; sourceTree = "<group>"; };
+		73D2794C2A81BC5F00B12C0C /* ChoiceAddDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceAddDiaryView.swift; sourceTree = "<group>"; };
 		73D2794E2A8219B600B12C0C /* InviteCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteCodeView.swift; sourceTree = "<group>"; };
+		73D279502A828F9700B12C0C /* AddDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiaryView.swift; sourceTree = "<group>"; };
 		9E86AAB6E73640C35049F8A8 /* Pods-meongmory_iOS-meongmory_iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meongmory_iOS-meongmory_iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-meongmory_iOS-meongmory_iOSUITests/Pods-meongmory_iOS-meongmory_iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A2AC24CC2A801B1600D284A7 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		A2AC24D02A80316F00D284A7 /* SetNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNotificationView.swift; sourceTree = "<group>"; };
@@ -249,8 +251,9 @@
 		73D2794B2A81BC4400B12C0C /* Diary */ = {
 			isa = PBXGroup;
 			children = (
-				73D2794C2A81BC5F00B12C0C /* AddDiaryView.swift */,
+				73D2794C2A81BC5F00B12C0C /* ChoiceAddDiaryView.swift */,
 				73D2794E2A8219B600B12C0C /* InviteCodeView.swift */,
+				73D279502A828F9700B12C0C /* AddDiaryView.swift */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -517,13 +520,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73D2794D2A81BC5F00B12C0C /* AddDiaryView.swift in Sources */,
+				73D2794D2A81BC5F00B12C0C /* ChoiceAddDiaryView.swift in Sources */,
 				73600E0C2A809AB800F9FE87 /* MapView.swift in Sources */,
 				A2AC24D32A80317E00D284A7 /* EditProfileView.swift in Sources */,
 				73D279482A813BF800B12C0C /* MapTypeLazyGrid.swift in Sources */,
 				73600E0F2A80FBC600F9FE87 /* LocationService.swift in Sources */,
 				731C3F892A5FB8B600A5277A /* ContentView.swift in Sources */,
 				731C3F872A5FB8B600A5277A /* meongmory_iOSApp.swift in Sources */,
+				73D279512A828F9700B12C0C /* AddDiaryView.swift in Sources */,
 				A2AC24D12A80316F00D284A7 /* SetNotificationView.swift in Sources */,
 				73D2794F2A8219B600B12C0C /* InviteCodeView.swift in Sources */,
 				A2AC24CD2A801B1600D284A7 /* MyPageView.swift in Sources */,

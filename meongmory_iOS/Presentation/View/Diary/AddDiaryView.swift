@@ -8,79 +8,80 @@
 import SwiftUI
 
 struct AddDiaryView: View {
+    @State var diaryName: String = ""
+    
     var body: some View {
         NavigationView {
             VStack {
                 VStack(alignment: .leading) {
                     HStack {
-                        Text("환영합니다")
+                        Text("펫다이어리 만들기")
                             .font(Font.custom("AppleSDGothicNeoSB00", size: 20))
                             .foregroundColor(Color(red: 0.99, green: 0.61, blue: 0.07))
                         
-                        // TODO: 이름 State 사용하여 변경
-                        Text("차유상님!")
-                            .font(Font.custom("AppleSDGothicNeoSB00", size: 20))
-                        
-                        
-                        Image("diary_add_con")
+                        Image("diary_add_invite")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 23, height: 23)
                             .clipped()
-                    } // 환영인사 + 이모티콘 Hstack 끝
+                        
+                        Spacer()
+                    }
                     
-                    
-                    
-                    VStack {
-                        Text("우리집 강아지를 등록하고 가족, 지인과 반려동물의 추억을 공유해보세요!")
-                            .font(Font.custom("AppleSDGothicNeoSB00", size: 14))
-                            .foregroundColor(Color(red: 0.27, green: 0.27, blue: 0.27))
-                            .frame(width: 343, alignment: .topLeading)
-                            
-                        Text("혹은 가족 및 지인에게 초대 코드를 받아 강아지들의 일상을 구경해보세요!")
-                            .font(Font.custom("AppleSDGothicNeoSB00", size: 14))
-                            .foregroundColor(Color(red: 0.27, green: 0.27, blue: 0.27))
-                            .frame(width: 343, alignment: .topLeading)
-                            .padding(.top, 8)
-                    } // 소개글 VStack 끝
-                    .padding(.top, 15)
-                } // 환영글 VStack
+                    Text("우리 집만의 개성 있는 펫다이어리 이름을 정해보세요!")
+                      .font(Font.custom("AppleSDGothicNeoSB00", size: 16))
+                      .foregroundColor(Color(red: 0.27, green: 0.27, blue: 0.27))
+                      .padding(.top, 9)
+                } // 제목 + 소개
+                .padding(.top, 69)
                 .padding(.leading, 16)
-                .padding(.top, 65)
+                
+                
+                VStack() {
+                    HStack {
+                        Text("강아지네")
+                            .font(Font.custom("Noto Sans KR", size: 12).weight(.medium))
+                            .foregroundColor(Color(red: 0.45, green: 0.45, blue: 0.45))
+                        Spacer()
+                    }.padding(.leading, 16)
+                   
+                    
+                    TextField("초대 코드 입력", text: $diaryName)
+                        .frame(height: 39)
+                        .background(Color(red: 0.98, green: 0.98, blue: 0.98))
+                        .cornerRadius(10)
+                        .padding(.horizontal, 16)
+                  
+                    // TODO: if문을 통해 로직 시 숨김 처리
+                    HStack {
+                        Text("최대 한글 6자, 영문 12자까지 입력 가능해요.")
+                            .font(Font.custom("AppleSDGothicNeoM00", size: 11))
+                            .foregroundColor(Color(red: 0.45, green: 0.45, blue: 0.45))
+                            .padding(.top, 6)
+                        
+                        Spacer()
+                    }
+                    .padding(.leading, 16)
+                } // 초대코드 입력창 + 확인 버튼 + 알림 VStack 끝
+                .padding(.top, 84)
                 
                 Spacer()
+               
+
+                NavigationLink {
+                    // TODO: 강아지 등록 페이지
+                } label: {
+                    Text("만들기")
+                        .font(Font.custom("AppleSDGothicNeoSB00", size: 15))
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(Color(red: 1, green: 0.99, blue: 0.99))
+                }
+                .frame(width: 343, height: 45)
+                // 색상 변경 삼항연상자 쓰기
+                .background(Color(red: 0.99, green: 0.61, blue: 0.07))
+                .cornerRadius(10)
                 
-                VStack {
-                    NavigationLink {
-                        // TODO: 다이어리 생성 View
-                    } label: {
-                        Text("주인으로 강아지네 새로 만들기")
-                            .font(Font.custom("AppleSDGothicNeoSB00", size: 15))
-                            .multilineTextAlignment(.center)
-                            .foregroundColor(Color(red: 1, green: 0.99, blue: 0.99))
-                    }
-                    .frame(width: 343, height: 45)
-                    .background(Color(red: 0.99, green: 0.61, blue: 0.07))
-                    .cornerRadius(10)
-                    
-                    
-                    NavigationLink {
-                        InviteCodeView()
-                    } label: {
-                        Text("가족 및 지인으로 등록하기 (초대 코드)")
-                            .font(Font.custom("AppleSDGothicNeoSB00", size: 15))
-                            .multilineTextAlignment(.center)
-                            .foregroundColor(Color(red: 1, green: 0.99, blue: 0.99))
-                    }
-                    .frame(width: 343, height: 45)
-                    .background(Color(red: 0.24, green: 0.15, blue: 0.04))
-                    .cornerRadius(10)
-                    
-                    
-                }// 버튼 VStack
-                .padding(.bottom, 3)
-                
-            } // 전체 화면 VStack
+            } // 전체 View
         } // 네비게이션 View 끝
     }
 }

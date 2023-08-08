@@ -85,7 +85,7 @@ struct InviteCodeView: View {
                 .cornerRadius(10)
                 
             } // 전체 View
-        }
+        } // 네비게이션 View 끝
     }
 }
 
