@@ -269,6 +269,8 @@
 				A2AC24C62A7CD11D00D284A7 /* OnBoardingView.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
 		73600E0A2A809A4300F9FE87 /* Map */ = {
 			isa = PBXGroup;
 			children = (
