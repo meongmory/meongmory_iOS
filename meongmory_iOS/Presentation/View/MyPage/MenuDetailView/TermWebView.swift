@@ -8,7 +8,7 @@
 import SwiftUI
 
 enum TermType: String {
-    case term = "https://www.naver.com" // 임시 URL값
+    case term = "https://persistent-pumpkin-861.notion.site/3c7548bbc34440cabb8ee8446129f3b7?pvs=4"
     case privacyTerm = "https://persistent-pumpkin-861.notion.site/bb768f6604154157bc2a84cc50852479?pvs=4"
 }
 
