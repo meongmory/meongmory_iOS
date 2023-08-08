@@ -8,17 +8,13 @@
 import SwiftUI
 
 struct MyPageView: View {
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-
     var body: some View {
-        NavigationView {
-            ScrollView {
-                UserProfilView()
-                MypageMenuListView()
-            }
-            .navigationBarTitle("마이페이지", displayMode: .inline)
+        ScrollView {
+            UserProfilView()
+            MypageMenuListView()
         }
-        
+        .navigationBarBackButtonHidden(true)
+        .navigationTitle("마이페이지")
     }
 }
 

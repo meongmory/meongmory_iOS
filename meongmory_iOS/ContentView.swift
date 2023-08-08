@@ -11,7 +11,7 @@ struct ContentView: View {
     @State private var selection = 1;
     
     var body: some View {
-        ZStack {
+        NavigationView {
             TabView(selection: $selection, content: {
                 MyPageView()    // TODO: 지도 view로 변경
                     .onTapGesture { selection = 0 }
@@ -34,7 +34,9 @@ struct ContentView: View {
                     }
                     .tag(2)
             })
+            .navigationBarTitle(selection == 2 ? "마이페이지" : "", displayMode: .inline)
         }
+        
         
         
     }
