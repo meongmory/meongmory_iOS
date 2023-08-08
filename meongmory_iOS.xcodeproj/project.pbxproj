@@ -66,6 +66,7 @@
 		A2AC24E62A8262CF00D284A7 /* MypageMenuListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageMenuListView.swift; sourceTree = "<group>"; };
 		A2AC24E82A82631800D284A7 /* MypageMenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageMenuRow.swift; sourceTree = "<group>"; };
 		A2AC24EA2A82637000D284A7 /* UserProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfilView.swift; sourceTree = "<group>"; };
+		A2AC24EC2A82829900D284A7 /* meongmory-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "meongmory-iOS-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +117,7 @@
 		731C3F852A5FB8B600A5277A /* meongmory_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				A2AC24EC2A82829900D284A7 /* meongmory-iOS-Info.plist */,
 				73600DED2A74ABAC00F9FE87 /* Data */,
 				73600DEC2A74ABA100F9FE87 /* Business */,
 				73600DEB2A74A90800F9FE87 /* Presentation */,
@@ -544,6 +546,7 @@
 				DEVELOPMENT_TEAM = 643M65W7HH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "meongmory-iOS-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -575,6 +578,7 @@
 				DEVELOPMENT_TEAM = 643M65W7HH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "meongmory-iOS-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
