@@ -11,7 +11,7 @@ struct ContentView: View {
     @State private var selection = 1;
     
     var body: some View {
-        NavigationView {
+        ZStack {
             TabView(selection: $selection, content: {
                 MyPageView()    // TODO: 지도 view로 변경
                     .onTapGesture { selection = 0 }
