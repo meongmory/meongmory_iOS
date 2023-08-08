@@ -13,7 +13,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             TabView(selection: $selection, content: {
-                MyPageView()    // TODO: 지도 view로 변경
+                MapView()    // TODO: 지도 view로 변경
                     .onTapGesture { selection = 0 }
                     .tabItem {
                         (selection == 0) ? Image("map.fill") : Image("map")
@@ -34,10 +34,11 @@ struct ContentView: View {
                     }
                     .tag(2)
             })
+            .onAppear { UITabBar.appearance().backgroundColor = .white }
             .navigationBarTitle(selection == 2 ? "마이페이지" : "", displayMode: .inline)
+          
         }
-        
-        
+
         
     }
 }
