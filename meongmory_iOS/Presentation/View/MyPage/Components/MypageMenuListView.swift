@@ -9,40 +9,41 @@ import SwiftUI
 
 struct MypageMenuListView: View {
     var body: some View {
-        List {
-            getHeaderTitle(title: "계정 설정")
-                .padding(.top, 20)
-            Group {
-                MypageMenuRow(menuDetail: MenuDetail.proVersion)
-                MypageMenuRow(menuDetail: MenuDetail.logout)
-                MypageMenuRow(menuDetail: MenuDetail.signout)
-            }
-            divider
-            
-            getHeaderTitle(title: "고객 지원")
-            Group {
-                MypageMenuRow(menuDetail: MenuDetail.notification)
-                MypageMenuRow(menuDetail: MenuDetail.report)
-            }
-            divider
+        VStack {
+            VStack(alignment: .leading, content: {
+                getHeaderTitle(title: "계정 설정")
+                    .padding(.top, 20)
+                Group {
+                    MypageMenuRow(menuDetail: MenuDetail.proVersion)
+                    MypageMenuRow(menuDetail: MenuDetail.logout)
+                    MypageMenuRow(menuDetail: MenuDetail.signout)
+                }
+                divider
+                
+                getHeaderTitle(title: "고객 지원")
+                Group {
+                    MypageMenuRow(menuDetail: MenuDetail.notification)
+                    MypageMenuRow(menuDetail: MenuDetail.report)
+                }
+                divider
 
-            getHeaderTitle(title: "앱 정보")
-            Group {
-                MypageMenuRow(menuDetail: MenuDetail.term)
-                MypageMenuRow(menuDetail: MenuDetail.privacyTerm)
-            }
-            
+                getHeaderTitle(title: "앱 정보")
+                Group {
+                    MypageMenuRow(menuDetail: MenuDetail.term)
+                    MypageMenuRow(menuDetail: MenuDetail.privacyTerm)
+                }
+                VStack{ }
+                    .padding(.bottom, 20)
+            })
+            .cornerRadius(16)
+            .background(Color(red: 255/255, green: 251/255, blue: 243/255))
+            .overlay(
+                RoundedRectangle(cornerRadius: 16)
+                    .stroke(Color(red: 255/255, green: 217/255, blue: 133/255), lineWidth: 0.5)
+            )
         }
-        .environment(\.defaultMinListRowHeight, 5)
-        .frame(height: 450)
-        .cornerRadius(16)
-        .background(Color(red: 255/255, green: 251/255, blue: 243/255))
         .padding(.horizontal, 20)
-        .overlay(
-            RoundedRectangle(cornerRadius: 16)
-                .stroke(Color(red: 255/255, green: 217/255, blue: 133/255), lineWidth: 0.5)
-        )
-        .listStyle(.plain)
+        
     }
     
     var divider: some View {
@@ -50,6 +51,8 @@ struct MypageMenuListView: View {
             .background(Color(red: 255/255, green: 217/255, blue: 133/255))
             .listRowSeparator(.hidden)
             .listRowBackground(Color.clear)
+            .padding(.horizontal, 15)
+            .padding(.vertical, 10)
     }
     
     func getHeaderTitle(title: String) -> some View {
@@ -61,6 +64,8 @@ struct MypageMenuListView: View {
                 .frame(height: 0)
                 .listRowSeparator(.hidden)
                 .listRowBackground(Color.clear)
+                .padding(.vertical, 10)
+                .padding(.leading, 15)
         }
         return header
     }

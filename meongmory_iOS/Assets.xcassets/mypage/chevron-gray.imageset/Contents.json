@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "arrowtriangle.down.gray@1x.png",
+      "filename" : "gray_chevron@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "arrowtriangle.down.gray@2x.png",
+      "filename" : "gray_chevron@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "arrowtriangle.down.gray@3x.png",
+      "filename" : "gray_chevron@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -36,22 +36,23 @@ struct MypageMenuRow: View {
                     Text(menuDetail.rawValue)
                         .font(Font.system(size: 12))
                         .fontWeight(.medium)
+                        .foregroundColor(.black)
                         .padding(.leading, 10)
                 }
                 Spacer()
+                Image("chevron-gray")
+                    .padding(.trailing, 20)
             }
             .frame(height: 20)
+            .padding(.leading, 15)
+            .padding(.vertical, 3)
         }
-        .listRowSeparator(.hidden)
-        .listRowBackground(Color.clear)
     }
     
     func getAlertRow() -> some View {
         var row: some View {
             Button {
                 alertShowing.toggle()
-                print("did Tap alertRow")
-
             } label: {
                 HStack {
                     HStack {
@@ -59,15 +60,17 @@ struct MypageMenuRow: View {
                         Text(menuDetail.rawValue)
                             .font(Font.system(size: 12))
                             .fontWeight(.medium)
+                            .foregroundColor(.black)
                             .padding(.leading, 10)
                     }
                     Spacer()
-                    
+                    Image("chevron-gray")
+                        .padding(.trailing, 20)
                 }
                 .frame(height: 20)
+                .padding(.leading, 15)
+                .padding(.vertical, 3)
             }
-            .listRowSeparator(.hidden)
-            .listRowBackground(Color.clear)
             .alert((menuDetail == .logout) ? "로그아웃" : "회원 탈퇴",
                    isPresented: $alertShowing) {
                 Button("취소", role: .cancel) {}
@@ -84,10 +87,6 @@ struct MypageMenuRow: View {
         }
         return row
     }
-    
-    
-    
-    
 }
 
 struct MypageMenuRow_Previews: PreviewProvider {
