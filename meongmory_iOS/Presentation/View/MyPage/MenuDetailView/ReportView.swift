@@ -14,11 +14,12 @@ enum EmailTailType: String {
 }
 
 struct ReportView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     private let contentPlaceholder: String = "각종 문의나 오류 제보에 있어 자유롭게 적어주세요."
     
     @State var emailHead: String = ""
-    @State var emailTail: String = "naver.com"
+    @State var emailTail: String = ""
     @State var content: String = ""
     
     @State var isDropdownTapped: Bool = false
@@ -40,8 +41,21 @@ struct ReportView: View {
             
             bottomButton
         }
-        .padding(.top, 50)
+        .padding(.top, 40)
         .padding(.horizontal, 20)
+        
+        .navigationBarBackButtonHidden(true)
+        .navigationTitle("문의 및 오류 제보")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+                    self.presentationMode.wrappedValue.dismiss()
+                } label: {
+                    Image(systemName: "arrow.left")
+                        .foregroundColor(Color(red: 51/255, green: 51/255, blue: 51/255))
+                }
+            }
+        }
         
     }
     
