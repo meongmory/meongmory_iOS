@@ -16,6 +16,11 @@
 		731C3F982A5FB8B800A5277A /* meongmory_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C3F972A5FB8B800A5277A /* meongmory_iOSTests.swift */; };
 		731C3FA22A5FB8B800A5277A /* meongmory_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C3FA12A5FB8B800A5277A /* meongmory_iOSUITests.swift */; };
 		731C3FA42A5FB8B800A5277A /* meongmory_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C3FA32A5FB8B800A5277A /* meongmory_iOSUITestsLaunchTests.swift */; };
+		A2AC24BF2A78B84D00D284A7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24BE2A78B84D00D284A7 /* LoginView.swift */; };
+		A2AC24C12A78C27E00D284A7 /* ValidatePhoneNumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24C02A78C27E00D284A7 /* ValidatePhoneNumView.swift */; };
+		A2AC24C32A7CCBBF00D284A7 /* AgreeToTermsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24C22A7CCBBF00D284A7 /* AgreeToTermsView.swift */; };
+		A2AC24C52A7CCFD800D284A7 /* SetNicknameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24C42A7CCFD800D284A7 /* SetNicknameView.swift */; };
+		A2AC24C72A7CD11D00D284A7 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24C62A7CD11D00D284A7 /* OnBoardingView.swift */; };
 		73600E0C2A809AB800F9FE87 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73600E0B2A809AB800F9FE87 /* MapView.swift */; };
 		73600E0F2A80FBC600F9FE87 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73600E0E2A80FBC600F9FE87 /* LocationService.swift */; };
 		73D279482A813BF800B12C0C /* MapTypeLazyGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D279472A813BF800B12C0C /* MapTypeLazyGrid.swift */; };
@@ -69,6 +74,11 @@
 		731C3F9D2A5FB8B800A5277A /* meongmory_iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = meongmory_iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		731C3FA12A5FB8B800A5277A /* meongmory_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meongmory_iOSUITests.swift; sourceTree = "<group>"; };
 		731C3FA32A5FB8B800A5277A /* meongmory_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meongmory_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A2AC24BE2A78B84D00D284A7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		A2AC24C02A78C27E00D284A7 /* ValidatePhoneNumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatePhoneNumView.swift; sourceTree = "<group>"; };
+		A2AC24C22A7CCBBF00D284A7 /* AgreeToTermsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreeToTermsView.swift; sourceTree = "<group>"; };
+		A2AC24C42A7CCFD800D284A7 /* SetNicknameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNicknameView.swift; sourceTree = "<group>"; };
+		A2AC24C62A7CD11D00D284A7 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		73600E0B2A809AB800F9FE87 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		73600E0D2A80FB4B00F9FE87 /* meongmory-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "meongmory-iOS-Info.plist"; sourceTree = SOURCE_ROOT; };
 		73600E0E2A80FBC600F9FE87 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
@@ -242,12 +252,23 @@
 		73600DF12A74ADAB00F9FE87 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A2AC24BD2A78B82000D284A7 /* Auth */,
 				73600E0A2A809A4300F9FE87 /* Map */,
 				A2AC24CB2A801B0B00D284A7 /* MyPage */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
+		A2AC24BD2A78B82000D284A7 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				A2AC24BE2A78B84D00D284A7 /* LoginView.swift */,
+				A2AC24C02A78C27E00D284A7 /* ValidatePhoneNumView.swift */,
+				A2AC24C22A7CCBBF00D284A7 /* AgreeToTermsView.swift */,
+				A2AC24C42A7CCFD800D284A7 /* SetNicknameView.swift */,
+				A2AC24C62A7CD11D00D284A7 /* OnBoardingView.swift */,
+			);
+			path = Auth;
 		73600E0A2A809A4300F9FE87 /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -544,6 +565,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2AC24C12A78C27E00D284A7 /* ValidatePhoneNumView.swift in Sources */,
+				A2AC24BF2A78B84D00D284A7 /* LoginView.swift in Sources */,
+				A2AC24C72A7CD11D00D284A7 /* OnBoardingView.swift in Sources */,
+				A2AC24C32A7CCBBF00D284A7 /* AgreeToTermsView.swift in Sources */,
+				A2AC24C52A7CCFD800D284A7 /* SetNicknameView.swift in Sources */,
 				A2AC24D92A80D99100D284A7 /* EMenuDetail.swift in Sources */,
 				A2AC24DF2A80DA1400D284A7 /* TermWebView.swift in Sources */,
 				A2AC24E92A82631800D284A7 /* MypageMenuRow.swift in Sources */,
@@ -719,10 +745,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"meongmory_iOS/Preview Content\"";
-				DEVELOPMENT_TEAM = 643M65W7HH;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = J4X458RVHG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "meongmory-iOS-Info.plist";
