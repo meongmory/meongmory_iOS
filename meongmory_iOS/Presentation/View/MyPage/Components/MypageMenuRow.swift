@@ -45,7 +45,7 @@ struct MypageMenuRow: View {
             }
             .frame(height: 20)
             .padding(.leading, 15)
-            .padding(.vertical, 3)
+            .padding(.vertical, 5)
         }
     }
     
@@ -69,7 +69,7 @@ struct MypageMenuRow: View {
                 }
                 .frame(height: 20)
                 .padding(.leading, 15)
-                .padding(.vertical, 3)
+                .padding(.vertical, 5)
             }
             .alert((menuDetail == .logout) ? "로그아웃" : "회원 탈퇴",
                    isPresented: $alertShowing) {

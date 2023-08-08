@@ -58,7 +58,7 @@ struct MypageMenuListView: View {
     func getHeaderTitle(title: String) -> some View {
         var header: some View {
             Text(title)
-                .font(Font.system(size: 10))
+                .font(Font.system(size: 12))
                 .fontWeight(.semibold)
                 .foregroundColor(Color(red: 109/255, green: 109/255, blue: 109/255))
                 .frame(height: 0)
