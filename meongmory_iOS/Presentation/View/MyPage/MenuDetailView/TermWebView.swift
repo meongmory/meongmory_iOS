@@ -9,7 +9,7 @@ import SwiftUI
 
 enum TermType: String {
     case term = "https://www.naver.com" // 임시 URL값
-    case privacyTerm = "https://www.google.com" // 임시 URL값
+    case privacyTerm = "https://persistent-pumpkin-861.notion.site/bb768f6604154157bc2a84cc50852479?pvs=4"
 }
 
 struct TermWebView: View {
