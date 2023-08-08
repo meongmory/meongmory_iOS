@@ -25,6 +25,7 @@
 		A2AC24E72A8262CF00D284A7 /* MypageMenuListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24E62A8262CF00D284A7 /* MypageMenuListView.swift */; };
 		A2AC24E92A82631800D284A7 /* MypageMenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24E82A82631800D284A7 /* MypageMenuRow.swift */; };
 		A2AC24EB2A82637000D284A7 /* UserProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24EA2A82637000D284A7 /* UserProfilView.swift */; };
+		A2AC250A2A828C5900D284A7 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC25092A828C5900D284A7 /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		A2AC24E82A82631800D284A7 /* MypageMenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageMenuRow.swift; sourceTree = "<group>"; };
 		A2AC24EA2A82637000D284A7 /* UserProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfilView.swift; sourceTree = "<group>"; };
 		A2AC24EC2A82829900D284A7 /* meongmory-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "meongmory-iOS-Info.plist"; sourceTree = SOURCE_ROOT; };
+		A2AC25092A828C5900D284A7 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +219,7 @@
 				A2AC24D02A80316F00D284A7 /* SetNotificationView.swift */,
 				A2AC24D82A80D99100D284A7 /* EMenuDetail.swift */,
 				A2AC24CC2A801B1600D284A7 /* MyPageView.swift */,
+				A2AC25092A828C5900D284A7 /* WebView.swift */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				A2AC24EB2A82637000D284A7 /* UserProfilView.swift in Sources */,
 				A2AC24CD2A801B1600D284A7 /* MyPageView.swift in Sources */,
 				A2AC24D52A80327D00D284A7 /* ProVersionView.swift in Sources */,
+				A2AC250A2A828C5900D284A7 /* WebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

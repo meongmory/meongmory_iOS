@@ -16,7 +16,10 @@ struct TermWebView: View {
     var type: TermType?
     
     var body: some View {
-        Text("TermWebView - \(type?.rawValue ?? "")")
+        ScrollView {
+            WebView(url: type?.rawValue ?? "www.naver.com")
+        }
+        .navigationTitle(type == .term ? "약관 안내" : "개인정보 처리 방침")
     }
 }
 
