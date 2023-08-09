@@ -70,6 +70,7 @@ struct AddDiaryView: View {
 
                 NavigationLink {
                     // TODO: 강아지 등록 페이지
+                    AddPetView()
                 } label: {
                     Text("만들기")
                         .font(Font.custom("AppleSDGothicNeoSB00", size: 15))
