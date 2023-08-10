@@ -11,9 +11,76 @@ struct NoticeView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
     var body: some View {
-        VStack {
-            // TODO: 컴포넌트 추가
+        List {
+            // TODO: api 연결 후 ForEach문으로 변경
+            Group {
+                NoticeRow()
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color.clear)
+                NoticeRow()
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color.clear)
+                NoticeRow()
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color.clear)
+                NoticeRow()
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color.clear)
+                NoticeRow()
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color.clear)
+                NoticeRow()
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color.clear)
+                NoticeRow()
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color.clear)
+                NoticeRow()
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color.clear)
+                NoticeRow()
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color.clear)
+                NoticeRow()
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color.clear)
+            }
+            Group {
+                NoticeRow()
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color.clear)
+                NoticeRow()
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color.clear)
+                NoticeRow()
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color.clear)
+                NoticeRow()
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color.clear)
+                NoticeRow()
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color.clear)
+                NoticeRow()
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color.clear)
+                NoticeRow()
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color.clear)
+                NoticeRow()
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color.clear)
+                NoticeRow()
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color.clear)
+                NoticeRow()
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color.clear)
+            }
         }
+        .listStyle(PlainListStyle())
+        .padding(.top, 20)
+        
         .navigationBarBackButtonHidden(true)
         .navigationTitle("공지사항")
         .toolbar {

@@ -16,17 +16,14 @@
 		731C3F982A5FB8B800A5277A /* meongmory_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C3F972A5FB8B800A5277A /* meongmory_iOSTests.swift */; };
 		731C3FA22A5FB8B800A5277A /* meongmory_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C3FA12A5FB8B800A5277A /* meongmory_iOSUITests.swift */; };
 		731C3FA42A5FB8B800A5277A /* meongmory_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C3FA32A5FB8B800A5277A /* meongmory_iOSUITestsLaunchTests.swift */; };
-		A2AC24BF2A78B84D00D284A7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24BE2A78B84D00D284A7 /* LoginView.swift */; };
-		A2AC24C12A78C27E00D284A7 /* ValidatePhoneNumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24C02A78C27E00D284A7 /* ValidatePhoneNumView.swift */; };
-		A2AC24C32A7CCBBF00D284A7 /* AgreeToTermsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24C22A7CCBBF00D284A7 /* AgreeToTermsView.swift */; };
-		A2AC24C52A7CCFD800D284A7 /* SetNicknameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24C42A7CCFD800D284A7 /* SetNicknameView.swift */; };
-		A2AC24C72A7CD11D00D284A7 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24C62A7CD11D00D284A7 /* OnBoardingView.swift */; };
 		73600E0C2A809AB800F9FE87 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73600E0B2A809AB800F9FE87 /* MapView.swift */; };
 		73600E0F2A80FBC600F9FE87 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73600E0E2A80FBC600F9FE87 /* LocationService.swift */; };
 		73D279482A813BF800B12C0C /* MapTypeLazyGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D279472A813BF800B12C0C /* MapTypeLazyGrid.swift */; };
 		73D2794A2A8154AD00B12C0C /* MapInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D279492A8154AD00B12C0C /* MapInfoView.swift */; };
 		768BC0BAACFC50EE43CEE161 /* Pods_meongmory_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D318894BA7CDB8D4A30853 /* Pods_meongmory_iOSTests.framework */; };
 		A2A211C82A829C160067D436 /* iPages in Frameworks */ = {isa = PBXBuildFile; productRef = A2A211C72A829C160067D436 /* iPages */; };
+		A2A211CA2A8477740067D436 /* NoticeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A211C92A8477740067D436 /* NoticeDetailView.swift */; };
+		A2A211CC2A847A330067D436 /* NoticeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A211CB2A847A330067D436 /* NoticeRow.swift */; };
 		A2AC24BF2A78B84D00D284A7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24BE2A78B84D00D284A7 /* LoginView.swift */; };
 		A2AC24C12A78C27E00D284A7 /* ValidatePhoneNumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24C02A78C27E00D284A7 /* ValidatePhoneNumView.swift */; };
 		A2AC24C32A7CCBBF00D284A7 /* AgreeToTermsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24C22A7CCBBF00D284A7 /* AgreeToTermsView.swift */; };
@@ -86,6 +83,8 @@
 		73D279472A813BF800B12C0C /* MapTypeLazyGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTypeLazyGrid.swift; sourceTree = "<group>"; };
 		73D279492A8154AD00B12C0C /* MapInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInfoView.swift; sourceTree = "<group>"; };
 		9E86AAB6E73640C35049F8A8 /* Pods-meongmory_iOS-meongmory_iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meongmory_iOS-meongmory_iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-meongmory_iOS-meongmory_iOSUITests/Pods-meongmory_iOS-meongmory_iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A2A211C92A8477740067D436 /* NoticeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailView.swift; sourceTree = "<group>"; };
+		A2A211CB2A847A330067D436 /* NoticeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeRow.swift; sourceTree = "<group>"; };
 		A2AC24BE2A78B84D00D284A7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		A2AC24C02A78C27E00D284A7 /* ValidatePhoneNumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatePhoneNumView.swift; sourceTree = "<group>"; };
 		A2AC24C22A7CCBBF00D284A7 /* AgreeToTermsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreeToTermsView.swift; sourceTree = "<group>"; };
@@ -321,6 +320,7 @@
 				A2AC24DA2A80D9F700D284A7 /* NoticeView.swift */,
 				A2AC24DC2A80DA0000D284A7 /* ReportView.swift */,
 				A2AC24DE2A80DA1400D284A7 /* TermWebView.swift */,
+				A2A211C92A8477740067D436 /* NoticeDetailView.swift */,
 			);
 			path = MenuDetailView;
 			sourceTree = "<group>";
@@ -331,6 +331,7 @@
 				A2AC24E62A8262CF00D284A7 /* MypageMenuListView.swift */,
 				A2AC24E82A82631800D284A7 /* MypageMenuRow.swift */,
 				A2AC24EA2A82637000D284A7 /* UserProfilView.swift */,
+				A2A211CB2A847A330067D436 /* NoticeRow.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -589,6 +590,7 @@
 				A2AC24E92A82631800D284A7 /* MypageMenuRow.swift in Sources */,
 				A2AC24D32A80317E00D284A7 /* EditProfileView.swift in Sources */,
 				A2AC24E72A8262CF00D284A7 /* MypageMenuListView.swift in Sources */,
+				A2A211CC2A847A330067D436 /* NoticeRow.swift in Sources */,
 				73600E0C2A809AB800F9FE87 /* MapView.swift in Sources */,
 				A2AC24D32A80317E00D284A7 /* EditProfileView.swift in Sources */,
 				73D279482A813BF800B12C0C /* MapTypeLazyGrid.swift in Sources */,
@@ -597,6 +599,7 @@
 				A2AC24DB2A80D9F700D284A7 /* NoticeView.swift in Sources */,
 				731C3F872A5FB8B600A5277A /* meongmory_iOSApp.swift in Sources */,
 				A2AC24DD2A80DA0000D284A7 /* ReportView.swift in Sources */,
+				A2A211CA2A8477740067D436 /* NoticeDetailView.swift in Sources */,
 				A2AC24D12A80316F00D284A7 /* SetNotificationView.swift in Sources */,
 				A2AC24EB2A82637000D284A7 /* UserProfilView.swift in Sources */,
 				A2AC24CD2A801B1600D284A7 /* MyPageView.swift in Sources */,
