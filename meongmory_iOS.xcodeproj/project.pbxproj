@@ -16,16 +16,12 @@
 		731C3F982A5FB8B800A5277A /* meongmory_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C3F972A5FB8B800A5277A /* meongmory_iOSTests.swift */; };
 		731C3FA22A5FB8B800A5277A /* meongmory_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C3FA12A5FB8B800A5277A /* meongmory_iOSUITests.swift */; };
 		731C3FA42A5FB8B800A5277A /* meongmory_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C3FA32A5FB8B800A5277A /* meongmory_iOSUITestsLaunchTests.swift */; };
-		A2AC24BF2A78B84D00D284A7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24BE2A78B84D00D284A7 /* LoginView.swift */; };
-		A2AC24C12A78C27E00D284A7 /* ValidatePhoneNumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24C02A78C27E00D284A7 /* ValidatePhoneNumView.swift */; };
-		A2AC24C32A7CCBBF00D284A7 /* AgreeToTermsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24C22A7CCBBF00D284A7 /* AgreeToTermsView.swift */; };
-		A2AC24C52A7CCFD800D284A7 /* SetNicknameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24C42A7CCFD800D284A7 /* SetNicknameView.swift */; };
-		A2AC24C72A7CD11D00D284A7 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24C62A7CD11D00D284A7 /* OnBoardingView.swift */; };
 		73600E0C2A809AB800F9FE87 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73600E0B2A809AB800F9FE87 /* MapView.swift */; };
 		73600E0F2A80FBC600F9FE87 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73600E0E2A80FBC600F9FE87 /* LocationService.swift */; };
 		73D279482A813BF800B12C0C /* MapTypeLazyGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D279472A813BF800B12C0C /* MapTypeLazyGrid.swift */; };
 		73D2794A2A8154AD00B12C0C /* MapInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D279492A8154AD00B12C0C /* MapInfoView.swift */; };
 		768BC0BAACFC50EE43CEE161 /* Pods_meongmory_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D318894BA7CDB8D4A30853 /* Pods_meongmory_iOSTests.framework */; };
+		95D2E8632A8776B60093D5D3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D2E8622A8776B60093D5D3 /* HomeView.swift */; };
 		A2A211C82A829C160067D436 /* iPages in Frameworks */ = {isa = PBXBuildFile; productRef = A2A211C72A829C160067D436 /* iPages */; };
 		A2AC24BF2A78B84D00D284A7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24BE2A78B84D00D284A7 /* LoginView.swift */; };
 		A2AC24C12A78C27E00D284A7 /* ValidatePhoneNumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24C02A78C27E00D284A7 /* ValidatePhoneNumView.swift */; };
@@ -85,6 +81,7 @@
 		73600E0E2A80FBC600F9FE87 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		73D279472A813BF800B12C0C /* MapTypeLazyGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTypeLazyGrid.swift; sourceTree = "<group>"; };
 		73D279492A8154AD00B12C0C /* MapInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInfoView.swift; sourceTree = "<group>"; };
+		95D2E8622A8776B60093D5D3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9E86AAB6E73640C35049F8A8 /* Pods-meongmory_iOS-meongmory_iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meongmory_iOS-meongmory_iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-meongmory_iOS-meongmory_iOSUITests/Pods-meongmory_iOS-meongmory_iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A2AC24BE2A78B84D00D284A7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		A2AC24C02A78C27E00D284A7 /* ValidatePhoneNumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatePhoneNumView.swift; sourceTree = "<group>"; };
@@ -258,6 +255,7 @@
 		73600DF12A74ADAB00F9FE87 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				95D2E8612A85F7DF0093D5D3 /* Home */,
 				A2AC24BD2A78B82000D284A7 /* Auth */,
 				73600E0A2A809A4300F9FE87 /* Map */,
 				A2AC24CB2A801B0B00D284A7 /* MyPage */,
@@ -286,6 +284,14 @@
 				375A7971AA1BDD4E53A79C6A /* Pods-meongmory_iOSTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		95D2E8612A85F7DF0093D5D3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				95D2E8622A8776B60093D5D3 /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		A2AC24BD2A78B82000D284A7 /* Auth */ = {
@@ -582,6 +588,7 @@
 				A2AC24C12A78C27E00D284A7 /* ValidatePhoneNumView.swift in Sources */,
 				A2AC24BF2A78B84D00D284A7 /* LoginView.swift in Sources */,
 				A2AC24C72A7CD11D00D284A7 /* OnBoardingView.swift in Sources */,
+				95D2E8632A8776B60093D5D3 /* HomeView.swift in Sources */,
 				A2AC24C32A7CCBBF00D284A7 /* AgreeToTermsView.swift in Sources */,
 				A2AC24C52A7CCFD800D284A7 /* SetNicknameView.swift in Sources */,
 				A2AC24D92A80D99100D284A7 /* EMenuDetail.swift in Sources */,
