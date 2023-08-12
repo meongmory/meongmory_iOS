@@ -40,6 +40,9 @@ struct AddPetView: View {
                         .frame(height: 39)
                         .background(Color(red: 0.98, green: 0.98, blue: 0.98))
                         .cornerRadius(10)
+                        .font(Font.custom("AppleSDGothicNeoM00", size: 12))
+                        .foregroundColor(Color(red: 0.45, green: 0.45, blue: 0.45))
+
                        
                 }// 반려동물 이름 VStack
                 .padding(.horizontal, 16)
@@ -48,17 +51,26 @@ struct AddPetView: View {
                 
                 VStack(spacing: 10) {
                     HStack {
-                        Text("반려동물 이름")
+                        Text("품종")
                             .font(Font.custom("AppleSDGothicNeoSB00", size: 12))
                             .foregroundColor(Color(red: 0.45, green: 0.45, blue: 0.45))
                         Spacer()
                     }
                    
                     
-                    TextField("반려동물 이름 입력", text: $petName)
-                        .frame(height: 39)
-                        .background(Color(red: 0.98, green: 0.98, blue: 0.98))
-                        .cornerRadius(10)
+                    NavigationLink {
+                        // TODO: 품종 찾기
+                    } label: {
+                        Text("만들기")
+                            .font(Font.custom("AppleSDGothicNeoM00", size: 12))
+                            .foregroundColor(Color(red: 0.45, green: 0.45, blue: 0.45))
+                    }
+                    .frame(width: CGFloat.screenWidth - 32, height: 39)
+                    .background(Color(red: 0.98, green: 0.98, blue: 0.98))
+                    .cornerRadius(10)
+                    
+                    
+                    
                     
                 } // 반려동물 품종 VStack
                 .padding(.horizontal, 16)
@@ -66,69 +78,118 @@ struct AddPetView: View {
                 
                 VStack(spacing: 10) {
                     HStack {
-                        Text("반려동물 이름")
+                        Text("성별")
                             .font(Font.custom("AppleSDGothicNeoSB00", size: 12))
                             .foregroundColor(Color(red: 0.45, green: 0.45, blue: 0.45))
                         Spacer()
                     }
+                    
+                    HStack(spacing: 30) {
+                        Button {
+                            // 수컷
+                        } label: {
+                            Text("수컷")
+                                .font(Font.custom("AppleSDGothicNeoM00", size: 12))
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.black)
+
+                        }.frame(width: 164, height: 39)
+                            .background(Color(red: 1, green: 0.98, blue: 0.93))
+                            .cornerRadius(10)
+                        
+                        Button {
+                            // 수컷
+                        } label: {
+                            Text("암컷")
+                                .font(Font.custom("AppleSDGothicNeoM00", size: 12))
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.black)
+                            
+                        }.frame(width: 164, height: 39)
+                            .background(Color(red: 1, green: 0.98, blue: 0.93))
+                            .cornerRadius(10)
+                        
+                    }
                    
-                    
-                    TextField("반려동물 이름 입력", text: $petName)
-                        .frame(height: 39)
-                        .background(Color(red: 0.98, green: 0.98, blue: 0.98))
-                        .cornerRadius(10)
-                    
                 } // 반려동물 성별 VStack
                 .padding(.horizontal, 16)
                 .padding(.top, 12)
                 
                 VStack(spacing: 10) {
                     HStack {
-                        Text("반려동물 이름")
+                        Text("나이")
                             .font(Font.custom("AppleSDGothicNeoSB00", size: 12))
                             .foregroundColor(Color(red: 0.45, green: 0.45, blue: 0.45))
                         Spacer()
                     }
                    
                     
-                    TextField("반려동물 이름 입력", text: $petName)
+                    TextField("나이 입력", text: $petName)
                         .frame(height: 39)
                         .background(Color(red: 0.98, green: 0.98, blue: 0.98))
                         .cornerRadius(10)
+                        .keyboardType(.numberPad)
                 } // 반려동물 나이 VStack
                 .padding(.horizontal, 16)
                 .padding(.top, 12)
                 
                 VStack(spacing: 10) {
                     HStack {
-                        Text("반려동물 이름")
+                        Text("입양한 날짜")
                             .font(Font.custom("AppleSDGothicNeoSB00", size: 12))
                             .foregroundColor(Color(red: 0.45, green: 0.45, blue: 0.45))
                         Spacer()
                     }
-                   
                     
-                    TextField("반려동물 이름 입력", text: $petName)
-                        .frame(height: 39)
-                        .background(Color(red: 0.98, green: 0.98, blue: 0.98))
-                        .cornerRadius(10)
+                    HStack {
+                        TextField("", text: $petName)
+                            .frame(height: 39)
+                            .background(Color(red: 0.98, green: 0.98, blue: 0.98))
+                            .cornerRadius(10)
+                            .keyboardType(.numberPad)
+                        
+                        Text("년")
+                            .font(Font.custom("AppleSDGothicNeoM00", size: 12))
+                            .foregroundColor(Color(red: 0.45, green: 0.45, blue: 0.45))
+                        
+                        TextField("", text: $petName)
+                            .frame(height: 39)
+                            .background(Color(red: 0.98, green: 0.98, blue: 0.98))
+                            .cornerRadius(10)
+                            .keyboardType(.numberPad)
+                        
+                        Text("월")
+                            .font(Font.custom("AppleSDGothicNeoM00", size: 12))
+                            .foregroundColor(Color(red: 0.45, green: 0.45, blue: 0.45))
+                        
+                        TextField("", text: $petName)
+                            .frame(height: 39)
+                            .background(Color(red: 0.98, green: 0.98, blue: 0.98))
+                            .cornerRadius(10)
+                            .keyboardType(.numberPad)
+                        
+                        Text("일")
+                            .font(Font.custom("AppleSDGothicNeoM00", size: 12))
+                            .foregroundColor(Color(red: 0.45, green: 0.45, blue: 0.45))
+                    }
                 } // 반려동물 입양날짜 VStack
                 .padding(.horizontal, 16)
                 .padding(.top, 12)
                 
                 VStack(spacing: 10) {
                     HStack {
-                        Text("반려동물 이름")
+                        Text("반려동물 등록번호")
                             .font(Font.custom("AppleSDGothicNeoSB00", size: 12))
                             .foregroundColor(Color(red: 0.45, green: 0.45, blue: 0.45))
                         Spacer()
                     }
                    
                     
-                    TextField("반려동물 이름 입력", text: $petName)
+                    TextField("반려동물 등록번호 입력", text: $petName)
                         .frame(height: 39)
                         .background(Color(red: 0.98, green: 0.98, blue: 0.98))
                         .cornerRadius(10)
+                        .keyboardType(.numberPad)
                 } // 반려동물 등록번호 VStack
                 .padding(.horizontal, 16)
                 .padding(.top, 12)
@@ -143,7 +204,7 @@ struct AddPetView: View {
                         .multilineTextAlignment(.center)
                         .foregroundColor(Color(red: 1, green: 0.99, blue: 0.99))
                 }
-                .frame(width: 343, height: 45)
+                .frame(width: CGFloat.screenWidth - 32, height: 45)
                 // 색상 변경 삼항연상자 쓰기
                 .background(Color(red: 0.99, green: 0.61, blue: 0.07))
                 .cornerRadius(10)
