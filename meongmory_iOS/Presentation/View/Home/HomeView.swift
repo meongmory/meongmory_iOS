@@ -9,20 +9,25 @@ import SwiftUI
 
 struct HomeView: View {
     init() {
-        // 스크롤 시 NavigationBar 색상 변경 막음
+        // 스크롤 시 NavigationBar 색상 변경 막음 - 모든 화면에 적용됨
         let appearance: UINavigationBarAppearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
+        appearance.shadowColor = .clear
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        UINavigationBar.appearance().compactAppearance = appearance
     }
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                // 강아지네
-                
-                // 보러가기
-                // 사업자
+            VStack {
+                Divider()
+                ScrollView {
+                    // 강아지네
+                    FamilyListView()
+                    // 보러가기
+                    // 사업자
+                }
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
