@@ -25,7 +25,7 @@ struct HomeView: View {
                 ScrollView(.vertical) {
                     FamilyListView()
                     RecommendedView()
-                    // 사업자
+                    BusinessView()
                 }
             }
             .toolbar {
