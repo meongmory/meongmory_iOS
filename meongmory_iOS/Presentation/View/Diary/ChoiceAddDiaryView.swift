@@ -53,6 +53,7 @@ struct ChoiceAddDiaryView: View {
                 VStack {
                     NavigationLink {
                         // TODO: 다이어리 생성 View
+                        AddDiaryView()
                     } label: {
                         Text("주인으로 강아지네 새로 만들기")
                             .font(Font.custom("AppleSDGothicNeoSB00", size: 15))
