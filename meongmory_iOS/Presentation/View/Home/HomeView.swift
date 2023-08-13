@@ -22,10 +22,9 @@ struct HomeView: View {
         NavigationView {
             VStack(spacing: 0) {
                 Divider()
-                ScrollView {
-                    // 강아지네
+                ScrollView(.vertical) {
                     FamilyListView()
-                    // 보러가기
+                    RecommendedView()
                     // 사업자
                 }
             }

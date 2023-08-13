@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct FamilyListView: View {
+    let rows = [GridItem(.fixed(100), spacing: 12)]
+    
     var body: some View {
-        let rows = [GridItem(.fixed(100), spacing: 12)]
-        
         VStack(spacing: 0) {
             VStack(alignment: .leading, spacing: 20) {
                 Text("강아지네")
