@@ -9,7 +9,30 @@ import SwiftUI
 
 struct FamilyListView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        let rows = [GridItem(.fixed(100), spacing: 12)]
+        
+        VStack(spacing: 0) {
+            VStack(alignment: .leading, spacing: 20) {
+                Text("강아지네")
+                    .font(Font.custom("AppleSDGothicNeoB00", size: 16))
+                    .fontWeight(.regular)
+                    .foregroundColor(Color(red: 0.24, green: 0.16, blue: 0.04))
+                    .padding(.top, 11)
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    LazyHGrid(rows: rows) {
+                        ForEach(0..<10, id: \.self) { cell in
+                            FamilyLazyHGridCell()
+                        }
+                    }
+                    .padding(.trailing, 16)
+                }
+                .frame(maxHeight: 125, alignment: .leading)
+            }
+            .padding(.leading, 16)
+            .padding(.bottom, 13)
+            Divider()
+        }
     }
 }
 
