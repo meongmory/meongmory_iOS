@@ -9,15 +9,14 @@ import SwiftUI
 
 struct AddPetView: View {
     @State var petName: String = ""
-    @State var petKind: String = ""
-    @State var petGender: Bool = false
+    @State var petKind: String = "aa"
+    @State var petGender: String = ""
     @State var petAge: String = ""
     @State var petYear: String = ""
     @State var petMonth: String = ""
     @State var petDay: String = ""
     @State var petNum: String = ""
     
-    @State var petNameChange: Bool = false
     
     var body: some View {
         VStack {
@@ -45,17 +44,10 @@ struct AddPetView: View {
                 
                 TextField("반려동물 이름 입력", text: $petName)
                     .frame(height: 39)
-                    .background(petNameChange ? Color(red: 1, green: 0.98, blue: 0.93) : Color(red: 0.98, green: 0.98, blue: 0.98))
+                    .background(petName != "" ? Color(red: 1, green: 0.98, blue: 0.93) : Color(red: 0.98, green: 0.98, blue: 0.98))
                     .cornerRadius(10)
                     .font(Font.custom("AppleSDGothicNeoM00", size: 12))
-                    .foregroundColor(petNameChange ? .black : Color(red: 0.45, green: 0.45, blue: 0.45))
-                    .onChange(of: petName) { newValue in
-                        if newValue == "" {
-                            petNameChange = false
-                        }else {
-                            petNameChange = true
-                        }
-                    }
+                    .foregroundColor(petName != "" ? .black : Color(red: 0.45, green: 0.45, blue: 0.45))
 
 
                    
@@ -101,27 +93,27 @@ struct AddPetView: View {
                 
                 HStack(spacing: 30) {
                     Button {
-                        // 수컷
+                        petGender = "수컷"
                     } label: {
                         Text("수컷")
                             .font(Font.custom("AppleSDGothicNeoM00", size: 12))
                             .multilineTextAlignment(.center)
-                            .foregroundColor(.black)
+                            .foregroundColor(petGender == "수컷" ? .black : Color(red: 0.45, green: 0.45, blue: 0.45))
 
-                    }.frame(width: 164, height: 39)
-                        .background(Color(red: 1, green: 0.98, blue: 0.93))
+                    }.frame(width: (CGFloat.screenWidth - 47) / 2, height: 39)
+                        .background(petGender == "수컷" ? Color(red: 1, green: 0.98, blue: 0.93) : Color(red: 0.98, green: 0.98, blue: 0.98))
                         .cornerRadius(10)
                     
                     Button {
-                        // 수컷
+                        petGender = "암컷"
                     } label: {
                         Text("암컷")
                             .font(Font.custom("AppleSDGothicNeoM00", size: 12))
                             .multilineTextAlignment(.center)
-                            .foregroundColor(.black)
+                            .foregroundColor(petGender == "암컷" ? .black : Color(red: 0.45, green: 0.45, blue: 0.45))
                         
-                    }.frame(width: 164, height: 39)
-                        .background(Color(red: 1, green: 0.98, blue: 0.93))
+                    }.frame(width: (CGFloat.screenWidth - 47) / 2, height: 39)
+                        .background(petGender == "암컷" ? Color(red: 1, green: 0.98, blue: 0.93) : Color(red: 0.98, green: 0.98, blue: 0.98))
                         .cornerRadius(10)
                     
                 }
@@ -141,7 +133,8 @@ struct AddPetView: View {
                 
                 TextField("나이 입력", text: $petAge)
                     .frame(height: 39)
-                    .background(Color(red: 0.98, green: 0.98, blue: 0.98))
+                    .background(petAge != "" ? Color(red: 1, green: 0.98, blue: 0.93) : Color(red: 0.98, green: 0.98, blue: 0.98))
+                    .foregroundColor(petAge != "" ? .black : Color(red: 0.45, green: 0.45, blue: 0.45))
                     .cornerRadius(10)
                     .keyboardType(.numberPad)
             } // MARK: 반려동물 나이 VStack
@@ -157,9 +150,10 @@ struct AddPetView: View {
                 }
                 
                 HStack {
-                    TextField("", text: $petYear)
+                    TextField("년", text: $petYear)
                         .frame(height: 39)
-                        .background(Color(red: 0.98, green: 0.98, blue: 0.98))
+                        .background(petYear != "" ? Color(red: 1, green: 0.98, blue: 0.93) : Color(red: 0.98, green: 0.98, blue: 0.98))
+                        .foregroundColor(petYear != "" ? .black : Color(red: 0.45, green: 0.45, blue: 0.45))
                         .cornerRadius(10)
                         .keyboardType(.numberPad)
                     
@@ -167,9 +161,10 @@ struct AddPetView: View {
                         .font(Font.custom("AppleSDGothicNeoM00", size: 12))
                         .foregroundColor(Color(red: 0.45, green: 0.45, blue: 0.45))
                     
-                    TextField("", text: $petMonth)
+                    TextField("월", text: $petMonth)
                         .frame(height: 39)
-                        .background(Color(red: 0.98, green: 0.98, blue: 0.98))
+                        .background(petMonth != "" ? Color(red: 1, green: 0.98, blue: 0.93) : Color(red: 0.98, green: 0.98, blue: 0.98))
+                        .foregroundColor(petMonth != "" ? .black : Color(red: 0.45, green: 0.45, blue: 0.45))
                         .cornerRadius(10)
                         .keyboardType(.numberPad)
                     
@@ -177,9 +172,10 @@ struct AddPetView: View {
                         .font(Font.custom("AppleSDGothicNeoM00", size: 12))
                         .foregroundColor(Color(red: 0.45, green: 0.45, blue: 0.45))
                     
-                    TextField("", text: $petDay)
+                    TextField("일", text: $petDay)
                         .frame(height: 39)
-                        .background(Color(red: 0.98, green: 0.98, blue: 0.98))
+                        .background(petDay != "" ? Color(red: 1, green: 0.98, blue: 0.93) : Color(red: 0.98, green: 0.98, blue: 0.98))
+                        .foregroundColor(petDay != "" ? .black : Color(red: 0.45, green: 0.45, blue: 0.45))
                         .cornerRadius(10)
                         .keyboardType(.numberPad)
                     
@@ -202,7 +198,8 @@ struct AddPetView: View {
                 
                 TextField("반려동물 등록번호 입력", text: $petNum)
                     .frame(height: 39)
-                    .background(Color(red: 0.98, green: 0.98, blue: 0.98))
+                    .background(petNum != "" ? Color(red: 1, green: 0.98, blue: 0.93) : Color(red: 0.98, green: 0.98, blue: 0.98))
+                    .foregroundColor(petNum != "" ? .black : Color(red: 0.45, green: 0.45, blue: 0.45))
                     .cornerRadius(10)
                     .keyboardType(.numberPad)
             } // MARK: 반려동물 등록번호 VStack
@@ -221,7 +218,7 @@ struct AddPetView: View {
             }
             .frame(width: CGFloat.screenWidth - 32, height: 45)
             // 색상 변경 삼항연상자 쓰기
-            .background(Color(red: 0.99, green: 0.61, blue: 0.07))
+            .background(petName != "" && petKind != "" && petGender != "" && petAge != "" && petYear != "" && petMonth != "" && petDay != "" && petNum != "" ? Color(red: 0.99, green: 0.61, blue: 0.07) : Color(red: 0.85, green: 0.85, blue: 0.85))
             .cornerRadius(10)
             .padding(.top, 21)
         } // MARK: 전체 VStack
