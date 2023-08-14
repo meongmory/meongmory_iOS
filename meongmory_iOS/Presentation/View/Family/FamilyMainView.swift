@@ -11,17 +11,21 @@ struct FamilyMainView: View {
     var body: some View {
         VStack(spacing: 0) {
             Divider()
-//            if 반려동물 미등록 상태인 경우
+            /* if 반려동물 미등록 상태인 경우
             PetEmptyView()
             Spacer()
             DiaryEmptyView()
             Spacer()
-            // if 반려동물은 등록돼 있는데 기록은 없을 경우 DiaryEmptyView 사용
-            // else
-//            ScrollView {
+            */
+            
+            /* if 반려동물은 등록돼 있는데 기록은 없을 경우 DiaryEmptyView 사용 */
+            
+            /* else (DiaryView에만 스크롤뷰 사용) */
+            ScrollView {
             // 반려동물 리스트 + 추가버튼
+                PetListView()
             // 앨범형(default) or 목록형 (@namespace)
-//            }
+            }
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
