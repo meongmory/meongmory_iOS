@@ -9,7 +9,22 @@ import SwiftUI
 
 struct DiaryEmptyView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            VStack(spacing: 12) {
+                Image("image")
+                Text("오늘도 반려동물과 즐거운 시간을 보내셨나요?")
+                    .font(Font.system(size: 15))
+                    .fontWeight(.bold)
+                    .frame(height: 20)
+                Text("촬영했던 반려동물 사진과 함께 즐거웠던 시간을 기록해보세요!")
+                    .font(Font.system(size: 13))
+                    .fontWeight(.semibold)
+                    .padding(.horizontal, 62)
+                    .frame(height: 40)
+            }
+            .multilineTextAlignment(.center)
+            .foregroundColor(Color(red: 0.45, green: 0.45, blue: 0.45))
+        }
     }
 }
 
