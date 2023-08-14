@@ -9,46 +9,53 @@ import SwiftUI
 
 struct FamilyMainView: View {
     var body: some View {
-        NavigationView {
-            VStack(spacing: 0) {
-                Divider()
-                ScrollView {
-                    
-                }
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    HStack(spacing: 6) {
-                        Text("유상이네")
-                            .font(Font.custom("AppleSDGothicNeoB00", size: 18))
-                            .foregroundColor(.black)
-                        Button(action: {}, label: {
-                            Image("chevron_down")
-                        })
-                    }
-                    .onTapGesture {
-                        // TODO: 디자인 요청
-                    }
-                }
+        VStack(spacing: 0) {
+            Divider()
+            ScrollView {
+//                 if 반려동물 미등록 상태인 경우 {
+                PetEmptyView()
+                DiaryEmptyView()
+//                 }
+                // else
+                // 반려동물 리스트 + 추가버튼
                 
-                /* 본인이 강아지네 가족에 해당될 경우에만 보임 */
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        // TODO: 강아지네 관리 화면으로 이동
-                    }, label: {
-                        Image("users")
-                    })
-                }
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        // TODO: 기록 추가 화면으로 이동
-                    }, label: {
-                        Image("plus")
-                    })
-                }
-                /* -- */
+                // 앨범형(default) or 목록형 (@namespace)
+                
             }
         }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                HStack(spacing: 6) {
+                    Text("유상이네")
+                        .font(Font.custom("AppleSDGothicNeoB00", size: 18))
+                        .foregroundColor(.black)
+                    Button(action: {}, label: {
+                        Image("chevron_down")
+                    })
+                }
+                .onTapGesture {
+                    // TODO: 디자인 요청
+                }
+            }
+            
+            /* 본인이 강아지네 가족에 해당될 경우에만 보임 */
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: {
+                    // TODO: 강아지네 관리 화면으로 이동
+                }, label: {
+                    Image("users")
+                })
+            }
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: {
+                    // TODO: 기록 추가 화면으로 이동
+                }, label: {
+                    Image("plus")
+                })
+            }
+            /* -- */
+        }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
