@@ -13,14 +13,14 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             TabView(selection: $selection, content: {
-                MapView()    // TODO: 지도 view로 변경
+                MapView()
                     .onTapGesture { selection = 0 }
                     .tabItem {
                         (selection == 0) ? Image("map.fill") : Image("map")
                     }
                     .tag(0)
                 
-                MyPageView()    // TODO: 홈 view로 변경
+                HomeView()
                     .onTapGesture { selection = 1 }
                     .tabItem {
                         (selection == 1) ? Image("home.fill") : Image("home")
