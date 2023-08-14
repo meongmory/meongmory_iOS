@@ -18,6 +18,8 @@
 		731C3FA42A5FB8B800A5277A /* meongmory_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C3FA32A5FB8B800A5277A /* meongmory_iOSUITestsLaunchTests.swift */; };
 		73600E0C2A809AB800F9FE87 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73600E0B2A809AB800F9FE87 /* MapView.swift */; };
 		73600E0F2A80FBC600F9FE87 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73600E0E2A80FBC600F9FE87 /* LocationService.swift */; };
+		7397F29F2A886FA20032CC21 /* PetKindView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7397F29E2A886FA20032CC21 /* PetKindView.swift */; };
+		7397F2A12A887BD20032CC21 /* PetKindListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7397F2A02A887BD20032CC21 /* PetKindListRow.swift */; };
 		73D279482A813BF800B12C0C /* MapTypeLazyGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D279472A813BF800B12C0C /* MapTypeLazyGrid.swift */; };
 		73D2794A2A8154AD00B12C0C /* MapInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D279492A8154AD00B12C0C /* MapInfoView.swift */; };
 		73D2794D2A81BC5F00B12C0C /* ChoiceAddDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D2794C2A81BC5F00B12C0C /* ChoiceAddDiaryView.swift */; };
@@ -83,6 +85,8 @@
 		73600E0B2A809AB800F9FE87 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		73600E0D2A80FB4B00F9FE87 /* meongmory-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "meongmory-iOS-Info.plist"; sourceTree = SOURCE_ROOT; };
 		73600E0E2A80FBC600F9FE87 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		7397F29E2A886FA20032CC21 /* PetKindView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetKindView.swift; sourceTree = "<group>"; };
+		7397F2A02A887BD20032CC21 /* PetKindListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetKindListRow.swift; sourceTree = "<group>"; };
 		73D279472A813BF800B12C0C /* MapTypeLazyGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTypeLazyGrid.swift; sourceTree = "<group>"; };
 		73D279492A8154AD00B12C0C /* MapInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInfoView.swift; sourceTree = "<group>"; };
 		73D2794C2A81BC5F00B12C0C /* ChoiceAddDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceAddDiaryView.swift; sourceTree = "<group>"; };
@@ -289,6 +293,8 @@
 				73D2794E2A8219B600B12C0C /* InviteCodeView.swift */,
 				73D279502A828F9700B12C0C /* AddDiaryView.swift */,
 				73D279552A83476D00B12C0C /* AddPetView.swift */,
+				7397F29E2A886FA20032CC21 /* PetKindView.swift */,
+				7397F2A02A887BD20032CC21 /* PetKindListRow.swift */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -606,6 +612,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73D2794D2A81BC5F00B12C0C /* ChoiceAddDiaryView.swift in Sources */,
+				7397F2A12A887BD20032CC21 /* PetKindListRow.swift in Sources */,
 				A2AC24C12A78C27E00D284A7 /* ValidatePhoneNumView.swift in Sources */,
 				A2AC24BF2A78B84D00D284A7 /* LoginView.swift in Sources */,
 				A2AC24C72A7CD11D00D284A7 /* OnBoardingView.swift in Sources */,
@@ -619,6 +626,7 @@
 				73600E0C2A809AB800F9FE87 /* MapView.swift in Sources */,
 				73D279562A83476E00B12C0C /* AddPetView.swift in Sources */,
 				A2AC24D32A80317E00D284A7 /* EditProfileView.swift in Sources */,
+				7397F29F2A886FA20032CC21 /* PetKindView.swift in Sources */,
 				73D279482A813BF800B12C0C /* MapTypeLazyGrid.swift in Sources */,
 				73D279592A849B8700B12C0C /* CGFloat+.swift in Sources */,
 				73600E0F2A80FBC600F9FE87 /* LocationService.swift in Sources */,
