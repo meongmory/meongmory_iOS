@@ -81,6 +81,7 @@ struct PetAddButton: View {
                             .stroke(Color(red: 0.91, green: 0.91, blue: 0.91), lineWidth: 2)
                     )
             })
+            .frame(width: 70, height: 70)
             
             Text("펫 추가하기")
               .font(Font.system(size: 10))
