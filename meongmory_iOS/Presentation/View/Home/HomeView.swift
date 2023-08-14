@@ -30,9 +30,7 @@ struct HomeView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: {}, label: {
-                        Image("main_text_icon")
-                    })
+                    Image("main_text_icon")
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {

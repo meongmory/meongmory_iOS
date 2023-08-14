@@ -22,7 +22,11 @@ struct FamilyListView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     LazyHGrid(rows: rows) {
                         ForEach(0..<10, id: \.self) { cell in
-                            FamilyLazyHGridCell()
+                            NavigationLink {
+                                FamilyMainView()
+                            } label: {
+                                FamilyLazyHGridCell()
+                            }
                         }
                     }
                     .padding(.trailing, 16)
