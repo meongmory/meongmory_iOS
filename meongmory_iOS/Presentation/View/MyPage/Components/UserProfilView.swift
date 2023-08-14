@@ -19,7 +19,7 @@ struct UserProfilView: View {
                     NavigationLink {
                         SetNotificationView()
                     } label: {
-                        Text("알림설정")
+                        Text("🔔 알림설정")
                             .font(Font.system(size: 10))
                             .foregroundColor(Color.black)
                             .padding(.vertical, 6)
@@ -29,7 +29,7 @@ struct UserProfilView: View {
                     NavigationLink {
                         EditProfileView()
                     } label: {
-                        Text("프로필 수정")
+                        Text("✏️ 프로필 수정")
                             .font(Font.system(size: 11))
                             .foregroundColor(Color.black)
                             .padding(.vertical, 6)
