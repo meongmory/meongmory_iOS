@@ -14,6 +14,7 @@ struct AgreeToTermsView: View {
         var forced: Bool
         var content: String
         @State var isAgree: Bool
+        var webUrl: TermType?
     }
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
@@ -23,9 +24,9 @@ struct AgreeToTermsView: View {
     
     @State var isAllAgree: Bool = false
     @State var terms: [Term] = [
-        Term(forced: true, content: "이용 약관 동의", isAgree: false),
-        Term(forced: true, content: "개인 정보 수집 및 이용 동의", isAgree: false),
-        Term(forced: false, content: "E-mail 및 SMS 광고성 정보 수신 동의", isAgree: false)
+        Term(forced: true, content: "이용 약관 동의", isAgree: false, webUrl: .term),
+        Term(forced: true, content: "개인 정보 수집 및 이용 동의", isAgree: false, webUrl: .privacyTerm),
+        Term(forced: false, content: "E-mail 및 SMS 광고성 정보 수신 동의", isAgree: false, webUrl: nil)
     ]
     
     var body: some View {
@@ -36,12 +37,9 @@ struct AgreeToTermsView: View {
             Divider()
                 .padding(.vertical, 5)
             
-//            terms.forEach { term in
-//                getAgreeOfTermView(term: term)
-//            }
-            getAgreeOfTermView(term: terms[0])
-            getAgreeOfTermView(term: terms[1])
-            getAgreeOfTermView(term: terms[2])
+            getTermViewWithWeb(term: terms[0])
+            getTermViewWithWeb(term: terms[1])
+            getTermViewWithoutWeb(term: terms[2])
             
             
             Spacer()
@@ -109,12 +107,48 @@ struct AgreeToTermsView: View {
                     .font(Font.system(size: 12))
                     .foregroundColor(Color(red: 69/255, green: 69/255, blue: 69/255))
                     .lineSpacing(4)
-            }  
+            }
         })
     }
     
-    func getAgreeOfTermView(term: Term) -> some View {
+    var bottomButton: some View {
+        NavigationLink {
+            SetNicknameView()
+        } label: {
+            Text("동의하고 시작하기")
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 10)
+        }
+        .navigationBarBackButtonHidden(true)
+        .background(isAllAgree
+                    ? Color(red: 252/255, green: 156/255, blue: 19/255)
+                    : Color(red: 217/255, green: 217/255, blue: 217/255))
+        .cornerRadius(10)
+    }
+    
+    /// methods
+    func getTermViewWithWeb(term: Term) -> some View {
         var agreeOfTerm: some View {
+            NavigationLink {
+                TermWebView(type: .term)
+            } label: {
+                getTermRowLabel(term: term)
+            }
+            .accentColor(.black)
+        }
+        return agreeOfTerm
+    }
+
+    
+    func getTermViewWithoutWeb(term: Term) -> some View {
+        return getTermRowLabel(term: term)
+    }
+    
+    
+    func getTermRowLabel(term: Term) -> some View {
+        var label: some View {
             HStack(alignment: .firstTextBaseline, content: {
                 Button {
                     term.isAgree.toggle()
@@ -142,24 +176,7 @@ struct AgreeToTermsView: View {
                     .font(Font.system(size: 14))
             })
         }
-        return agreeOfTerm
-    }
-    
-    var bottomButton: some View {
-        NavigationLink {
-            SetNicknameView()
-        } label: {
-            Text("동의하고 시작하기")
-                .fontWeight(.bold)
-                .foregroundColor(Color.white)
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 10)
-        }
-        .navigationBarBackButtonHidden(true)
-        .background(isAllAgree
-                    ? Color(red: 252/255, green: 156/255, blue: 19/255)
-                    : Color(red: 217/255, green: 217/255, blue: 217/255))
-        .cornerRadius(10)
+        return label
     }
     
 }
