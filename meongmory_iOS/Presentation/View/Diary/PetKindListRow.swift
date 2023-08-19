@@ -33,6 +33,8 @@ struct PetKindListRow: View {
                 Image(animal.isSelected ? "animal_checkbox_select" : "animal_checkbox")
             }
 
+        }.onTapGesture {
+            animal.isSelected = true
         }
     }
 }
