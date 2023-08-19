@@ -21,11 +21,22 @@ struct FamilyMainView: View {
             /* if 반려동물은 등록돼 있는데 기록은 없을 경우 DiaryEmptyView 사용 */
             
             /* else (DiaryView에만 스크롤뷰 사용) */
-            ScrollView {
-                PetListView()
-                DiaryView()
-            }
+//            GeometryReader { geometry in
+                ScrollView {
+                    VStack(spacing: 0) {
+                        PetListView()
+                        // 광고 배너
+                        DiaryView()
+//                                              .frame(height: 1500)
+                                                .frame(maxHeight: .infinity)
+                        //                      .frame(maxWidth: .infinity)
+//                      .frame(minHeight: geometry.size.height)
+                    }
+                    //              .frame(maxHeight: .infinity)
+                }
+//            }
         }
+        .edgesIgnoringSafeArea(.bottom)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 HStack(spacing: 6) {

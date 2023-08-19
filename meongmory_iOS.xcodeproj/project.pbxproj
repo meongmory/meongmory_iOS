@@ -20,6 +20,8 @@
 		73600E0F2A80FBC600F9FE87 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73600E0E2A80FBC600F9FE87 /* LocationService.swift */; };
 		73D279482A813BF800B12C0C /* MapTypeLazyGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D279472A813BF800B12C0C /* MapTypeLazyGrid.swift */; };
 		73D2794A2A8154AD00B12C0C /* MapInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D279492A8154AD00B12C0C /* MapInfoView.swift */; };
+		9534FB9B2A90DD56001514E6 /* DiaryGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9534FB9A2A90DD56001514E6 /* DiaryGalleryView.swift */; };
+		9534FB9D2A90DD61001514E6 /* DiaryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9534FB9C2A90DD61001514E6 /* DiaryListView.swift */; };
 		95D2E8632A8776B60093D5D3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D2E8622A8776B60093D5D3 /* HomeView.swift */; };
 		95D2E8652A87FAF70093D5D3 /* FamilyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D2E8642A87FAF70093D5D3 /* FamilyListView.swift */; };
 		95D2E8672A892F9D0093D5D3 /* FamilyLazyHGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D2E8662A892F9D0093D5D3 /* FamilyLazyHGridCell.swift */; };
@@ -92,6 +94,8 @@
 		73D279492A8154AD00B12C0C /* MapInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInfoView.swift; sourceTree = "<group>"; };
 		7B8ED58B38D61D0D3FCD7005 /* Pods_meongmory_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meongmory_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8624801B1920F006821521FD /* Pods-meongmory_iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meongmory_iOSTests.release.xcconfig"; path = "Target Support Files/Pods-meongmory_iOSTests/Pods-meongmory_iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		9534FB9A2A90DD56001514E6 /* DiaryGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryGalleryView.swift; sourceTree = "<group>"; };
+		9534FB9C2A90DD61001514E6 /* DiaryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListView.swift; sourceTree = "<group>"; };
 		95D2E8622A8776B60093D5D3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		95D2E8642A87FAF70093D5D3 /* FamilyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyListView.swift; sourceTree = "<group>"; };
 		95D2E8662A892F9D0093D5D3 /* FamilyLazyHGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyLazyHGridCell.swift; sourceTree = "<group>"; };
@@ -322,6 +326,8 @@
 				95D2E87F2A8A75E50093D5D3 /* PetEmptyView.swift */,
 				95D2E8812A8A76690093D5D3 /* DiaryEmptyView.swift */,
 				95D2E8832A8A77C30093D5D3 /* DiaryView.swift */,
+				9534FB9A2A90DD56001514E6 /* DiaryGalleryView.swift */,
+				9534FB9C2A90DD61001514E6 /* DiaryListView.swift */,
 			);
 			path = Family;
 			sourceTree = "<group>";
@@ -630,6 +636,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2AC24C12A78C27E00D284A7 /* ValidatePhoneNumView.swift in Sources */,
+				9534FB9D2A90DD61001514E6 /* DiaryListView.swift in Sources */,
 				95D2E86B2A898AFC0093D5D3 /* BusinessView.swift in Sources */,
 				A2AC24BF2A78B84D00D284A7 /* LoginView.swift in Sources */,
 				95D2E8672A892F9D0093D5D3 /* FamilyLazyHGridCell.swift in Sources */,
@@ -652,6 +659,7 @@
 				731C3F892A5FB8B600A5277A /* ContentView.swift in Sources */,
 				A2AC24DB2A80D9F700D284A7 /* NoticeView.swift in Sources */,
 				95D2E8692A895CB30093D5D3 /* RecommendedView.swift in Sources */,
+				9534FB9B2A90DD56001514E6 /* DiaryGalleryView.swift in Sources */,
 				731C3F872A5FB8B600A5277A /* meongmory_iOSApp.swift in Sources */,
 				A2AC24DD2A80DA0000D284A7 /* ReportView.swift in Sources */,
 				A2A211CA2A8477740067D436 /* NoticeDetailView.swift in Sources */,
