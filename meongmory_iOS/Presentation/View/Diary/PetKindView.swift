@@ -12,9 +12,13 @@ struct PetKindView: View {
     @State var petKind: String = ""
     
     @State var petList: [Animal] = [
-        Animal(id: 1, animalName: "말티즈", animalType: "강아지", isSelected: false),
-        Animal(id: 2, animalName: "오드아이", animalType: "고양이", isSelected: false)
+        Animal(id: 1, animalName: "말티즈", animalType: "강아지"),
+        Animal(id: 2, animalName: "오드아이", animalType: "고양이")
     ]
+    @State var selectedId: Int = -1
+    
+    
+    
     
     var body: some View {
         VStack {
@@ -56,8 +60,8 @@ struct PetKindView: View {
                     .padding(.trailing, 10)
             }
             
-            List(petList) {
-                PetKindListRow(animal: $0)
+            List(petList) { pet in
+                PetKindListRow(animal: pet, selectedId: $selectedId)
             }
         }
     }
