@@ -7,6 +7,7 @@ target 'meongmory_iOS' do
 
   # Pods for meongmory_iOS
 	pod 'NMapsMap'
+    pod 'PagerTabStripView', '~> 4.0'
 
   target 'meongmory_iOSTests' do
     inherit! :search_paths

@@ -22,9 +22,8 @@ struct FamilyMainView: View {
             
             /* else (DiaryView에만 스크롤뷰 사용) */
             ScrollView {
-            // 반려동물 리스트 + 추가버튼
                 PetListView()
-            // 앨범형(default) or 목록형 (@namespace)
+                DiaryView()
             }
         }
         .toolbar {
