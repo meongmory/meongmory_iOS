@@ -15,7 +15,7 @@ struct DiaryGalleryView: View {
     ]
 
     var body: some View {
-//        ScrollView(.vertical) {
+        ScrollView(.vertical) {
             LazyVGrid(columns: gridItems, spacing: 2) {
                 ForEach(0..<25, id: \.self) { index in
                     Rectangle()
@@ -27,7 +27,7 @@ struct DiaryGalleryView: View {
             .padding(.top, 2)
             .padding(.horizontal, 16)
             .padding(.bottom, 40)
-//        }
+        }
     }
 }
 
