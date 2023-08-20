@@ -13,9 +13,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             TabView(selection: $selection, content: {
-
-                ChoiceAddDiaryView()    // TODO: 지도 view로 변경
-
+                MapView()
                     .onTapGesture { selection = 0 }
                     .tabItem {
                         (selection == 0) ? Image("map.fill") : Image("map")
