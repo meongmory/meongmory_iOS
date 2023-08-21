@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DiaryGalleryView: View {
-    let gridItems: [GridItem] = [
+    private let gridItems: [GridItem] = [
         GridItem(.flexible(), spacing: 2),
         GridItem(.flexible(), spacing: 2),
         GridItem(.flexible())

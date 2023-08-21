@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FamilyListView: View {
-    let rows = [GridItem(.fixed(100), spacing: 12)]
+    private let rows = [GridItem(.fixed(100), spacing: 12)]
     
     var body: some View {
         VStack(spacing: 0) {

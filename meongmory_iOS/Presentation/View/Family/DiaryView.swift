@@ -14,9 +14,7 @@ enum Page: Int, CaseIterable {
 }
 
 struct DiaryView: View {
-    @State var selection = Page.gallery
-//    @StateObject var galleryModel = ListModel()
-//    @StateObject var listModel = ListModel()
+    @State private var selection = Page.gallery
     
     var body: some View {
         PagerTabStripView(selection: $selection) {
@@ -35,7 +33,6 @@ struct DiaryView: View {
 
 struct DiaryTabBarItem<SelectionType>: View where SelectionType: Hashable {
     @EnvironmentObject private var pagerSettings: PagerSettings<SelectionType>
-    
     @Binding var selection: SelectionType
     var selectedImageName: String
     var defaultImageName: String

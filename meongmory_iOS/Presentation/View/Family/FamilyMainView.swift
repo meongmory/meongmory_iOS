@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct FamilyMainView: View {
+    // 선택된 반려동물 : PetListView, DiaryView, 여기서 모두 같은 걸 써야 함
+    // 반려동물 정보(idx or name)랑 Bool값 같이 갖고 있어야 할듯
+    // @State 말고 @StateObject 혹은 @EnvironmentObject 사용
+//    @State var isSelected: [Bool] = [false, false, false, false]
+    
     var body: some View {
         VStack(spacing: 0) {
             Divider()

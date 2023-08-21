@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct DiaryListViewRow: View {
-    var petList: [String]
-    var date: String
-    var numOfMedia: Int
+    private var petList: [String]
+    private var date: String
+    private var numOfMedia: Int
     
     // api 연결시 모델로 받아와서 init - 사진/동영상 리스트도 추가
     init(petList: [String], date: String, numOfMedia: Int) {

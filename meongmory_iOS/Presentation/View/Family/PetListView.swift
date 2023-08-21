@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct PetListView: View {
-    @State var isSelected: [Bool] = [false, false, false, false]
-    let rows = [GridItem(.fixed(70), spacing: 15)]
+    @State private var isSelected: [Bool] = [false, false, false, false]
+    private let rows = [GridItem(.fixed(70), spacing: 15)]
     
     var body: some View {
         VStack(spacing: 0) {
