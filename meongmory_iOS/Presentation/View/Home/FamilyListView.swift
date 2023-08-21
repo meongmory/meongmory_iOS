@@ -23,7 +23,7 @@ struct FamilyListView: View {
                     LazyHGrid(rows: rows) {
                         ForEach(0..<10, id: \.self) { cell in
                             NavigationLink {
-                                FamilyMainView()
+                                FamilyIntroView()
                             } label: {
                                 FamilyLazyHGridCell()
                             }

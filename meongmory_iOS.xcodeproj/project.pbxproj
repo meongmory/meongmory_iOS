@@ -23,6 +23,7 @@
 		9534FB9B2A90DD56001514E6 /* DiaryGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9534FB9A2A90DD56001514E6 /* DiaryGalleryView.swift */; };
 		9534FB9D2A90DD61001514E6 /* DiaryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9534FB9C2A90DD61001514E6 /* DiaryListView.swift */; };
 		9534FB9F2A932A41001514E6 /* DiaryListViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9534FB9E2A932A41001514E6 /* DiaryListViewRow.swift */; };
+		9534FBA62A93B027001514E6 /* FamilyIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9534FBA52A93B027001514E6 /* FamilyIntroView.swift */; };
 		95D2E8632A8776B60093D5D3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D2E8622A8776B60093D5D3 /* HomeView.swift */; };
 		95D2E8652A87FAF70093D5D3 /* FamilyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D2E8642A87FAF70093D5D3 /* FamilyListView.swift */; };
 		95D2E8672A892F9D0093D5D3 /* FamilyLazyHGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D2E8662A892F9D0093D5D3 /* FamilyLazyHGridCell.swift */; };
@@ -98,6 +99,7 @@
 		9534FB9A2A90DD56001514E6 /* DiaryGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryGalleryView.swift; sourceTree = "<group>"; };
 		9534FB9C2A90DD61001514E6 /* DiaryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListView.swift; sourceTree = "<group>"; };
 		9534FB9E2A932A41001514E6 /* DiaryListViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListViewRow.swift; sourceTree = "<group>"; };
+		9534FBA52A93B027001514E6 /* FamilyIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyIntroView.swift; sourceTree = "<group>"; };
 		95D2E8622A8776B60093D5D3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		95D2E8642A87FAF70093D5D3 /* FamilyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyListView.swift; sourceTree = "<group>"; };
 		95D2E8662A892F9D0093D5D3 /* FamilyLazyHGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyLazyHGridCell.swift; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 				95D2E8832A8A77C30093D5D3 /* DiaryView.swift */,
 				9534FB9A2A90DD56001514E6 /* DiaryGalleryView.swift */,
 				9534FB9C2A90DD61001514E6 /* DiaryListView.swift */,
+				9534FBA52A93B027001514E6 /* FamilyIntroView.swift */,
 			);
 			path = Family;
 			sourceTree = "<group>";
@@ -661,6 +664,7 @@
 				95D2E8702A8998D60093D5D3 /* FamilyMainView.swift in Sources */,
 				A2AC24DF2A80DA1400D284A7 /* TermWebView.swift in Sources */,
 				A2AC24E92A82631800D284A7 /* MypageMenuRow.swift in Sources */,
+				9534FBA62A93B027001514E6 /* FamilyIntroView.swift in Sources */,
 				A2AC24D32A80317E00D284A7 /* EditProfileView.swift in Sources */,
 				A2AC24E72A8262CF00D284A7 /* MypageMenuListView.swift in Sources */,
 				A2A211CC2A847A330067D436 /* NoticeRow.swift in Sources */,
