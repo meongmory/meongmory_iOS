@@ -18,6 +18,7 @@ struct DiaryListView: View {
                         DiaryListViewRow(petList: ["루비", "밍키", "옥수수"], date: "2023년 8월 21일", numOfMedia: 5)
                     }
                 }
+                .padding(.bottom, 60)
             }
         }
     }
