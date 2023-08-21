@@ -27,18 +27,6 @@ struct HomeView: View {
                 BusinessView()
             }
         }
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Image("main_text_icon")
-            }
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button(action: {
-                    // TODO: 알림 화면으로 이동
-                }, label: {
-                    Image("bell")
-                })
-            }
-        }
     }
 }
 

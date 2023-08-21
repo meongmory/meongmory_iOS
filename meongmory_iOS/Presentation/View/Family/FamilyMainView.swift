@@ -49,14 +49,13 @@ struct FamilyMainView: View {
             }
             
             /* 본인이 강아지네 가족에 해당될 경우에만 보임 */
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItemGroup(placement: .primaryAction) {
                 Button(action: {
                     // TODO: 강아지네 관리 화면으로 이동
                 }, label: {
                     Image("users")
                 })
-            }
-            ToolbarItem(placement: .navigationBarTrailing) {
+                
                 Button(action: {
                     // TODO: 기록 추가 화면으로 이동
                 }, label: {

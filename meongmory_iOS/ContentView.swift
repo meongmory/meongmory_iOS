@@ -25,6 +25,20 @@ struct ContentView: View {
                     .tabItem {
                         (selection == 1) ? Image("home.fill") : Image("home")
                     }
+                    .toolbar {
+                        if selection == 1 {
+                            ToolbarItem(placement: .navigationBarLeading) {
+                                Image("main_text_icon")
+                            }
+                            ToolbarItem(placement: .navigationBarTrailing) {
+                                Button(action: {
+                                    // TODO: 알림 화면으로 이동
+                                }, label: {
+                                    Image("bell")
+                                })
+                            }
+                        }
+                    }
                     .tag(1)
                 
                 MyPageView()
