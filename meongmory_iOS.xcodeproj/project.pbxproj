@@ -22,6 +22,7 @@
 		73D2794A2A8154AD00B12C0C /* MapInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D279492A8154AD00B12C0C /* MapInfoView.swift */; };
 		9534FB9B2A90DD56001514E6 /* DiaryGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9534FB9A2A90DD56001514E6 /* DiaryGalleryView.swift */; };
 		9534FB9D2A90DD61001514E6 /* DiaryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9534FB9C2A90DD61001514E6 /* DiaryListView.swift */; };
+		9534FB9F2A932A41001514E6 /* DiaryListViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9534FB9E2A932A41001514E6 /* DiaryListViewRow.swift */; };
 		95D2E8632A8776B60093D5D3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D2E8622A8776B60093D5D3 /* HomeView.swift */; };
 		95D2E8652A87FAF70093D5D3 /* FamilyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D2E8642A87FAF70093D5D3 /* FamilyListView.swift */; };
 		95D2E8672A892F9D0093D5D3 /* FamilyLazyHGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D2E8662A892F9D0093D5D3 /* FamilyLazyHGridCell.swift */; };
@@ -96,6 +97,7 @@
 		8624801B1920F006821521FD /* Pods-meongmory_iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meongmory_iOSTests.release.xcconfig"; path = "Target Support Files/Pods-meongmory_iOSTests/Pods-meongmory_iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		9534FB9A2A90DD56001514E6 /* DiaryGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryGalleryView.swift; sourceTree = "<group>"; };
 		9534FB9C2A90DD61001514E6 /* DiaryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListView.swift; sourceTree = "<group>"; };
+		9534FB9E2A932A41001514E6 /* DiaryListViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListViewRow.swift; sourceTree = "<group>"; };
 		95D2E8622A8776B60093D5D3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		95D2E8642A87FAF70093D5D3 /* FamilyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyListView.swift; sourceTree = "<group>"; };
 		95D2E8662A892F9D0093D5D3 /* FamilyLazyHGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyLazyHGridCell.swift; sourceTree = "<group>"; };
@@ -305,6 +307,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9534FBA02A932A4D001514E6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				95D2E87B2A8A74FE0093D5D3 /* PetLazyHGridCell.swift */,
+				9534FB9E2A932A41001514E6 /* DiaryListViewRow.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		95D2E8612A85F7DF0093D5D3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -320,8 +331,8 @@
 		95D2E86E2A89989E0093D5D3 /* Family */ = {
 			isa = PBXGroup;
 			children = (
+				9534FBA02A932A4D001514E6 /* Components */,
 				95D2E86F2A8998D60093D5D3 /* FamilyMainView.swift */,
-				95D2E87B2A8A74FE0093D5D3 /* PetLazyHGridCell.swift */,
 				95D2E8792A8A74EA0093D5D3 /* PetListView.swift */,
 				95D2E87F2A8A75E50093D5D3 /* PetEmptyView.swift */,
 				95D2E8812A8A76690093D5D3 /* DiaryEmptyView.swift */,
@@ -636,6 +647,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2AC24C12A78C27E00D284A7 /* ValidatePhoneNumView.swift in Sources */,
+				9534FB9F2A932A41001514E6 /* DiaryListViewRow.swift in Sources */,
 				9534FB9D2A90DD61001514E6 /* DiaryListView.swift in Sources */,
 				95D2E86B2A898AFC0093D5D3 /* BusinessView.swift in Sources */,
 				A2AC24BF2A78B84D00D284A7 /* LoginView.swift in Sources */,

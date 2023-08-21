@@ -8,7 +8,7 @@
 import SwiftUI
 import PagerTabStripView
 
-enum Page: String {
+enum Page: Int, CaseIterable {
     case gallery
     case list
 }

@@ -9,7 +9,17 @@ import SwiftUI
 
 struct DiaryListView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing: 0) {
+            Divider()
+                .padding(.top, 1)
+            ScrollView(.vertical) {
+                LazyVStack(spacing: 0) {
+                    ForEach(0..<10, id: \.self) { idx in
+                        DiaryListViewRow(petList: ["루비", "밍키", "옥수수"], date: "2023년 8월 21일", numOfMedia: 5)
+                    }
+                }
+            }
+        }
     }
 }
 
