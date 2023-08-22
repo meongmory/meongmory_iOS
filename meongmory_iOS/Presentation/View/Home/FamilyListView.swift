@@ -14,8 +14,7 @@ struct FamilyListView: View {
         VStack(spacing: 0) {
             VStack(alignment: .leading, spacing: 20) {
                 Text("강아지네")
-                    .font(Font.custom("AppleSDGothicNeoB00", size: 16))
-                    .fontWeight(.regular)
+                    .font(Font.system(size: 16, weight: .bold))
                     .foregroundColor(Color(red: 0.24, green: 0.16, blue: 0.04))
                     .padding(.top, 11)
                 

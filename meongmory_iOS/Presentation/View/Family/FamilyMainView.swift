@@ -37,7 +37,7 @@ struct FamilyMainView: View {
             ToolbarItem(placement: .navigationBarLeading) {
                 HStack(spacing: 6) {
                     Text("유상이네")
-                        .font(Font.custom("AppleSDGothicNeoB00", size: 18))
+                        .font(Font.system(size: 18, weight: .bold))
                         .foregroundColor(.black)
                     Button(action: {}, label: {
                         Image("chevron_down")
@@ -50,19 +50,18 @@ struct FamilyMainView: View {
             
             /* 본인이 강아지네 가족에 해당될 경우에만 보임 */
             ToolbarItemGroup(placement: .primaryAction) {
-                Button(action: {
+                NavigationLink {
                     // TODO: 강아지네 관리 화면으로 이동
-                }, label: {
+                } label: {
                     Image("users")
-                })
+                }
                 
-                Button(action: {
+                NavigationLink {
                     // TODO: 기록 추가 화면으로 이동
-                }, label: {
+                } label: {
                     Image("plus")
-                })
+                }
             }
-            /* -- */
         }
         .navigationBarBackButtonHidden(true)
     }

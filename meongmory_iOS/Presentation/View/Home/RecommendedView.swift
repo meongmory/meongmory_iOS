@@ -32,7 +32,7 @@ struct RecommendedView: View {
             VStack(alignment: .leading, spacing: 6) {
                 Text(title)
                     .frame(height: 20)
-                    .font(Font.custom("AppleSDGothicNeoB00", size: 11))
+                    .font(Font.system(size: 11, weight: .bold))
                     .foregroundColor(Color(red: 0.2, green: 0.2, blue: 0.2))
                     .padding(.top, 10)
                 
@@ -63,7 +63,7 @@ struct RecommendedView: View {
                         if date != nil {
                             Text(date!)
                                 .frame(height: 20)
-                                .font(Font.custom("AppleSDGothicNeoM00", size: 10))
+                                .font(Font.system(size: 10))
                                 .foregroundColor(.white)
                                 .padding(.top, 10)
                                 .padding(.trailing, 14)
@@ -71,7 +71,7 @@ struct RecommendedView: View {
                         Spacer()
                         Text(subtext)
                             .frame(height: 20)
-                            .font(Font.custom("AppleSDGothicNeoM00", size: 10))
+                            .font(Font.system(size: 10))
                             .foregroundColor(.white)
                             .padding(.bottom, 10)
                             .padding(.trailing, 14)

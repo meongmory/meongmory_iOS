@@ -22,40 +22,40 @@ struct DiaryListViewRow: View {
     var body: some View {
         VStack(spacing: 0) {
             VStack(spacing: 13) {
-                HStack(spacing: 0) {
-                    HStack(spacing: 8) {
-                        HStack(spacing: 0) {
-                            var petNames: Text {
-                                var petNames = ""
-                                for idx in petList.indices {
-                                    if idx == petList.count-1 {
-                                        petNames = petNames + petList[idx]
-                                    } else {
-                                        petNames = petNames + petList[idx] + ", "
+                NavigationLink {
+                    // TODO: 다이어리 기록 상세 화면으로 이동
+                } label: {
+                    HStack(spacing: 0) {
+                        HStack(spacing: 8) {
+                            HStack(spacing: 0) {
+                                var petNames: Text {
+                                    var petNames = ""
+                                    for idx in petList.indices {
+                                        if idx == petList.count-1 {
+                                            petNames = petNames + petList[idx]
+                                        } else {
+                                            petNames = petNames + petList[idx] + ", "
+                                        }
                                     }
+                                    return Text(petNames)
                                 }
-                                return Text(petNames)
+                                petNames
+                                    .font(Font.system(size: 13))
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.black)
+                                    .frame(height: 20)
                             }
-                            petNames
-                                .font(Font.system(size: 13))
-                                .fontWeight(.bold)
+                            Text("\(date)")
+                                .font(Font.system(size: 12))
+                                .fontWeight(.medium)
                                 .foregroundColor(.black)
                                 .frame(height: 20)
                         }
-                        Text("\(date)")
-                            .font(Font.system(size: 12))
-                            .fontWeight(.medium)
-                            .foregroundColor(.black)
-                            .frame(height: 20)
-                    }
-                    Spacer()
-                    Button(action: {
-                        // TODO: 다이어리 상세 화면으로 이동
-                    }, label: {
+                        Spacer()
                         Image("chevron_right")
-                    })
+                    }
+                    .padding(.trailing, 16)
                 }
-                .padding(.trailing, 16)
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     LazyHStack(alignment: .top) {

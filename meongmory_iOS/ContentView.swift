@@ -31,11 +31,11 @@ struct ContentView: View {
                                 Image("animory_home_logo")
                             }
                             ToolbarItem(placement: .navigationBarTrailing) {
-                                Button(action: {
+                                NavigationLink {
                                     // TODO: 알림 화면으로 이동
-                                }, label: {
+                                } label: {
                                     Image("bell")
-                                })
+                                }
                             }
                         }
                     }

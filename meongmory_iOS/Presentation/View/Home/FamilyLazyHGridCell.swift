@@ -28,16 +28,19 @@ struct FamilyLazyHGridCell: View {
                     .clipShape(Circle())
                 
                 Text("유상이네")
-                    .font(Font.custom("AppleSDGothicNeoB00", size: 14))
+                    .font(Font.system(size: 14, weight: .bold))
                     .multilineTextAlignment(.center)
                     .foregroundColor(.white)
+                    .frame(width: 80)
+                    .lineLimit(2)
             }
             
-            // 너무 길어지면 말줄임표 사용
             Text("루비, 밍키")
-              .font(Font.custom("AppleSDGothicNeoM00", size: 12))
+                .font(Font.system(size: 12))
               .multilineTextAlignment(.center)
               .foregroundColor(.black)
+              .frame(width: 100, height: 20)
+              .lineLimit(1)
         }
     }
 }

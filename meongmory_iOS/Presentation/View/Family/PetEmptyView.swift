@@ -71,16 +71,16 @@ struct PetEmptyView_Previews: PreviewProvider {
 struct PetAddButton: View {
     var body: some View {
         VStack(spacing: 11) {
-            Button(action: {
+            NavigationLink {
                 // TODO: 반려동물 추가 화면으로 이동
-            }, label: {
+            } label: {
                 Image("plus_gray")
                     .frame(width: 68, height: 68)
                     .overlay(
                         Circle()
                             .stroke(Color(red: 0.91, green: 0.91, blue: 0.91), lineWidth: 2)
                     )
-            })
+            }
             .frame(width: 70, height: 70)
             
             Text("펫 추가하기")
