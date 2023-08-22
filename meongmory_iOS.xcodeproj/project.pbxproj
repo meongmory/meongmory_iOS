@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D2A92F3993CD8F01D02BFAB /* Pods_meongmory_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F649211620FFB86E7785362 /* Pods_meongmory_iOSTests.framework */; };
+		0D89D9F0C7C35C5569CD06CF /* Pods_meongmory_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8ED58B38D61D0D3FCD7005 /* Pods_meongmory_iOSTests.framework */; };
+		39626A4B55173F1E0F6FDB37 /* Pods_meongmory_iOS_meongmory_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 710AE12BA7E994C279F3F674 /* Pods_meongmory_iOS_meongmory_iOSUITests.framework */; };
 		731C3F872A5FB8B600A5277A /* meongmory_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C3F862A5FB8B600A5277A /* meongmory_iOSApp.swift */; };
 		731C3F892A5FB8B600A5277A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C3F882A5FB8B600A5277A /* ContentView.swift */; };
 		731C3F8B2A5FB8B800A5277A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 731C3F8A2A5FB8B800A5277A /* Assets.xcassets */; };
@@ -19,11 +20,21 @@
 		73600E0F2A80FBC600F9FE87 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73600E0E2A80FBC600F9FE87 /* LocationService.swift */; };
 		73D279482A813BF800B12C0C /* MapTypeLazyGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D279472A813BF800B12C0C /* MapTypeLazyGrid.swift */; };
 		73D2794A2A8154AD00B12C0C /* MapInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D279492A8154AD00B12C0C /* MapInfoView.swift */; };
+		9534FB9B2A90DD56001514E6 /* DiaryGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9534FB9A2A90DD56001514E6 /* DiaryGalleryView.swift */; };
+		9534FB9D2A90DD61001514E6 /* DiaryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9534FB9C2A90DD61001514E6 /* DiaryListView.swift */; };
+		9534FB9F2A932A41001514E6 /* DiaryListViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9534FB9E2A932A41001514E6 /* DiaryListViewRow.swift */; };
+		9534FBA62A93B027001514E6 /* FamilyIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9534FBA52A93B027001514E6 /* FamilyIntroView.swift */; };
 		95D2E8632A8776B60093D5D3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D2E8622A8776B60093D5D3 /* HomeView.swift */; };
 		95D2E8652A87FAF70093D5D3 /* FamilyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D2E8642A87FAF70093D5D3 /* FamilyListView.swift */; };
 		95D2E8672A892F9D0093D5D3 /* FamilyLazyHGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D2E8662A892F9D0093D5D3 /* FamilyLazyHGridCell.swift */; };
 		95D2E8692A895CB30093D5D3 /* RecommendedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D2E8682A895CB30093D5D3 /* RecommendedView.swift */; };
 		95D2E86B2A898AFC0093D5D3 /* BusinessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D2E86A2A898AFC0093D5D3 /* BusinessView.swift */; };
+		95D2E8702A8998D60093D5D3 /* FamilyMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D2E86F2A8998D60093D5D3 /* FamilyMainView.swift */; };
+		95D2E87A2A8A74EA0093D5D3 /* PetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D2E8792A8A74EA0093D5D3 /* PetListView.swift */; };
+		95D2E87C2A8A74FE0093D5D3 /* PetLazyHGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D2E87B2A8A74FE0093D5D3 /* PetLazyHGridCell.swift */; };
+		95D2E8802A8A75E50093D5D3 /* PetEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D2E87F2A8A75E50093D5D3 /* PetEmptyView.swift */; };
+		95D2E8822A8A76690093D5D3 /* DiaryEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D2E8812A8A76690093D5D3 /* DiaryEmptyView.swift */; };
+		95D2E8842A8A77C30093D5D3 /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D2E8832A8A77C30093D5D3 /* DiaryView.swift */; };
 		A2A211C82A829C160067D436 /* iPages in Frameworks */ = {isa = PBXBuildFile; productRef = A2A211C72A829C160067D436 /* iPages */; };
 		A2A211CA2A8477740067D436 /* NoticeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A211C92A8477740067D436 /* NoticeDetailView.swift */; };
 		A2A211CC2A847A330067D436 /* NoticeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A211CB2A847A330067D436 /* NoticeRow.swift */; };
@@ -44,8 +55,7 @@
 		A2AC24E92A82631800D284A7 /* MypageMenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24E82A82631800D284A7 /* MypageMenuRow.swift */; };
 		A2AC24EB2A82637000D284A7 /* UserProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC24EA2A82637000D284A7 /* UserProfilView.swift */; };
 		A2AC250A2A828C5900D284A7 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC25092A828C5900D284A7 /* WebView.swift */; };
-		F8DB522163C3A3F4C1055372 /* Pods_meongmory_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835C9DEA75C1C25C867E1349 /* Pods_meongmory_iOS.framework */; };
-		FE43DE0BD065FF4097944E2F /* Pods_meongmory_iOS_meongmory_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86705927D952F7A98BCBEBA2 /* Pods_meongmory_iOS_meongmory_iOSUITests.framework */; };
+		E4146AC63468FB807DDA6761 /* Pods_meongmory_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6927785F4FCADF26B2EECA5D /* Pods_meongmory_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,9 +76,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1751BD90428D42FA35575791 /* Pods-meongmory_iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meongmory_iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-meongmory_iOSTests/Pods-meongmory_iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		1E371025C9495C6B0A566137 /* Pods-meongmory_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meongmory_iOS.debug.xcconfig"; path = "Target Support Files/Pods-meongmory_iOS/Pods-meongmory_iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		5F649211620FFB86E7785362 /* Pods_meongmory_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meongmory_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32135234C1CFD91DD390A316 /* Pods-meongmory_iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meongmory_iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-meongmory_iOSTests/Pods-meongmory_iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6927785F4FCADF26B2EECA5D /* Pods_meongmory_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meongmory_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		710AE12BA7E994C279F3F674 /* Pods_meongmory_iOS_meongmory_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meongmory_iOS_meongmory_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		731C3F832A5FB8B600A5277A /* meongmory_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = meongmory_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		731C3F862A5FB8B600A5277A /* meongmory_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meongmory_iOSApp.swift; sourceTree = "<group>"; };
 		731C3F882A5FB8B600A5277A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -84,15 +94,23 @@
 		73600E0E2A80FBC600F9FE87 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		73D279472A813BF800B12C0C /* MapTypeLazyGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTypeLazyGrid.swift; sourceTree = "<group>"; };
 		73D279492A8154AD00B12C0C /* MapInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInfoView.swift; sourceTree = "<group>"; };
-		835C9DEA75C1C25C867E1349 /* Pods_meongmory_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meongmory_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		86705927D952F7A98BCBEBA2 /* Pods_meongmory_iOS_meongmory_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meongmory_iOS_meongmory_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B8ED58B38D61D0D3FCD7005 /* Pods_meongmory_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meongmory_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8624801B1920F006821521FD /* Pods-meongmory_iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meongmory_iOSTests.release.xcconfig"; path = "Target Support Files/Pods-meongmory_iOSTests/Pods-meongmory_iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		9534FB9A2A90DD56001514E6 /* DiaryGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryGalleryView.swift; sourceTree = "<group>"; };
+		9534FB9C2A90DD61001514E6 /* DiaryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListView.swift; sourceTree = "<group>"; };
+		9534FB9E2A932A41001514E6 /* DiaryListViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryListViewRow.swift; sourceTree = "<group>"; };
+		9534FBA52A93B027001514E6 /* FamilyIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyIntroView.swift; sourceTree = "<group>"; };
 		95D2E8622A8776B60093D5D3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		95D2E8642A87FAF70093D5D3 /* FamilyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyListView.swift; sourceTree = "<group>"; };
 		95D2E8662A892F9D0093D5D3 /* FamilyLazyHGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyLazyHGridCell.swift; sourceTree = "<group>"; };
 		95D2E8682A895CB30093D5D3 /* RecommendedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedView.swift; sourceTree = "<group>"; };
 		95D2E86A2A898AFC0093D5D3 /* BusinessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessView.swift; sourceTree = "<group>"; };
-		9C2472582335E1C990D71690 /* Pods-meongmory_iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meongmory_iOSTests.release.xcconfig"; path = "Target Support Files/Pods-meongmory_iOSTests/Pods-meongmory_iOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		9E86AAB6E73640C35049F8A8 /* Pods-meongmory_iOS-meongmory_iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meongmory_iOS-meongmory_iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-meongmory_iOS-meongmory_iOSUITests/Pods-meongmory_iOS-meongmory_iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		95D2E86F2A8998D60093D5D3 /* FamilyMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMainView.swift; sourceTree = "<group>"; };
+		95D2E8792A8A74EA0093D5D3 /* PetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetListView.swift; sourceTree = "<group>"; };
+		95D2E87B2A8A74FE0093D5D3 /* PetLazyHGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetLazyHGridCell.swift; sourceTree = "<group>"; };
+		95D2E87F2A8A75E50093D5D3 /* PetEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetEmptyView.swift; sourceTree = "<group>"; };
+		95D2E8812A8A76690093D5D3 /* DiaryEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryEmptyView.swift; sourceTree = "<group>"; };
+		95D2E8832A8A77C30093D5D3 /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
 		A2A211C92A8477740067D436 /* NoticeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailView.swift; sourceTree = "<group>"; };
 		A2A211CB2A847A330067D436 /* NoticeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeRow.swift; sourceTree = "<group>"; };
 		A2AC24BE2A78B84D00D284A7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -112,9 +130,10 @@
 		A2AC24E82A82631800D284A7 /* MypageMenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageMenuRow.swift; sourceTree = "<group>"; };
 		A2AC24EA2A82637000D284A7 /* UserProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfilView.swift; sourceTree = "<group>"; };
 		A2AC25092A828C5900D284A7 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
-		B2652356D58A2D2C14FD0367 /* Pods-meongmory_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meongmory_iOS.release.xcconfig"; path = "Target Support Files/Pods-meongmory_iOS/Pods-meongmory_iOS.release.xcconfig"; sourceTree = "<group>"; };
-		C8DE388FA91D929CB32FA648 /* Pods-meongmory_iOS-meongmory_iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meongmory_iOS-meongmory_iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-meongmory_iOS-meongmory_iOSUITests/Pods-meongmory_iOS-meongmory_iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
-		D60A684CAA37723A0FF75B9D /* Pods-meongmory_iOS-meongmory_iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meongmory_iOS-meongmory_iOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-meongmory_iOS-meongmory_iOSUITests/Pods-meongmory_iOS-meongmory_iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B05E3865260A634F33965A20 /* Pods-meongmory_iOS-meongmory_iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meongmory_iOS-meongmory_iOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-meongmory_iOS-meongmory_iOSUITests/Pods-meongmory_iOS-meongmory_iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B836494C613AB16F76E0AC61 /* Pods-meongmory_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meongmory_iOS.debug.xcconfig"; path = "Target Support Files/Pods-meongmory_iOS/Pods-meongmory_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		D724F9ED424DD3A2A6B47622 /* Pods-meongmory_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meongmory_iOS.release.xcconfig"; path = "Target Support Files/Pods-meongmory_iOS/Pods-meongmory_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		ED5C9D62FA6CACD2686082CF /* Pods-meongmory_iOS-meongmory_iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meongmory_iOS-meongmory_iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-meongmory_iOS-meongmory_iOSUITests/Pods-meongmory_iOS-meongmory_iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2A211C82A829C160067D436 /* iPages in Frameworks */,
-				F8DB522163C3A3F4C1055372 /* Pods_meongmory_iOS.framework in Frameworks */,
+				E4146AC63468FB807DDA6761 /* Pods_meongmory_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,7 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D2A92F3993CD8F01D02BFAB /* Pods_meongmory_iOSTests.framework in Frameworks */,
+				0D89D9F0C7C35C5569CD06CF /* Pods_meongmory_iOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,23 +158,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE43DE0BD065FF4097944E2F /* Pods_meongmory_iOS_meongmory_iOSUITests.framework in Frameworks */,
+				39626A4B55173F1E0F6FDB37 /* Pods_meongmory_iOS_meongmory_iOSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		45E2BFDA6836D6AA9450FA24 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				835C9DEA75C1C25C867E1349 /* Pods_meongmory_iOS.framework */,
-				86705927D952F7A98BCBEBA2 /* Pods_meongmory_iOS_meongmory_iOSUITests.framework */,
-				5F649211620FFB86E7785362 /* Pods_meongmory_iOSTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		731C3F7A2A5FB8B600A5277A = {
 			isa = PBXGroup;
 			children = (
@@ -164,7 +173,7 @@
 				731C3FA02A5FB8B800A5277A /* meongmory_iOSUITests */,
 				731C3F842A5FB8B600A5277A /* Products */,
 				9326C0C919B79DC7467D8D0D /* Pods */,
-				45E2BFDA6836D6AA9450FA24 /* Frameworks */,
+				AC4632B91A21A043CEAB8E59 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -268,6 +277,7 @@
 		73600DF12A74ADAB00F9FE87 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				95D2E86E2A89989E0093D5D3 /* Family */,
 				95D2E8612A85F7DF0093D5D3 /* Home */,
 				A2AC24BD2A78B82000D284A7 /* Auth */,
 				73600E0A2A809A4300F9FE87 /* Map */,
@@ -289,14 +299,23 @@
 		9326C0C919B79DC7467D8D0D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1E371025C9495C6B0A566137 /* Pods-meongmory_iOS.debug.xcconfig */,
-				B2652356D58A2D2C14FD0367 /* Pods-meongmory_iOS.release.xcconfig */,
-				D60A684CAA37723A0FF75B9D /* Pods-meongmory_iOS-meongmory_iOSUITests.debug.xcconfig */,
-				C8DE388FA91D929CB32FA648 /* Pods-meongmory_iOS-meongmory_iOSUITests.release.xcconfig */,
-				1751BD90428D42FA35575791 /* Pods-meongmory_iOSTests.debug.xcconfig */,
-				9C2472582335E1C990D71690 /* Pods-meongmory_iOSTests.release.xcconfig */,
+				B836494C613AB16F76E0AC61 /* Pods-meongmory_iOS.debug.xcconfig */,
+				D724F9ED424DD3A2A6B47622 /* Pods-meongmory_iOS.release.xcconfig */,
+				B05E3865260A634F33965A20 /* Pods-meongmory_iOS-meongmory_iOSUITests.debug.xcconfig */,
+				ED5C9D62FA6CACD2686082CF /* Pods-meongmory_iOS-meongmory_iOSUITests.release.xcconfig */,
+				32135234C1CFD91DD390A316 /* Pods-meongmory_iOSTests.debug.xcconfig */,
+				8624801B1920F006821521FD /* Pods-meongmory_iOSTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9534FBA02A932A4D001514E6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				95D2E87B2A8A74FE0093D5D3 /* PetLazyHGridCell.swift */,
+				9534FB9E2A932A41001514E6 /* DiaryListViewRow.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		95D2E8612A85F7DF0093D5D3 /* Home */ = {
@@ -309,6 +328,22 @@
 				95D2E86A2A898AFC0093D5D3 /* BusinessView.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		95D2E86E2A89989E0093D5D3 /* Family */ = {
+			isa = PBXGroup;
+			children = (
+				9534FBA02A932A4D001514E6 /* Components */,
+				95D2E86F2A8998D60093D5D3 /* FamilyMainView.swift */,
+				95D2E8792A8A74EA0093D5D3 /* PetListView.swift */,
+				95D2E87F2A8A75E50093D5D3 /* PetEmptyView.swift */,
+				95D2E8812A8A76690093D5D3 /* DiaryEmptyView.swift */,
+				95D2E8832A8A77C30093D5D3 /* DiaryView.swift */,
+				9534FB9A2A90DD56001514E6 /* DiaryGalleryView.swift */,
+				9534FB9C2A90DD61001514E6 /* DiaryListView.swift */,
+				9534FBA52A93B027001514E6 /* FamilyIntroView.swift */,
+			);
+			path = Family;
 			sourceTree = "<group>";
 		};
 		A2AC24BD2A78B82000D284A7 /* Auth */ = {
@@ -360,6 +395,16 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		AC4632B91A21A043CEAB8E59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6927785F4FCADF26B2EECA5D /* Pods_meongmory_iOS.framework */,
+				710AE12BA7E994C279F3F674 /* Pods_meongmory_iOS_meongmory_iOSUITests.framework */,
+				7B8ED58B38D61D0D3FCD7005 /* Pods_meongmory_iOSTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -367,11 +412,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 731C3FA72A5FB8B800A5277A /* Build configuration list for PBXNativeTarget "meongmory_iOS" */;
 			buildPhases = (
-				34AE56B6079275B50C6BC9CF /* [CP] Check Pods Manifest.lock */,
+				475AC6586B3A87E1416286D7 /* [CP] Check Pods Manifest.lock */,
 				731C3F7F2A5FB8B600A5277A /* Sources */,
 				731C3F802A5FB8B600A5277A /* Frameworks */,
 				731C3F812A5FB8B600A5277A /* Resources */,
-				C5184BE32F29F113EF051B93 /* [CP] Embed Pods Frameworks */,
+				5E69BD9FFBA5E363F9292614 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -389,7 +434,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 731C3FAA2A5FB8B800A5277A /* Build configuration list for PBXNativeTarget "meongmory_iOSTests" */;
 			buildPhases = (
-				90C713F6AC20427A50B3A523 /* [CP] Check Pods Manifest.lock */,
+				549058B77D625020CB28D55B /* [CP] Check Pods Manifest.lock */,
 				731C3F8F2A5FB8B800A5277A /* Sources */,
 				731C3F902A5FB8B800A5277A /* Frameworks */,
 				731C3F912A5FB8B800A5277A /* Resources */,
@@ -408,11 +453,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 731C3FAD2A5FB8B800A5277A /* Build configuration list for PBXNativeTarget "meongmory_iOSUITests" */;
 			buildPhases = (
-				B9809860BBE9598F9D137788 /* [CP] Check Pods Manifest.lock */,
+				E66C0E20DF01EFDBB3164D1D /* [CP] Check Pods Manifest.lock */,
 				731C3F992A5FB8B800A5277A /* Sources */,
 				731C3F9A2A5FB8B800A5277A /* Frameworks */,
 				731C3F9B2A5FB8B800A5277A /* Resources */,
-				D29887583FD3204D5C2D175C /* [CP] Embed Pods Frameworks */,
+				907FFF27307437FED5D90A60 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -497,7 +542,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		34AE56B6079275B50C6BC9CF /* [CP] Check Pods Manifest.lock */ = {
+		475AC6586B3A87E1416286D7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -519,7 +564,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		90C713F6AC20427A50B3A523 /* [CP] Check Pods Manifest.lock */ = {
+		549058B77D625020CB28D55B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -541,7 +586,41 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B9809860BBE9598F9D137788 /* [CP] Check Pods Manifest.lock */ = {
+		5E69BD9FFBA5E363F9292614 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-meongmory_iOS/Pods-meongmory_iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-meongmory_iOS/Pods-meongmory_iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-meongmory_iOS/Pods-meongmory_iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		907FFF27307437FED5D90A60 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-meongmory_iOS-meongmory_iOSUITests/Pods-meongmory_iOS-meongmory_iOSUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-meongmory_iOS-meongmory_iOSUITests/Pods-meongmory_iOS-meongmory_iOSUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-meongmory_iOS-meongmory_iOSUITests/Pods-meongmory_iOS-meongmory_iOSUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E66C0E20DF01EFDBB3164D1D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -563,40 +642,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C5184BE32F29F113EF051B93 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-meongmory_iOS/Pods-meongmory_iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-meongmory_iOS/Pods-meongmory_iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-meongmory_iOS/Pods-meongmory_iOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D29887583FD3204D5C2D175C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-meongmory_iOS-meongmory_iOSUITests/Pods-meongmory_iOS-meongmory_iOSUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-meongmory_iOS-meongmory_iOSUITests/Pods-meongmory_iOS-meongmory_iOSUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-meongmory_iOS-meongmory_iOSUITests/Pods-meongmory_iOS-meongmory_iOSUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -605,16 +650,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2AC24C12A78C27E00D284A7 /* ValidatePhoneNumView.swift in Sources */,
+				9534FB9F2A932A41001514E6 /* DiaryListViewRow.swift in Sources */,
+				9534FB9D2A90DD61001514E6 /* DiaryListView.swift in Sources */,
 				95D2E86B2A898AFC0093D5D3 /* BusinessView.swift in Sources */,
 				A2AC24BF2A78B84D00D284A7 /* LoginView.swift in Sources */,
 				95D2E8672A892F9D0093D5D3 /* FamilyLazyHGridCell.swift in Sources */,
+				95D2E87C2A8A74FE0093D5D3 /* PetLazyHGridCell.swift in Sources */,
 				A2AC24C72A7CD11D00D284A7 /* OnBoardingView.swift in Sources */,
 				95D2E8632A8776B60093D5D3 /* HomeView.swift in Sources */,
 				A2AC24C32A7CCBBF00D284A7 /* AgreeToTermsView.swift in Sources */,
 				A2AC24C52A7CCFD800D284A7 /* SetNicknameView.swift in Sources */,
 				A2AC24D92A80D99100D284A7 /* EMenuDetail.swift in Sources */,
+				95D2E8702A8998D60093D5D3 /* FamilyMainView.swift in Sources */,
 				A2AC24DF2A80DA1400D284A7 /* TermWebView.swift in Sources */,
 				A2AC24E92A82631800D284A7 /* MypageMenuRow.swift in Sources */,
+				9534FBA62A93B027001514E6 /* FamilyIntroView.swift in Sources */,
 				A2AC24D32A80317E00D284A7 /* EditProfileView.swift in Sources */,
 				A2AC24E72A8262CF00D284A7 /* MypageMenuListView.swift in Sources */,
 				A2A211CC2A847A330067D436 /* NoticeRow.swift in Sources */,
@@ -625,15 +675,20 @@
 				731C3F892A5FB8B600A5277A /* ContentView.swift in Sources */,
 				A2AC24DB2A80D9F700D284A7 /* NoticeView.swift in Sources */,
 				95D2E8692A895CB30093D5D3 /* RecommendedView.swift in Sources */,
+				9534FB9B2A90DD56001514E6 /* DiaryGalleryView.swift in Sources */,
 				731C3F872A5FB8B600A5277A /* meongmory_iOSApp.swift in Sources */,
 				A2AC24DD2A80DA0000D284A7 /* ReportView.swift in Sources */,
 				A2A211CA2A8477740067D436 /* NoticeDetailView.swift in Sources */,
+				95D2E8822A8A76690093D5D3 /* DiaryEmptyView.swift in Sources */,
 				A2AC24D12A80316F00D284A7 /* SetNotificationView.swift in Sources */,
+				95D2E8842A8A77C30093D5D3 /* DiaryView.swift in Sources */,
 				A2AC24EB2A82637000D284A7 /* UserProfilView.swift in Sources */,
 				A2AC24CD2A801B1600D284A7 /* MyPageView.swift in Sources */,
 				95D2E8652A87FAF70093D5D3 /* FamilyListView.swift in Sources */,
+				95D2E8802A8A75E50093D5D3 /* PetEmptyView.swift in Sources */,
 				A2AC24D52A80327D00D284A7 /* ProVersionView.swift in Sources */,
 				A2AC250A2A828C5900D284A7 /* WebView.swift in Sources */,
+				95D2E87A2A8A74EA0093D5D3 /* PetListView.swift in Sources */,
 				73D2794A2A8154AD00B12C0C /* MapInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -787,7 +842,7 @@
 		};
 		731C3FA82A5FB8B800A5277A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E371025C9495C6B0A566137 /* Pods-meongmory_iOS.debug.xcconfig */;
+			baseConfigurationReference = B836494C613AB16F76E0AC61 /* Pods-meongmory_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -809,7 +864,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -825,7 +880,7 @@
 		};
 		731C3FA92A5FB8B800A5277A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2652356D58A2D2C14FD0367 /* Pods-meongmory_iOS.release.xcconfig */;
+			baseConfigurationReference = D724F9ED424DD3A2A6B47622 /* Pods-meongmory_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -845,7 +900,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -861,7 +916,7 @@
 		};
 		731C3FAB2A5FB8B800A5277A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1751BD90428D42FA35575791 /* Pods-meongmory_iOSTests.debug.xcconfig */;
+			baseConfigurationReference = 32135234C1CFD91DD390A316 /* Pods-meongmory_iOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -882,7 +937,7 @@
 		};
 		731C3FAC2A5FB8B800A5277A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C2472582335E1C990D71690 /* Pods-meongmory_iOSTests.release.xcconfig */;
+			baseConfigurationReference = 8624801B1920F006821521FD /* Pods-meongmory_iOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -903,7 +958,7 @@
 		};
 		731C3FAE2A5FB8B800A5277A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D60A684CAA37723A0FF75B9D /* Pods-meongmory_iOS-meongmory_iOSUITests.debug.xcconfig */;
+			baseConfigurationReference = B05E3865260A634F33965A20 /* Pods-meongmory_iOS-meongmory_iOSUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -922,7 +977,7 @@
 		};
 		731C3FAF2A5FB8B800A5277A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8DE388FA91D929CB32FA648 /* Pods-meongmory_iOS-meongmory_iOSUITests.release.xcconfig */;
+			baseConfigurationReference = ED5C9D62FA6CACD2686082CF /* Pods-meongmory_iOS-meongmory_iOSUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
