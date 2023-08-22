@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "main_text_icon.png",
+      "filename" : "animory_home_logo.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "main_text_icon@2x.png",
+      "filename" : "animory_home_logo@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "main_text_icon@3x.png",
+      "filename" : "animory_home_logo@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -28,7 +28,7 @@ struct ContentView: View {
                     .toolbar {
                         if selection == 1 {
                             ToolbarItem(placement: .navigationBarLeading) {
-                                Image("main_text_icon")
+                                Image("animory_home_logo")
                             }
                             ToolbarItem(placement: .navigationBarTrailing) {
                                 Button(action: {
