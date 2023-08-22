@@ -19,28 +19,12 @@ struct HomeView: View {
     }
     
     var body: some View {
-        NavigationView {
-            VStack(spacing: 0) {
-                Divider()
-                ScrollView(.vertical) {
-                    FamilyListView()
-                    RecommendedView()
-                    BusinessView()
-                }
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: {}, label: {
-                        Image("main_text_icon")
-                    })
-                }
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        // TODO: 알림 화면으로 이동
-                    }, label: {
-                        Image("bell")
-                    })
-                }
+        VStack(spacing: 0) {
+            Divider()
+            ScrollView(.vertical) {
+                FamilyListView()
+                RecommendedView()
+                BusinessView()
             }
         }
     }

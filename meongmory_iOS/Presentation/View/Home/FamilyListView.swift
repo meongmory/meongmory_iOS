@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FamilyListView: View {
-    let rows = [GridItem(.fixed(100), spacing: 12)]
+    private let rows = [GridItem(.fixed(100), spacing: 12)]
     
     var body: some View {
         VStack(spacing: 0) {
@@ -22,7 +22,11 @@ struct FamilyListView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     LazyHGrid(rows: rows) {
                         ForEach(0..<10, id: \.self) { cell in
-                            FamilyLazyHGridCell()
+                            NavigationLink {
+                                FamilyIntroView()
+                            } label: {
+                                FamilyLazyHGridCell()
+                            }
                         }
                     }
                     .padding(.trailing, 16)
