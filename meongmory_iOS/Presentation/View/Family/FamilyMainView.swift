@@ -57,7 +57,7 @@ struct FamilyMainView: View {
                 }
                 
                 NavigationLink {
-                    // TODO: 기록 추가 화면으로 이동
+                    AddRecordView()
                 } label: {
                     Image("plus")
                 }
