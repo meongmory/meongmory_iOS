@@ -17,10 +17,16 @@ struct Pet: Codable {
 struct AddRecordView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State private var petIsSelected = false
+    @State private var titleIsWritten = false
+    @State private var imageIsAdded = false
+    @State private var contentIsWritten = false
     // 서버 연동할 때 petList.count만큼 동적으로 init하는 걸로 바꾸기
     @State private var petSelectionList: [Bool] = [false, false, false, false, false]
+    @State private var title: String = ""
+    @State private var content: String = ""
     // 더미데이터
     private var petList: [Pet] = [Pet(type: "dog", name: "루비", age: 14), Pet(type: "dog", name: "밍키", age: 10), Pet(type: "dog", name: "옥수수", age: 8), Pet(type: "cat", name: "냥이", age: 3), Pet(type: "dog", name: "멍멍이", age: 1)]
+    @State private var imageList: [Image] = []
     
     var body: some View {
         VStack(spacing: 0) {
@@ -37,8 +43,8 @@ struct AddRecordView: View {
                     // pet이 2마리 이상일 경우에만. 1마리면 X
                     Text("(중복 선택 가능)")
                         .font(Font.system(size: 12, weight: .medium))
-                      .foregroundColor(Color(red: 0.63, green: 0.63, blue: 0.63).opacity(0.9))
-                      .frame(height: 20)
+                        .foregroundColor(Color(red: 0.63, green: 0.63, blue: 0.63).opacity(0.9))
+                        .frame(height: 20)
                     
                     // Pet List
                     ScrollView(.horizontal, showsIndicators: false) {
@@ -58,7 +64,7 @@ struct AddRecordView: View {
                                         )
                                         .background(Color(red: 0.98, green: 0.98, blue: 0.98))
                                         .clipShape(Circle())
-                                
+                                    
                                     VStack(spacing: -5) {
                                         Text(petList[index].name)
                                             .font(Font.system(size: 13, weight: .semibold))
@@ -87,10 +93,128 @@ struct AddRecordView: View {
                     }
                     .padding(.top, 16)
                     
-                    Text("제목")
-                        .padding(.top, 23)
+                    HStack(spacing: 4) {
+                        Text("제목")
+                            .font(Font.system(size: 13, weight: .bold))
+                            .foregroundColor(Color(red: 0.27, green: 0.27, blue: 0.27))
+                            .frame(height: 20)
+                        Image(titleIsWritten ? "check_circle_brown" : "check_circle_gray")
+                    }
+                    .padding(.top, 23)
+                    
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(.clear)
+                            .frame(height: 40)
+                            .background(Color(red: 0.98, green: 0.98, blue: 0.98))
+                            .cornerRadius(10)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .inset(by: 0.5)
+                                    .stroke(titleIsWritten ? Color(red: 0.75, green: 0.72, blue: 0.68) : Color(red: 0.91, green: 0.91, blue: 0.91), lineWidth: 1)
+                            )
+                        TextField("", text: $title, prompt: Text("제목을 입력해주세요").foregroundColor(Color(red: 0.45, green: 0.45, blue: 0.45)))
+                            .font(Font.system(size: 12))
+                            .foregroundColor(Color.black)
+                            .frame(height: 20)
+                            .padding(.horizontal, 11)
+                            .submitLabel(.done)
+                            .onChange(of: title) { _ in
+                                if title.isEmpty {
+                                    titleIsWritten = false
+                                } else {
+                                    titleIsWritten = true
+                                }
+                            }
+                    }
+                    .padding(.top, 12)
+                    .padding(.trailing, 16)
+                    
+                    HStack(spacing: 4) {
+                        Text("반려동물 사진 추가하기")
+                            .font(Font.system(size: 13, weight: .bold))
+                            .foregroundColor(Color(red: 0.27, green: 0.27, blue: 0.27))
+                            .frame(height: 20)
+                        Image(imageIsAdded ? "check_circle_brown" : "check_circle_gray")
+                    }
+                    .padding(.top, 23)
+                    .padding(.bottom, 12)
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 11) {
+                            ZStack {
+                                Rectangle()
+                                    .foregroundColor(.clear)
+                                    .frame(width: 105, height: 105)
+                                    .background(Color(red: 0.98, green: 0.98, blue: 0.98))
+                                    .cornerRadius(10)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 10)
+                                            .inset(by: 1)
+                                            .stroke(Color(red: 0.91, green: 0.91, blue: 0.91), lineWidth: 2)
+                                    )
+                                VStack(spacing: 6) {
+                                    Image("big_plus_gray")
+                                    Text("사진/동영상 추가")
+                                        .font(Font.system(size: 11, weight: .bold))
+                                        .multilineTextAlignment(.center)
+                                        .foregroundColor(Color(red: 0.45, green: 0.45, blue: 0.45))
+                                        .frame(height: 20)
+                                }
+                                .padding(.top, 29)
+                                .padding(.bottom, 18)
+                            }
+                            .onTapGesture {
+                                // TODO: 앨범으로 이동
+                            }
+                            
+                            // Photo&Video List
+                            LazyHStack(spacing: 11) {
+                                ForEach(imageList.indices, id: \.self) { index in
+                                    Rectangle()
+                                        .foregroundColor(.clear)
+                                        .background(
+                                            // 앨범에서 갖고올 때 어떤 이미지로 갖고 오는지...
+//                                            Image(imageList[index])
+//                                                .resizable()
+//                                                .aspectRatio(contentMode: .fill)
+//                                                .frame(width: 105, height: 105)
+//                                                .clipped()
+                                        )
+                                        .frame(width: 105, height: 105)
+                                        .cornerRadius(10)
+                                }
+                            }
+                            .padding(.trailing, 16)
+                        }
+                    }
+                    
+                    HStack(spacing: 4) {
+                        Text("반려동물과의 추억 기록하기")
+                            .font(Font.system(size: 13, weight: .bold))
+                            .foregroundColor(Color(red: 0.27, green: 0.27, blue: 0.27))
+                            .frame(height: 20)
+                        Image(contentIsWritten ? "check_circle_brown" : "check_circle_gray")
+                    }
+                    .padding(.top, 23)
+                    .padding(.bottom, 12)
+                    
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(.clear)
+                            .frame(height: 141)
+                            .background(Color(red: 0.98, green: 0.98, blue: 0.98))
+                            .cornerRadius(10)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .inset(by: 0.5)
+                                    .stroke(contentIsWritten ? Color(red: 0.75, green: 0.72, blue: 0.68) : Color(red: 0.91, green: 0.91, blue: 0.91), lineWidth: 1)
+                            )
+                            .padding(.trailing, 16)
+                        
+                        
+                    }
                 }
-                Spacer()
             }
             .padding(.top, 25)
             .padding(.leading, 16)
