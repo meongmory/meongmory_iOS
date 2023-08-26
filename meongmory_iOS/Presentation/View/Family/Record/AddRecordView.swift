@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 // API 연동할 때 파일 다 옮기기
 struct Pet: Codable {
@@ -33,7 +34,8 @@ struct AddRecordView: View {
     // 서버 연동할 때 petList.count만큼 동적으로 init하는 걸로 바꾸기
     @State private var petSelectionList: [Bool] = [false, false, false, false, false]
     @State private var title: String = ""
-    @State private var imageList: [Image] = []
+    @State private var selectedItems: [PhotosPickerItem] = []
+    @State private var selectedPhotosData: [Data] = []
     @State private var content: String = ""
     @State private var selectedShareScope: RecordSharingScope = .none
     // 더미데이터
@@ -164,48 +166,60 @@ struct AddRecordView: View {
                             
                             ScrollView(.horizontal, showsIndicators: false) {
                                 HStack(spacing: 11) {
-                                    ZStack {
-                                        Rectangle()
-                                            .foregroundColor(.clear)
-                                            .frame(width: 105, height: 105)
-                                            .background(Color(red: 0.98, green: 0.98, blue: 0.98))
-                                            .cornerRadius(10)
-                                            .overlay(
-                                                RoundedRectangle(cornerRadius: 10)
-                                                    .inset(by: 1)
-                                                    .stroke(Color(red: 0.91, green: 0.91, blue: 0.91), lineWidth: 2)
-                                            )
-                                        VStack(spacing: 6) {
-                                            Image("big_plus_gray")
-                                            Text("사진/동영상 추가")
-                                                .font(Font.system(size: 11, weight: .bold))
-                                                .multilineTextAlignment(.center)
-                                                .foregroundColor(Color(red: 0.45, green: 0.45, blue: 0.45))
-                                                .frame(height: 20)
+                                    PhotosPicker(selection: $selectedItems, maxSelectionCount: 5, matching: .any(of: [.images, .videos])) {
+                                        ZStack {
+                                            Rectangle()
+                                                .foregroundColor(.clear)
+                                                .frame(width: 105, height: 105)
+                                                .background(Color(red: 0.98, green: 0.98, blue: 0.98))
+                                                .cornerRadius(10)
+                                                .overlay(
+                                                    RoundedRectangle(cornerRadius: 10)
+                                                        .inset(by: 1)
+                                                        .stroke(Color(red: 0.91, green: 0.91, blue: 0.91), lineWidth: 2)
+                                                )
+                                            VStack(spacing: 6) {
+                                                Image("big_plus_gray")
+                                                Text("사진/동영상 추가")
+                                                    .font(Font.system(size: 11, weight: .bold))
+                                                    .multilineTextAlignment(.center)
+                                                    .foregroundColor(Color(red: 0.45, green: 0.45, blue: 0.45))
+                                                    .frame(height: 20)
+                                            }
+                                            .padding(.top, 29)
+                                            .padding(.bottom, 18)
                                         }
-                                        .padding(.top, 29)
-                                        .padding(.bottom, 18)
+//                                        .onTapGesture {
+//                                            checkIfAllDone()
+//                                        }
                                     }
-                                    .onTapGesture {
-                                        // TODO: 앨범으로 이동
-                                        checkIfAllDone()
+                                    .onChange(of: selectedItems) { newItems in
+                                        selectedPhotosData.removeAll()
+                                        for newItem in newItems {
+                                            Task {
+                                                if let data = try? await newItem.loadTransferable(type: Data.self) {
+                                                    selectedPhotosData.append(data)
+                                                }
+                                            }
+                                        }
                                     }
                                     
                                     // Photo&Video List
                                     LazyHStack(spacing: 11) {
-                                        ForEach(imageList.indices, id: \.self) { index in
-                                            Rectangle()
-                                                .foregroundColor(.clear)
-                                                .background(
-                                                    // 앨범에서 갖고올 때 어떻게 갖고 오는지 확인
-//                                                    Image(imageList[index])
-//                                                        .resizable()
-//                                                        .aspectRatio(contentMode: .fill)
-//                                                        .frame(width: 105, height: 105)
-//                                                        .clipped()
-                                                )
-                                                .frame(width: 105, height: 105)
-                                                .cornerRadius(10)
+                                        ForEach(selectedPhotosData, id: \.self) { photoData in
+                                            if let image = UIImage(data: photoData) {
+                                                Rectangle()
+                                                    .foregroundColor(.clear)
+                                                    .background(
+                                                        Image(uiImage: image)
+                                                            .resizable()
+                                                            .aspectRatio(contentMode: .fill)
+                                                            .frame(width: 105, height: 105)
+                                                            .clipped()
+                                                    )
+                                                    .frame(width: 105, height: 105)
+                                                    .cornerRadius(10)
+                                            }
                                         }
                                     }
                                     .padding(.trailing, 16)

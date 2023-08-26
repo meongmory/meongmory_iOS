@@ -11,7 +11,7 @@ struct ContentView: View {
     @State private var selection = 1;
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             TabView(selection: $selection, content: {
                 MapView()
                     .onTapGesture { selection = 0 }
