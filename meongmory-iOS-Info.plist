@@ -2,12 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>KAKAO_APP_KEY</key>
+	<string>e9d52c8f1e2088422911f72412a2686c</string>
+	<key>NMFClientId</key>
+	<string>zong4eaxmw</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-	<key>NMFClientId</key>
-	<string>zong4eaxmw</string>
 </dict>
 </plist>
