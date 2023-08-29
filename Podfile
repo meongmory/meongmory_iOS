@@ -6,8 +6,9 @@ target 'meongmory_iOS' do
   use_frameworks!
 
   # Pods for meongmory_iOS
-	pod 'NMapsMap'
-    pod 'PagerTabStripView', '~> 4.0'
+  pod 'NMapsMap'
+  pod 'PagerTabStripView', '~> 4.0'
+  pod 'ExyteMediaPicker'
 
   target 'meongmory_iOSTests' do
     inherit! :search_paths

@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import PhotosUI
+import ExyteMediaPicker
 
 // API 연동할 때 파일 다 옮기기
 struct Pet: Codable {
@@ -27,17 +27,19 @@ struct AddRecordView: View {
     private var isProVersion = false
     @State private var petIsSelected = false
     @State private var titleIsWritten = false
-    @State private var imageIsAdded = false
+    @State private var imagesAreAdded = false
     @State private var contentIsWritten = false
     @State private var sharingScopeIsSelected = false
     @State private var allDone = false
     // 서버 연동할 때 petList.count만큼 동적으로 init하는 걸로 바꾸기
     @State private var petSelectionList: [Bool] = [false, false, false, false, false]
     @State private var title: String = ""
-    @State private var selectedItems: [PhotosPickerItem] = []
-    @State private var selectedPhotosData: [Data] = []
+    @State private var selectedMedias: [Media] = []
+    @State private var totalMedias: [Media] = []
     @State private var content: String = ""
     @State private var selectedShareScope: RecordSharingScope = .none
+    @State private var showMediaPicker: Bool = false
+    let maxCount: Int = 5
     // 더미데이터
     private var petList: [Pet] = [Pet(type: "dog", name: "루비", age: 14), Pet(type: "dog", name: "밍키", age: 10), Pet(type: "dog", name: "옥수수", age: 8), Pet(type: "cat", name: "냥이", age: 3), Pet(type: "dog", name: "멍멍이", age: 1)]
     
@@ -159,67 +161,79 @@ struct AddRecordView: View {
                                     .font(Font.system(size: 13, weight: .bold))
                                     .foregroundColor(Color(red: 0.27, green: 0.27, blue: 0.27))
                                     .frame(height: 20)
-                                Image(imageIsAdded ? "check_circle_brown" : "check_circle_gray")
+                                Image(imagesAreAdded ? "check_circle_brown" : "check_circle_gray")
                             }
                             .padding(.top, 23)
                             .padding(.bottom, 12)
                             
                             ScrollView(.horizontal, showsIndicators: false) {
                                 HStack(spacing: 11) {
-                                    PhotosPicker(selection: $selectedItems, maxSelectionCount: 5, matching: .any(of: [.images, .videos])) {
-                                        ZStack {
-                                            Rectangle()
-                                                .foregroundColor(.clear)
-                                                .frame(width: 105, height: 105)
-                                                .background(Color(red: 0.98, green: 0.98, blue: 0.98))
-                                                .cornerRadius(10)
-                                                .overlay(
-                                                    RoundedRectangle(cornerRadius: 10)
-                                                        .inset(by: 1)
-                                                        .stroke(Color(red: 0.91, green: 0.91, blue: 0.91), lineWidth: 2)
-                                                )
-                                            VStack(spacing: 6) {
-                                                Image("big_plus_gray")
-                                                Text("사진/동영상 추가")
-                                                    .font(Font.system(size: 11, weight: .bold))
-                                                    .multilineTextAlignment(.center)
-                                                    .foregroundColor(Color(red: 0.45, green: 0.45, blue: 0.45))
-                                                    .frame(height: 20)
-                                            }
-                                            .padding(.top, 29)
-                                            .padding(.bottom, 18)
+                                    ZStack {
+                                        Rectangle()
+                                            .foregroundColor(.clear)
+                                            .frame(width: 105, height: 105)
+                                            .background(Color(red: 0.98, green: 0.98, blue: 0.98))
+                                            .cornerRadius(10)
+                                            .overlay(
+                                                RoundedRectangle(cornerRadius: 10)
+                                                    .inset(by: 1)
+                                                    .stroke(Color(red: 0.91, green: 0.91, blue: 0.91), lineWidth: 2)
+                                            )
+                                        VStack(spacing: 6) {
+                                            Image("big_plus_gray")
+                                            Text("사진/동영상 추가")
+                                                .font(Font.system(size: 11, weight: .bold))
+                                                .multilineTextAlignment(.center)
+                                                .foregroundColor(Color(red: 0.45, green: 0.45, blue: 0.45))
+                                                .frame(height: 20)
                                         }
-//                                        .onTapGesture {
-//                                            checkIfAllDone()
-//                                        }
+                                        .padding(.top, 29)
+                                        .padding(.bottom, 18)
                                     }
-                                    .onChange(of: selectedItems) { newItems in
-                                        selectedPhotosData.removeAll()
-                                        for newItem in newItems {
-                                            Task {
-                                                if let data = try? await newItem.loadTransferable(type: Data.self) {
-                                                    selectedPhotosData.append(data)
+                                    .onTapGesture {
+                                        showMediaPicker = true
+                                    }
+                                    .fullScreenCover(isPresented: $showMediaPicker) {
+                                        MediaPicker(
+                                            isPresented: $showMediaPicker,
+                                            onChange: { selectedMedias = $0 },
+                                            albumSelectionBuilder: { _, albumSelectionView, isInFullscreen in
+                                                VStack {
+                                                    headerView
+                                                    albumSelectionView
+                                                        .padding(.top, isInFullscreen ? 10 : 0)
+                                                        .background(isInFullscreen ? Color.black : nil)
+                                                    Spacer()
+                                                    Divider()
+                                                    footerView
                                                 }
+                                                .background(Color.white)
                                             }
-                                        }
+                                        )
+                                        .mediaSelectionType(.photoAndVideo)
+                                        .mediaSelectionStyle(.count)
+                                        .mediaSelectionLimit(maxCount-totalMedias.count)
+                                        .mediaPickerTheme(
+                                            main: .init(
+                                                albumSelectionBackground: .white,
+                                                fullscreenPhotoBackground: .black
+                                            ),
+                                            selection: .init(
+                                                emptyTint: .white,
+                                                emptyBackground: .black.opacity(0.25),
+                                                selectedTint: Color.accentColor,
+                                                fullscreenTint: .white
+                                            )
+                                        )
                                     }
                                     
                                     // Photo&Video List
                                     LazyHStack(spacing: 11) {
-                                        ForEach(selectedPhotosData, id: \.self) { photoData in
-                                            if let image = UIImage(data: photoData) {
-                                                Rectangle()
-                                                    .foregroundColor(.clear)
-                                                    .background(
-                                                        Image(uiImage: image)
-                                                            .resizable()
-                                                            .aspectRatio(contentMode: .fill)
-                                                            .frame(width: 105, height: 105)
-                                                            .clipped()
-                                                    )
-                                                    .frame(width: 105, height: 105)
-                                                    .cornerRadius(10)
-                                            }
+                                        ForEach(totalMedias) { media in
+                                            MediaCell(viewModel: MediaCellViewModel(media: media))
+                                                .aspectRatio(1, contentMode: .fill)
+                                                .frame(width: 105, height: 105)
+                                                .cornerRadius(10)
                                         }
                                     }
                                     .padding(.trailing, 16)
@@ -373,15 +387,56 @@ struct AddRecordView: View {
     
     func checkIfAllDone() {
         if petIsSelected,
-            titleIsWritten,
-            imageIsAdded,
-            contentIsWritten,
+           titleIsWritten,
+           imagesAreAdded,
+           contentIsWritten,
            sharingScopeIsSelected
         {
             allDone = true
         } else {
             allDone = false
         }
+    }
+    
+    var headerView: some View {
+        HStack {
+            Button {
+                selectedMedias = []
+                showMediaPicker = false
+            } label: {
+                Text("취소")
+            }
+            
+            Spacer()
+            Text("Photos")
+            Spacer()
+            
+            Button {
+                for media in selectedMedias {
+                    totalMedias.append(media)
+                }
+                selectedMedias = []
+                
+                if totalMedias.count > 0 {
+                    imagesAreAdded = true
+                } else {
+                    imagesAreAdded = false
+                }
+                checkIfAllDone()
+                
+                showMediaPicker = false
+            } label: {
+                Text("완료")
+            }
+        }
+        .foregroundColor(.black)
+        .frame(height: 0)
+        .padding()
+    }
+    
+    var footerView: some View {
+        Text("\(selectedMedias.count) 개 선택됨")
+            .padding(.horizontal)
     }
 }
 
