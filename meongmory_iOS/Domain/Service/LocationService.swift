@@ -27,7 +27,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate{
         
         if let coordinate = locationManager.location?.coordinate {
             print(coordinate)
-            return (coordinate.latitude, coordinate.longitude)
+            return (coordinate.longitude, coordinate.latitude)
         }
         return (0, 0)
     }

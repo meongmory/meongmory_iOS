@@ -13,7 +13,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             TabView(selection: $selection, content: {
-                MapView()
+                MapView(viewModel: MapViewModel())
                     .onTapGesture { selection = 0 }
                     .tabItem {
                         (selection == 0) ? Image("map.fill") : Image("map")

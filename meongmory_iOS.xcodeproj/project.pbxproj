@@ -16,6 +16,14 @@
 		731C3F982A5FB8B800A5277A /* meongmory_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C3F972A5FB8B800A5277A /* meongmory_iOSTests.swift */; };
 		731C3FA22A5FB8B800A5277A /* meongmory_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C3FA12A5FB8B800A5277A /* meongmory_iOSUITests.swift */; };
 		731C3FA42A5FB8B800A5277A /* meongmory_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C3FA32A5FB8B800A5277A /* meongmory_iOSUITestsLaunchTests.swift */; };
+		733B0F3F2AA77DCF008746CE /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B0F3E2AA77DCF008746CE /* APIManager.swift */; };
+		733B0F422AA77E97008746CE /* GeneralResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B0F412AA77E97008746CE /* GeneralResponseModel.swift */; };
+		733B0F442AA80FDB008746CE /* MapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B0F432AA80FDB008746CE /* MapService.swift */; };
+		733B0F472AA81608008746CE /* MapKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B0F462AA81608008746CE /* MapKind.swift */; };
+		733B0F492AA846C7008746CE /* KakaoAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B0F482AA846C7008746CE /* KakaoAPIManager.swift */; };
+		733B0F4C2AA84B8C008746CE /* MapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B0F4B2AA84B8C008746CE /* MapModel.swift */; };
+		733B0F502AA8C248008746CE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B0F4F2AA8C248008746CE /* Constants.swift */; };
+		733B0F542AA8D10F008746CE /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B0F532AA8D10F008746CE /* MapViewModel.swift */; };
 		735FEAC42A926103000017F4 /* AddDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735FEAC32A926103000017F4 /* AddDiaryView.swift */; };
 		735FEAC62A92611A000017F4 /* AddPetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735FEAC52A92611A000017F4 /* AddPetView.swift */; };
 		735FEAC82A92614C000017F4 /* SelectAddDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735FEAC72A92614C000017F4 /* SelectAddDiaryView.swift */; };
@@ -97,6 +105,14 @@
 		731C3F9D2A5FB8B800A5277A /* meongmory_iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = meongmory_iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		731C3FA12A5FB8B800A5277A /* meongmory_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meongmory_iOSUITests.swift; sourceTree = "<group>"; };
 		731C3FA32A5FB8B800A5277A /* meongmory_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meongmory_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		733B0F3E2AA77DCF008746CE /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		733B0F412AA77E97008746CE /* GeneralResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponseModel.swift; sourceTree = "<group>"; };
+		733B0F432AA80FDB008746CE /* MapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapService.swift; sourceTree = "<group>"; };
+		733B0F462AA81608008746CE /* MapKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKind.swift; sourceTree = "<group>"; };
+		733B0F482AA846C7008746CE /* KakaoAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAPIManager.swift; sourceTree = "<group>"; };
+		733B0F4B2AA84B8C008746CE /* MapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModel.swift; sourceTree = "<group>"; };
+		733B0F4F2AA8C248008746CE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		733B0F532AA8D10F008746CE /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		735FEAC32A926103000017F4 /* AddDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiaryView.swift; sourceTree = "<group>"; };
 		735FEAC52A92611A000017F4 /* AddPetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPetView.swift; sourceTree = "<group>"; };
 		735FEAC72A92614C000017F4 /* SelectAddDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddDiaryView.swift; sourceTree = "<group>"; };
@@ -121,7 +137,6 @@
 		95D2E8662A892F9D0093D5D3 /* FamilyLazyHGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyLazyHGridCell.swift; sourceTree = "<group>"; };
 		95D2E8682A895CB30093D5D3 /* RecommendedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedView.swift; sourceTree = "<group>"; };
 		95D2E86A2A898AFC0093D5D3 /* BusinessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessView.swift; sourceTree = "<group>"; };
-		9C2472582335E1C990D71690 /* Pods-meongmory_iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meongmory_iOSTests.release.xcconfig"; path = "Target Support Files/Pods-meongmory_iOSTests/Pods-meongmory_iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		95D2E86F2A8998D60093D5D3 /* FamilyMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMainView.swift; sourceTree = "<group>"; };
 		95D2E8792A8A74EA0093D5D3 /* PetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetListView.swift; sourceTree = "<group>"; };
 		95D2E87B2A8A74FE0093D5D3 /* PetLazyHGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetLazyHGridCell.swift; sourceTree = "<group>"; };
@@ -207,10 +222,10 @@
 		731C3F852A5FB8B600A5277A /* meongmory_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				735FEAD12A9261E9000017F4 /* Extension */,
+				733B0F4D2AA8C228008746CE /* Global */,
 				73600E0D2A80FB4B00F9FE87 /* meongmory-iOS-Info.plist */,
 				73600DED2A74ABAC00F9FE87 /* Data */,
-				73600DEC2A74ABA100F9FE87 /* Business */,
+				73600DEC2A74ABA100F9FE87 /* Domain */,
 				73600DEB2A74A90800F9FE87 /* Presentation */,
 				731C3F862A5FB8B600A5277A /* meongmory_iOSApp.swift */,
 				731C3F882A5FB8B600A5277A /* ContentView.swift */,
@@ -245,6 +260,67 @@
 			path = meongmory_iOSUITests;
 			sourceTree = "<group>";
 		};
+		733B0F402AA77E85008746CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				733B0F4A2AA84B7C008746CE /* Map */,
+				733B0F412AA77E97008746CE /* GeneralResponseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		733B0F452AA815EB008746CE /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				733B0F462AA81608008746CE /* MapKind.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		733B0F4A2AA84B7C008746CE /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				733B0F4B2AA84B8C008746CE /* MapModel.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		733B0F4D2AA8C228008746CE /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				733B0F4E2AA8C231008746CE /* Constants */,
+				733B0F452AA815EB008746CE /* Enum */,
+				735FEAD12A9261E9000017F4 /* Extension */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		733B0F4E2AA8C231008746CE /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				733B0F4F2AA8C248008746CE /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		733B0F512AA8D0F3008746CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				73600E0B2A809AB800F9FE87 /* MapView.swift */,
+				73D279472A813BF800B12C0C /* MapTypeLazyGrid.swift */,
+				73D279492A8154AD00B12C0C /* MapInfoView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		733B0F522AA8D0FA008746CE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				733B0F532AA8D10F008746CE /* MapViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		735FEAC22A925F6A000017F4 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,19 +351,19 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
-		73600DEC2A74ABA100F9FE87 /* Business */ = {
+		73600DEC2A74ABA100F9FE87 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				73600DEF2A74AD8C00F9FE87 /* AppState */,
 				73600DEE2A74AD7A00F9FE87 /* Service */,
 			);
-			path = Business;
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		73600DED2A74ABAC00F9FE87 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				73600DF02A74AD9A00F9FE87 /* Repository */,
+				733B0F402AA77E85008746CE /* Model */,
+				73600DF02A74AD9A00F9FE87 /* Network */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -296,22 +372,18 @@
 			isa = PBXGroup;
 			children = (
 				73600E0E2A80FBC600F9FE87 /* LocationService.swift */,
+				733B0F432AA80FDB008746CE /* MapService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
 		};
-		73600DEF2A74AD8C00F9FE87 /* AppState */ = {
+		73600DF02A74AD9A00F9FE87 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				733B0F3E2AA77DCF008746CE /* APIManager.swift */,
+				733B0F482AA846C7008746CE /* KakaoAPIManager.swift */,
 			);
-			path = AppState;
-			sourceTree = "<group>";
-		};
-		73600DF02A74AD9A00F9FE87 /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Repository;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		73600DF12A74ADAB00F9FE87 /* View */ = {
@@ -330,9 +402,8 @@
 		73600E0A2A809A4300F9FE87 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				73600E0B2A809AB800F9FE87 /* MapView.swift */,
-				73D279472A813BF800B12C0C /* MapTypeLazyGrid.swift */,
-				73D279492A8154AD00B12C0C /* MapInfoView.swift */,
+				733B0F522AA8D0FA008746CE /* ViewModel */,
+				733B0F512AA8D0F3008746CE /* View */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -458,6 +529,7 @@
 				731C3F802A5FB8B600A5277A /* Frameworks */,
 				731C3F812A5FB8B600A5277A /* Resources */,
 				5E69BD9FFBA5E363F9292614 /* [CP] Embed Pods Frameworks */,
+				6DC97E2056F972A2B2719C6B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -499,6 +571,7 @@
 				731C3F9A2A5FB8B800A5277A /* Frameworks */,
 				731C3F9B2A5FB8B800A5277A /* Resources */,
 				907FFF27307437FED5D90A60 /* [CP] Embed Pods Frameworks */,
+				E123C222A1AD5050C2DCDF7A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -644,6 +717,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-meongmory_iOS/Pods-meongmory_iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6DC97E2056F972A2B2719C6B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-meongmory_iOS/Pods-meongmory_iOS-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-meongmory_iOS/Pods-meongmory_iOS-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-meongmory_iOS/Pods-meongmory_iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		907FFF27307437FED5D90A60 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -659,6 +749,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-meongmory_iOS-meongmory_iOSUITests/Pods-meongmory_iOS-meongmory_iOSUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E123C222A1AD5050C2DCDF7A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-meongmory_iOS-meongmory_iOSUITests/Pods-meongmory_iOS-meongmory_iOSUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-meongmory_iOS-meongmory_iOSUITests/Pods-meongmory_iOS-meongmory_iOSUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-meongmory_iOS-meongmory_iOSUITests/Pods-meongmory_iOS-meongmory_iOSUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E66C0E20DF01EFDBB3164D1D /* [CP] Check Pods Manifest.lock */ = {
@@ -696,14 +803,17 @@
 				9534FB9D2A90DD61001514E6 /* DiaryListView.swift in Sources */,
 				95D2E86B2A898AFC0093D5D3 /* BusinessView.swift in Sources */,
 				A2AC24BF2A78B84D00D284A7 /* LoginView.swift in Sources */,
+				733B0F4C2AA84B8C008746CE /* MapModel.swift in Sources */,
 				95D2E8672A892F9D0093D5D3 /* FamilyLazyHGridCell.swift in Sources */,
 				95D2E87C2A8A74FE0093D5D3 /* PetLazyHGridCell.swift in Sources */,
 				A2AC24C72A7CD11D00D284A7 /* OnBoardingView.swift in Sources */,
 				95D2E8632A8776B60093D5D3 /* HomeView.swift in Sources */,
+				733B0F542AA8D10F008746CE /* MapViewModel.swift in Sources */,
 				A2AC24C32A7CCBBF00D284A7 /* AgreeToTermsView.swift in Sources */,
 				735FEAC62A92611A000017F4 /* AddPetView.swift in Sources */,
 				735FEAC82A92614C000017F4 /* SelectAddDiaryView.swift in Sources */,
 				A2AC24C52A7CCFD800D284A7 /* SetNicknameView.swift in Sources */,
+				733B0F492AA846C7008746CE /* KakaoAPIManager.swift in Sources */,
 				A2AC24D92A80D99100D284A7 /* EMenuDetail.swift in Sources */,
 				95D2E8702A8998D60093D5D3 /* FamilyMainView.swift in Sources */,
 				A2AC24DF2A80DA1400D284A7 /* TermWebView.swift in Sources */,
@@ -712,10 +822,13 @@
 				9534FBA62A93B027001514E6 /* FamilyIntroView.swift in Sources */,
 				A2AC24D32A80317E00D284A7 /* EditProfileView.swift in Sources */,
 				A2AC24E72A8262CF00D284A7 /* MypageMenuListView.swift in Sources */,
+				733B0F442AA80FDB008746CE /* MapService.swift in Sources */,
+				733B0F3F2AA77DCF008746CE /* APIManager.swift in Sources */,
 				A2A211CC2A847A330067D436 /* NoticeRow.swift in Sources */,
 				73600E0C2A809AB800F9FE87 /* MapView.swift in Sources */,
 				A2AC24D32A80317E00D284A7 /* EditProfileView.swift in Sources */,
 				73D279482A813BF800B12C0C /* MapTypeLazyGrid.swift in Sources */,
+				733B0F422AA77E97008746CE /* GeneralResponseModel.swift in Sources */,
 				73600E0F2A80FBC600F9FE87 /* LocationService.swift in Sources */,
 				735FEACA2A926166000017F4 /* CompleteAddPetView.swift in Sources */,
 				731C3F892A5FB8B600A5277A /* ContentView.swift in Sources */,
@@ -730,7 +843,9 @@
 				A2AC24D12A80316F00D284A7 /* SetNotificationView.swift in Sources */,
 				735FEAD52A926208000017F4 /* CGFloat+.swift in Sources */,
 				735FEACC2A92617F000017F4 /* InviteCodeView.swift in Sources */,
+				733B0F502AA8C248008746CE /* Constants.swift in Sources */,
 				95D2E8842A8A77C30093D5D3 /* DiaryView.swift in Sources */,
+				733B0F472AA81608008746CE /* MapKind.swift in Sources */,
 				A2AC24EB2A82637000D284A7 /* UserProfilView.swift in Sources */,
 				A2AC24CD2A801B1600D284A7 /* MyPageView.swift in Sources */,
 				95D2E8652A87FAF70093D5D3 /* FamilyListView.swift in Sources */,
