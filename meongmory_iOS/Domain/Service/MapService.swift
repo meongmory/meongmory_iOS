@@ -10,12 +10,15 @@ import Alamofire
 
 
 class MapService {
+    private let kakaoAPIManger = KakaoAPIManager()
     
-    func getAllLocation() {
-        
+    func getAllLocation(x: String, y: String) {
+        MapKind.allCases.forEach { mapKind in
+            kakaoAPIManger.getLocalInfo(keyword: mapKind.getKeyword(), x: x, y: y)
+        }
     }
     
-    func getSearchLocation() {
+    func getSearchLocation(keyword: String, x: String, y: String) {
         
     }
     

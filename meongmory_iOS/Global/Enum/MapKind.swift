@@ -50,9 +50,9 @@ extension MapKind {
         case .hair:
             return "애견미용실"
         case .food:
-            return "map_food_white"
+            return "애견용품"
         case .hospital:
-            return "map_hospital_white"
+            return "동물병원"
         }
     }
     

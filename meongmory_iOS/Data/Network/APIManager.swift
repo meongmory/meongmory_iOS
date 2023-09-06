@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-private let BASE_URL = "http://52.79.149.29/"
+
 
 class APIManger  {
     static let shared = APIManger()
@@ -27,7 +27,7 @@ extension APIManger {
                                            parameter: T?,
                                            completionHandler: @escaping (GeneralResponseModel<U>)->Void) {
         
-        guard let url = URL(string: BASE_URL + urlEndpointString) else { return }
+        guard let url = URL(string: Constants.BaseURL + urlEndpointString) else { return }
         
         AF
             .request(url, method: .get, parameters: parameter, headers: self.headers)
@@ -52,7 +52,7 @@ extension APIManger {
                                parameter: Parameters?,
                                completionHandler: @escaping (GeneralResponseModel<U>)->Void) {
         
-        guard let url = URL(string: BASE_URL + urlEndpointString) else { return }
+        guard let url = URL(string: Constants.BaseURL + urlEndpointString) else { return }
         
         AF
             //.request(url, method: .get, parameters: parameter, encoding: URLEncoding.queryString, headers: self.headers)
@@ -76,7 +76,7 @@ extension APIManger {
                                             parameter: T?,
                                             completionHandler: @escaping (GeneralResponseModel<U>)->Void) {
         
-        guard let url = URL(string: BASE_URL + urlEndpointString) else { return }
+        guard let url = URL(string: Constants.BaseURL + urlEndpointString) else { return }
         
         AF
             .request(url, method: .post, parameters: parameter, encoder: .json, headers: self.headers)
@@ -93,28 +93,6 @@ extension APIManger {
             .resume()
     }
     
-    
-    func getData<T: Codable, U: Decodable>(url: String,
-                                           responseDataType: U.Type,
-                                           requestDataType: T.Type,
-                                           parameter: T?,
-                                           completionHandler: @escaping (GeneralResponseModel<U>)->Void) {
-        
-        guard let url = URL(string: url) else { return }
-        
-        AF
-            .request(url, method: .get, parameters: parameter, headers: self.headers)
-            .responseDecodable(of: GeneralResponseModel<U>.self) { response in
-                print(response)
-                switch response.result {
-                case .success(let success):
-                    completionHandler(success)
-                case .failure(let error):
-                    print(error.localizedDescription)
-                }
-            }
-            .resume()
-    }
 
     // put
     func putData<T: Codable, U: Decodable>(urlEndpointString: String,
@@ -123,7 +101,7 @@ extension APIManger {
                                             parameter: T?,
                                             completionHandler: @escaping (GeneralResponseModel<U>)->Void) {
         
-        guard let url = URL(string: BASE_URL + urlEndpointString) else { return }
+        guard let url = URL(string: Constants.BaseURL + urlEndpointString) else { return }
         
         AF
             .request(url, method: .put, parameters: parameter, encoder: .json, headers: self.headers)
@@ -145,7 +123,7 @@ extension APIManger {
                                             parameter: T?,
                                             completionHandler: @escaping (GeneralResponseModel<U>)->Void) {
         
-        guard let url = URL(string: BASE_URL + urlEndpointString) else { return }
+        guard let url = URL(string: Constants.BaseURL + urlEndpointString) else { return }
         
         AF
             .request(url, method: .delete, parameters: parameter, encoder: .json, headers: self.headers)
@@ -167,8 +145,7 @@ extension APIManger {
                                             responseDataType: U.Type,
                                   completionHandler: @escaping (GeneralResponseModel<U>)->Void) {
         
-        guard let url = URL(string: BASE_URL + urlEndpointString) else { return }
-        print("삭제 요청 URL --> \(url)")
+        guard let url = URL(string: Constants.BaseURL + urlEndpointString) else { return }
         AF
             .request(url, method: .delete, headers: self.headers)
             .responseDecodable(of: GeneralResponseModel<U>.self) { response in
@@ -189,7 +166,7 @@ extension APIManger {
                                  responseDataType: U.Type,
                                  completionHandler: @escaping (GeneralResponseModel<U>)->Void) {
         
-        guard let url = URL(string: BASE_URL + urlEndpointString) else { return }
+        guard let url = URL(string: Constants.BaseURL + urlEndpointString) else { return }
         
         AF
             .request(url, method: .patch, headers: self.headers)
@@ -212,7 +189,7 @@ extension APIManger {
                                             parameter: T?,
                                             completionHandler: @escaping (GeneralResponseModel<U>)->Void) {
         
-        guard let url = URL(string: BASE_URL + urlEndpointString) else { return }
+        guard let url = URL(string: Constants.BaseURL + urlEndpointString) else { return }
         
         AF
             .request(url, method: .patch, parameters: parameter, encoder: .json, headers: self.headers)

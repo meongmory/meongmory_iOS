@@ -9,6 +9,8 @@ import SwiftUI
 import KakaoMapsSDK
 
 struct MapView: View {
+    private let mapService = MapService()
+    
     @State var coord: (Double, Double) = (126.74866529313351, 37.43121337890625)
     @State var draw: Bool = false
     
@@ -19,6 +21,7 @@ struct MapView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .onAppear {
                     draw = true
+                    mapService.getAllLocation(x: coord.0.description, y: coord.1.description)
                 }.onDisappear {
                     draw = false
                 }
