@@ -9,31 +9,26 @@ import SwiftUI
 
 struct MapTypeLazyGrid: View {
     let columns: [GridItem] = [GridItem(.flexible(), spacing: 5, alignment: nil)]
-    let title: [String] = ["애견카페", "미용실", "식료품점", "병원"]
-    let image: [String] = ["map_cafe", "map_hair", "map_food", "map_hospital"]
-    let selectedImage: [String] = ["map_cafe_white", "map_hair_white", "map_food_white", "map_hospital_white"]
-    let width: [CGFloat] = [90, 79, 90, 69]
-    let color: [Color] = [Color(red: 0.38, green: 0.45, blue: 0.95), Color(red: 0.99, green: 0.69, blue: 0.13), Color(red: 0.98, green: 0.44, blue: 0.4), Color(red: 0.18, green: 0.56, blue: 0.98)]
     @State var selected: [Bool] = [false, false, false, false]
     
     var body: some View {
         HStack {
             LazyHGrid(rows: columns, alignment: .top) {
-                ForEach(0..<4, id: \.self) { item in
+                ForEach(0..<MapKind.allCases.count, id: \.self) { item in
                     ZStack {
                         Rectangle()
                         .foregroundColor(.clear)
-                        .frame(width: width[item], height: 30)
-                        .background(selected[item] ? color[item] : .white.opacity(0.8))
+                        .frame(width: MapKind.allCases[item].getWidth(), height: 30)
+                        .background(selected[item] ? MapKind.allCases[item].getColor() : .white.opacity(0.8))
                         .cornerRadius(15)
                         
                         HStack(alignment: .center, spacing: 4) {
                             Label {
-                                Text(title[item])
+                                Text(MapKind.allCases[item].rawValue)
                                     .font(Font.custom("AppleSDGothicNeoM00", size: 12))
                                     .foregroundColor(selected[item] ? .white : .black)
                             } icon: {
-                                Image(selected[item] ? selectedImage[item] : image[item])
+                                Image(selected[item] ? MapKind.allCases[item].getSelectedImage() : MapKind.allCases[item].getImage())
                                     .frame(width: 15, height: 15)
                             }
                         }

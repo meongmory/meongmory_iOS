@@ -18,6 +18,8 @@
 		731C3FA42A5FB8B800A5277A /* meongmory_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C3FA32A5FB8B800A5277A /* meongmory_iOSUITestsLaunchTests.swift */; };
 		733B0F3F2AA77DCF008746CE /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B0F3E2AA77DCF008746CE /* APIManager.swift */; };
 		733B0F422AA77E97008746CE /* GeneralResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B0F412AA77E97008746CE /* GeneralResponseModel.swift */; };
+		733B0F442AA80FDB008746CE /* MapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B0F432AA80FDB008746CE /* MapService.swift */; };
+		733B0F472AA81608008746CE /* MapKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B0F462AA81608008746CE /* MapKind.swift */; };
 		735FEAC42A926103000017F4 /* AddDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735FEAC32A926103000017F4 /* AddDiaryView.swift */; };
 		735FEAC62A92611A000017F4 /* AddPetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735FEAC52A92611A000017F4 /* AddPetView.swift */; };
 		735FEAC82A92614C000017F4 /* SelectAddDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735FEAC72A92614C000017F4 /* SelectAddDiaryView.swift */; };
@@ -101,6 +103,8 @@
 		731C3FA32A5FB8B800A5277A /* meongmory_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meongmory_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		733B0F3E2AA77DCF008746CE /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		733B0F412AA77E97008746CE /* GeneralResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponseModel.swift; sourceTree = "<group>"; };
+		733B0F432AA80FDB008746CE /* MapService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapService.swift; sourceTree = "<group>"; };
+		733B0F462AA81608008746CE /* MapKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKind.swift; sourceTree = "<group>"; };
 		735FEAC32A926103000017F4 /* AddDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiaryView.swift; sourceTree = "<group>"; };
 		735FEAC52A92611A000017F4 /* AddPetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPetView.swift; sourceTree = "<group>"; };
 		735FEAC72A92614C000017F4 /* SelectAddDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddDiaryView.swift; sourceTree = "<group>"; };
@@ -210,6 +214,7 @@
 		731C3F852A5FB8B600A5277A /* meongmory_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				733B0F452AA815EB008746CE /* Enum */,
 				735FEAD12A9261E9000017F4 /* Extension */,
 				73600E0D2A80FB4B00F9FE87 /* meongmory-iOS-Info.plist */,
 				73600DED2A74ABAC00F9FE87 /* Data */,
@@ -254,6 +259,14 @@
 				733B0F412AA77E97008746CE /* GeneralResponseModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		733B0F452AA815EB008746CE /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				733B0F462AA81608008746CE /* MapKind.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 		735FEAC22A925F6A000017F4 /* Diary */ = {
@@ -307,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				73600E0E2A80FBC600F9FE87 /* LocationService.swift */,
+				733B0F432AA80FDB008746CE /* MapService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -753,6 +767,7 @@
 				9534FBA62A93B027001514E6 /* FamilyIntroView.swift in Sources */,
 				A2AC24D32A80317E00D284A7 /* EditProfileView.swift in Sources */,
 				A2AC24E72A8262CF00D284A7 /* MypageMenuListView.swift in Sources */,
+				733B0F442AA80FDB008746CE /* MapService.swift in Sources */,
 				733B0F3F2AA77DCF008746CE /* APIManager.swift in Sources */,
 				A2A211CC2A847A330067D436 /* NoticeRow.swift in Sources */,
 				73600E0C2A809AB800F9FE87 /* MapView.swift in Sources */,
@@ -774,6 +789,7 @@
 				735FEAD52A926208000017F4 /* CGFloat+.swift in Sources */,
 				735FEACC2A92617F000017F4 /* InviteCodeView.swift in Sources */,
 				95D2E8842A8A77C30093D5D3 /* DiaryView.swift in Sources */,
+				733B0F472AA81608008746CE /* MapKind.swift in Sources */,
 				A2AC24EB2A82637000D284A7 /* UserProfilView.swift in Sources */,
 				A2AC24CD2A801B1600D284A7 /* MyPageView.swift in Sources */,
 				95D2E8652A87FAF70093D5D3 /* FamilyListView.swift in Sources */,
