@@ -23,6 +23,7 @@
 		733B0F492AA846C7008746CE /* KakaoAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B0F482AA846C7008746CE /* KakaoAPIManager.swift */; };
 		733B0F4C2AA84B8C008746CE /* MapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B0F4B2AA84B8C008746CE /* MapModel.swift */; };
 		733B0F502AA8C248008746CE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B0F4F2AA8C248008746CE /* Constants.swift */; };
+		733B0F542AA8D10F008746CE /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B0F532AA8D10F008746CE /* MapViewModel.swift */; };
 		735FEAC42A926103000017F4 /* AddDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735FEAC32A926103000017F4 /* AddDiaryView.swift */; };
 		735FEAC62A92611A000017F4 /* AddPetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735FEAC52A92611A000017F4 /* AddPetView.swift */; };
 		735FEAC82A92614C000017F4 /* SelectAddDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735FEAC72A92614C000017F4 /* SelectAddDiaryView.swift */; };
@@ -111,6 +112,7 @@
 		733B0F482AA846C7008746CE /* KakaoAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAPIManager.swift; sourceTree = "<group>"; };
 		733B0F4B2AA84B8C008746CE /* MapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModel.swift; sourceTree = "<group>"; };
 		733B0F4F2AA8C248008746CE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		733B0F532AA8D10F008746CE /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		735FEAC32A926103000017F4 /* AddDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiaryView.swift; sourceTree = "<group>"; };
 		735FEAC52A92611A000017F4 /* AddPetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPetView.swift; sourceTree = "<group>"; };
 		735FEAC72A92614C000017F4 /* SelectAddDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddDiaryView.swift; sourceTree = "<group>"; };
@@ -301,6 +303,24 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		733B0F512AA8D0F3008746CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				73600E0B2A809AB800F9FE87 /* MapView.swift */,
+				73D279472A813BF800B12C0C /* MapTypeLazyGrid.swift */,
+				73D279492A8154AD00B12C0C /* MapInfoView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		733B0F522AA8D0FA008746CE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				733B0F532AA8D10F008746CE /* MapViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		735FEAC22A925F6A000017F4 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
@@ -382,9 +402,8 @@
 		73600E0A2A809A4300F9FE87 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				73600E0B2A809AB800F9FE87 /* MapView.swift */,
-				73D279472A813BF800B12C0C /* MapTypeLazyGrid.swift */,
-				73D279492A8154AD00B12C0C /* MapInfoView.swift */,
+				733B0F522AA8D0FA008746CE /* ViewModel */,
+				733B0F512AA8D0F3008746CE /* View */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -789,6 +808,7 @@
 				95D2E87C2A8A74FE0093D5D3 /* PetLazyHGridCell.swift in Sources */,
 				A2AC24C72A7CD11D00D284A7 /* OnBoardingView.swift in Sources */,
 				95D2E8632A8776B60093D5D3 /* HomeView.swift in Sources */,
+				733B0F542AA8D10F008746CE /* MapViewModel.swift in Sources */,
 				A2AC24C32A7CCBBF00D284A7 /* AgreeToTermsView.swift in Sources */,
 				735FEAC62A92611A000017F4 /* AddPetView.swift in Sources */,
 				735FEAC82A92614C000017F4 /* SelectAddDiaryView.swift in Sources */,

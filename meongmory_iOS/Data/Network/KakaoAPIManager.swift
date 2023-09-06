@@ -15,7 +15,7 @@ class KakaoAPIManager {
     let headers: HTTPHeaders = ["Authorization": Constants.KakaoHeaders]
     
     
-    func getLocalInfo(keyword: String, x: String, y: String) {
+    func getLocalInfo(keyword: String, x: String, y: String, completion: @escaping (KakaoMapResponse) -> Void) {
         let paramter: Parameters = [
             "query" : keyword,
             "x" : x,
@@ -32,8 +32,7 @@ class KakaoAPIManager {
                switch response.result {
                case .success(let result):
                    print("카카오맵 데이터 조회 성공")
-                   print(result)
-
+                   completion(result)
                case .failure(let error):
                    print("카카오맵 데이터 조회 실패")
                    print(error.localizedDescription)
