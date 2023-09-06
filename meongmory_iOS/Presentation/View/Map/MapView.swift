@@ -9,33 +9,30 @@ import SwiftUI
 import KakaoMapsSDK
 
 struct MapView: View {
-    let locationManger = LocationManager()
-    @State var coord: (Double, Double) = (0,0)
+    @State var coord: (Double, Double) = (126.74866529313351, 37.43121337890625)
     @State var draw: Bool = false
     
     
-//    init() {
-////        self.coord = locationManger.getCoordinate()
-//    }
-    
     var body: some View {
         ZStack() {
-            KakaoMapView(draw: $draw).onAppear(perform: {
-                    self.draw = true
-                }).onDisappear(perform: {
-                    self.draw = false
-                }).frame(maxWidth: .infinity, maxHeight: .infinity)
-            
-//            VStack {
-//                MapTypeLazyGrid()
-//                    .padding(.vertical, 11)
-//
-//                Spacer()
-//
+            KakaoMapView(draw: $draw, coord: $coord)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .onAppear {
+                    draw = true
+                }.onDisappear {
+                    draw = false
+                }
+
+            VStack {
+                MapTypeLazyGrid()
+                    .padding(.vertical, 11)
+
+                Spacer()
+
 //                MapInfoView()
 //                    .padding(.horizontal, 20)
 //                    .padding(.bottom, 38)
-//            }
+            }
                 
             
            
@@ -45,6 +42,7 @@ struct MapView: View {
 
 struct KakaoMapView: UIViewRepresentable {
     @Binding var draw: Bool
+    @Binding var coord: (Double, Double)
     
     /// UIView를 상속한 KMViewContainer를 생성한다.
     /// 뷰 생성과 함께 KMControllerDelegate를 구현한 Coordinator를 생성하고, 엔진을 생성 및 초기화한다.
@@ -64,6 +62,7 @@ struct KakaoMapView: UIViewRepresentable {
     /// draw가 false로 설정되면 렌더링을 멈추고 엔진을 stop한다.
     func updateUIView(_ uiView: KMViewContainer, context: Self.Context) {
         if draw {
+            context.coordinator.setCoord(coord: self.coord)
             context.coordinator.controller?.startEngine()
             context.coordinator.controller?.startRendering()
         }
@@ -75,7 +74,9 @@ struct KakaoMapView: UIViewRepresentable {
     
     /// Coordinator 생성
     func makeCoordinator() -> KakaoMapCoordinator {
-        return KakaoMapCoordinator()
+        let coordinator = KakaoMapCoordinator()
+        coordinator.setCoord(coord: coord)
+        return coordinator
     }
 
     /// Cleans up the presented `UIView` (and coordinator) in
@@ -86,10 +87,20 @@ struct KakaoMapView: UIViewRepresentable {
     
     /// Coordinator 구현. KMControllerDelegate를 adopt한다.
     class KakaoMapCoordinator: NSObject, MapControllerDelegate {
+        var coord: (Double, Double)?
+        
+        var controller: KMController?
+        var first: Bool
+        
         override init() {
             first = true
             super.init()
         }
+        
+        func setCoord(coord: (Double, Double)) {
+            self.coord = coord
+        }
+        
         
          // KMController 객체 생성 및 event delegate 지정
         func createController(_ view: KMViewContainer) {
@@ -102,11 +113,12 @@ struct KakaoMapView: UIViewRepresentable {
           /// 엔진 생성 및 초기화 이후, 렌더링 준비가 완료되면 아래 addViews를 호출한다.
           /// 원하는 뷰를 생성한다.
         func addViews() {
-            let defaultPosition: MapPoint = MapPoint(longitude: 127.108678, latitude: 37.402001)
+            print(12)
+            let point = MapPoint(longitude: coord!.0, latitude: coord!.1)
                 
             // MapviewInfo생성.
             // viewName과 사용할 viewInfoName, defaultPosition과 level을 설정한다.
-            let mapviewInfo: MapviewInfo = MapviewInfo(viewName: "mapview", viewInfoName: "map", defaultPosition: defaultPosition, defaultLevel: 7)
+            let mapviewInfo: MapviewInfo = MapviewInfo(viewName: "mapview", viewInfoName: "map", defaultPosition: point, defaultLevel: 3)
                 
             // mapviewInfo를 파라미터로 mapController를 통해 생성한 뷰의 객체를 얻어온다.
             // 정상적으로 생성되는 경우 Result.OK, 생성에 실패하는경우 Result.NOK가 리턴된다.
@@ -117,10 +129,11 @@ struct KakaoMapView: UIViewRepresentable {
         
         /// KMViewContainer 리사이징 될 때 호출.
         func containerDidResized(_ size: CGSize) {
+            print(12)
             let mapView: KakaoMap? = controller?.getView("mapview") as? KakaoMap
             mapView?.viewRect = CGRect(origin: CGPoint(x: 0.0, y: 0.0), size: size)
             if first {
-                let cameraUpdate: CameraUpdate = CameraUpdate.make(target: MapPoint(longitude: 14135167.020272, latitude: 4518393.389136), zoomLevel: 10, mapView: mapView!)
+                let cameraUpdate: CameraUpdate = CameraUpdate.make(target: MapPoint(longitude: coord!.0, latitude: coord!.1), zoomLevel: 10, mapView: mapView!)
                 mapView?.moveCamera(cameraUpdate)
                 first = false
             }
@@ -137,8 +150,7 @@ struct KakaoMapView: UIViewRepresentable {
            // 추가 실패 처리 작업
        }
         
-        var controller: KMController?
-        var first: Bool
+    
     }
 }
 

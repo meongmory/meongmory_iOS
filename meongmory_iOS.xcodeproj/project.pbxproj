@@ -16,6 +16,8 @@
 		731C3F982A5FB8B800A5277A /* meongmory_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C3F972A5FB8B800A5277A /* meongmory_iOSTests.swift */; };
 		731C3FA22A5FB8B800A5277A /* meongmory_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C3FA12A5FB8B800A5277A /* meongmory_iOSUITests.swift */; };
 		731C3FA42A5FB8B800A5277A /* meongmory_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731C3FA32A5FB8B800A5277A /* meongmory_iOSUITestsLaunchTests.swift */; };
+		733B0F3F2AA77DCF008746CE /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B0F3E2AA77DCF008746CE /* APIManager.swift */; };
+		733B0F422AA77E97008746CE /* GeneralResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B0F412AA77E97008746CE /* GeneralResponseModel.swift */; };
 		735FEAC42A926103000017F4 /* AddDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735FEAC32A926103000017F4 /* AddDiaryView.swift */; };
 		735FEAC62A92611A000017F4 /* AddPetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735FEAC52A92611A000017F4 /* AddPetView.swift */; };
 		735FEAC82A92614C000017F4 /* SelectAddDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735FEAC72A92614C000017F4 /* SelectAddDiaryView.swift */; };
@@ -97,6 +99,8 @@
 		731C3F9D2A5FB8B800A5277A /* meongmory_iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = meongmory_iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		731C3FA12A5FB8B800A5277A /* meongmory_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meongmory_iOSUITests.swift; sourceTree = "<group>"; };
 		731C3FA32A5FB8B800A5277A /* meongmory_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = meongmory_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		733B0F3E2AA77DCF008746CE /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		733B0F412AA77E97008746CE /* GeneralResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponseModel.swift; sourceTree = "<group>"; };
 		735FEAC32A926103000017F4 /* AddDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiaryView.swift; sourceTree = "<group>"; };
 		735FEAC52A92611A000017F4 /* AddPetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPetView.swift; sourceTree = "<group>"; };
 		735FEAC72A92614C000017F4 /* SelectAddDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAddDiaryView.swift; sourceTree = "<group>"; };
@@ -209,7 +213,7 @@
 				735FEAD12A9261E9000017F4 /* Extension */,
 				73600E0D2A80FB4B00F9FE87 /* meongmory-iOS-Info.plist */,
 				73600DED2A74ABAC00F9FE87 /* Data */,
-				73600DEC2A74ABA100F9FE87 /* Business */,
+				73600DEC2A74ABA100F9FE87 /* Domain */,
 				73600DEB2A74A90800F9FE87 /* Presentation */,
 				731C3F862A5FB8B600A5277A /* meongmory_iOSApp.swift */,
 				731C3F882A5FB8B600A5277A /* ContentView.swift */,
@@ -244,6 +248,14 @@
 			path = meongmory_iOSUITests;
 			sourceTree = "<group>";
 		};
+		733B0F402AA77E85008746CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				733B0F412AA77E97008746CE /* GeneralResponseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		735FEAC22A925F6A000017F4 /* Diary */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,19 +286,19 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
-		73600DEC2A74ABA100F9FE87 /* Business */ = {
+		73600DEC2A74ABA100F9FE87 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				73600DEF2A74AD8C00F9FE87 /* AppState */,
 				73600DEE2A74AD7A00F9FE87 /* Service */,
 			);
-			path = Business;
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		73600DED2A74ABAC00F9FE87 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				73600DF02A74AD9A00F9FE87 /* Repository */,
+				733B0F402AA77E85008746CE /* Model */,
+				73600DF02A74AD9A00F9FE87 /* Network */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -299,18 +311,12 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		73600DEF2A74AD8C00F9FE87 /* AppState */ = {
+		73600DF02A74AD9A00F9FE87 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				733B0F3E2AA77DCF008746CE /* APIManager.swift */,
 			);
-			path = AppState;
-			sourceTree = "<group>";
-		};
-		73600DF02A74AD9A00F9FE87 /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Repository;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		73600DF12A74ADAB00F9FE87 /* View */ = {
@@ -747,10 +753,12 @@
 				9534FBA62A93B027001514E6 /* FamilyIntroView.swift in Sources */,
 				A2AC24D32A80317E00D284A7 /* EditProfileView.swift in Sources */,
 				A2AC24E72A8262CF00D284A7 /* MypageMenuListView.swift in Sources */,
+				733B0F3F2AA77DCF008746CE /* APIManager.swift in Sources */,
 				A2A211CC2A847A330067D436 /* NoticeRow.swift in Sources */,
 				73600E0C2A809AB800F9FE87 /* MapView.swift in Sources */,
 				A2AC24D32A80317E00D284A7 /* EditProfileView.swift in Sources */,
 				73D279482A813BF800B12C0C /* MapTypeLazyGrid.swift in Sources */,
+				733B0F422AA77E97008746CE /* GeneralResponseModel.swift in Sources */,
 				73600E0F2A80FBC600F9FE87 /* LocationService.swift in Sources */,
 				735FEACA2A926166000017F4 /* CompleteAddPetView.swift in Sources */,
 				731C3F892A5FB8B600A5277A /* ContentView.swift in Sources */,
