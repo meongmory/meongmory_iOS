@@ -9,7 +9,8 @@ import SwiftUI
 
 struct MapTypeLazyGrid: View {
     let columns: [GridItem] = [GridItem(.flexible(), spacing: 5, alignment: nil)]
-    @State var selected: [Bool] = [false, false, false, false]
+    
+    @ObservedObject var viewModel: MapViewModel
     
     var body: some View {
         HStack {
@@ -19,30 +20,24 @@ struct MapTypeLazyGrid: View {
                         Rectangle()
                         .foregroundColor(.clear)
                         .frame(width: MapKind.allCases[item].getWidth(), height: 30)
-                        .background(selected[item] ? MapKind.allCases[item].getColor() : .white.opacity(0.8))
+                        .background(viewModel.selectedMapKind == MapKind.allCases[item] ? MapKind.allCases[item].getColor() : .white.opacity(0.8))
                         .cornerRadius(15)
                         
                         HStack(alignment: .center, spacing: 4) {
                             Label {
                                 Text(MapKind.allCases[item].rawValue)
                                     .font(Font.custom("AppleSDGothicNeoM00", size: 12))
-                                    .foregroundColor(selected[item] ? .white : .black)
+                                    .foregroundColor(viewModel.selectedMapKind == MapKind.allCases[item] ? .white : .black)
                             } icon: {
-                                Image(selected[item] ? MapKind.allCases[item].getSelectedImage() : MapKind.allCases[item].getImage())
+                                Image(viewModel.selectedMapKind == MapKind.allCases[item] ? MapKind.allCases[item].getSelectedImage() : MapKind.allCases[item].getImage())
                                     .frame(width: 15, height: 15)
                             }
                         }
                     }.onTapGesture {
-                        if selected[item] {
-                            selected[item] = false
+                        if viewModel.selectedMapKind == MapKind.allCases[item] {
+                            viewModel.selectedMapKind = nil
                         }else {
-                            for i in 0..<4 {
-                                if i == item {
-                                    selected[i] = true
-                                }else {
-                                    selected[i] = false
-                                }
-                            }
+                            viewModel.selectedMapKind = MapKind.allCases[item]
                         }
                     }
                 }
@@ -53,6 +48,6 @@ struct MapTypeLazyGrid: View {
 
 struct MapTypeLazyGrid_Previews: PreviewProvider {
     static var previews: some View {
-        MapTypeLazyGrid()
+        MapTypeLazyGrid(viewModel: MapViewModel())
     }
 }

@@ -13,27 +13,22 @@ struct MapView: View {
     @ObservedObject var viewModel: MapViewModel
     
     @State var coord: (Double, Double) = (126.74866529313351, 37.43121337890625)
-    @State var draw: Bool = false
     
     
     var body: some View {
         ZStack() {
-            KakaoMapView(draw: $draw, coord: $coord, allLocation: $viewModel.allLocation)
+            KakaoMapView(viewModel: viewModel, coord: $coord)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .onAppear {
-                    draw = true
                     viewModel.loadLocation(x: coord.0.description, y: coord.1.description)
-                }.onDisappear {
-                    draw = false
                 }
 
             VStack {
-                MapTypeLazyGrid()
+                MapTypeLazyGrid(viewModel: viewModel)
                     .padding(.vertical, 11)
 
                 Spacer()
                 
-                Text(viewModel.allLocation.count.description)
 
 //                MapInfoView()
 //                    .padding(.horizontal, 20)
@@ -48,9 +43,9 @@ struct MapView: View {
 
 
 struct KakaoMapView: UIViewRepresentable {
-    @Binding var draw: Bool
+    @ObservedObject var viewModel: MapViewModel
+    
     @Binding var coord: (Double, Double)
-    @Binding var allLocation: [Document]
     
     /// UIView를 상속한 KMViewContainer를 생성한다.
     /// 뷰 생성과 함께 KMControllerDelegate를 구현한 Coordinator를 생성하고, 엔진을 생성 및 초기화한다.
@@ -59,6 +54,7 @@ struct KakaoMapView: UIViewRepresentable {
         view.sizeToFit()
         context.coordinator.createController(view)
         context.coordinator.controller?.initEngine()
+        
         
         return view
     }
@@ -69,14 +65,16 @@ struct KakaoMapView: UIViewRepresentable {
     /// draw가 true로 설정되면 엔진을 시작하고 렌더링을 시작한다.
     /// draw가 false로 설정되면 렌더링을 멈추고 엔진을 stop한다.
     func updateUIView(_ uiView: KMViewContainer, context: Self.Context) {
-        if draw {
-            context.coordinator.setCoord(coord: self.coord)
-            context.coordinator.controller?.startEngine()
-            context.coordinator.controller?.startRendering()
-        }
-        else {
-            context.coordinator.controller?.stopRendering()
-            context.coordinator.controller?.stopEngine()
+        context.coordinator.setCoord(coord: self.coord)
+        context.coordinator.setViewModel(viewModel: viewModel)
+        
+        context.coordinator.controller?.startEngine()
+        context.coordinator.controller?.startRendering()
+
+        if viewModel.isLoad {
+            context.coordinator.createLabelLayer()
+            context.coordinator.createPoiStyle()
+            context.coordinator.createAllPois()
         }
     }
     
@@ -101,6 +99,8 @@ struct KakaoMapView: UIViewRepresentable {
     /// Coordinator 구현. KMControllerDelegate를 adopt한다.
     class KakaoMapCoordinator: NSObject, MapControllerDelegate {
         var coord: (Double, Double)?
+         
+        var viewModel: MapViewModel?
         
         var controller: KMController?
         var first: Bool
@@ -110,10 +110,15 @@ struct KakaoMapView: UIViewRepresentable {
             super.init()
         }
         
+        
+        func setViewModel(viewModel: MapViewModel) {
+            self.viewModel = viewModel
+        }
+        
+        
         func setCoord(coord: (Double, Double)) {
             self.coord = coord
         }
-        
         
          // KMController 객체 생성 및 event delegate 지정
         func createController(_ view: KMViewContainer) {
@@ -126,7 +131,6 @@ struct KakaoMapView: UIViewRepresentable {
           /// 엔진 생성 및 초기화 이후, 렌더링 준비가 완료되면 아래 addViews를 호출한다.
           /// 원하는 뷰를 생성한다.
         func addViews() {
-            print(12)
             let point = MapPoint(longitude: coord!.0, latitude: coord!.1)
                 
             // MapviewInfo생성.
@@ -137,10 +141,7 @@ struct KakaoMapView: UIViewRepresentable {
             // 정상적으로 생성되는 경우 Result.OK, 생성에 실패하는경우 Result.NOK가 리턴된다.
             if controller?.addView(mapviewInfo) == Result.OK {
                 print("OK")
-                
-                createLabelLayer()
-                createPoiStyle()
-                createPois()
+                viewModel?.isLoad = true
             }
             
             
@@ -188,30 +189,77 @@ struct KakaoMapView: UIViewRepresentable {
             let manager = view.getLabelManager()
             // 심볼을 지정.
             // 심볼의 anchor point(심볼이 배치될때의 위치 기준점)를 지정. 심볼의 좌상단을 기준으로 한 % 값.
-            let iconStyle = PoiIconStyle(symbol: UIImage(named: "hair_pin"), anchorPoint: CGPoint(x: 0.0, y: 0.5))
-            let perLevelStyle = PerLevelPoiStyle(iconStyle: iconStyle, level: 0)  // 이 스타일이 적용되기 시작할 레벨.
-            let poiStyle = PoiStyle(styleID: "customStyle1", styles: [perLevelStyle])
-            manager.addPoiStyle(poiStyle)
+            let hairIconStyle = PoiIconStyle(symbol: UIImage(named: "hair_pin"), anchorPoint: CGPoint(x: 0.0, y: 0.5))
+            let hairPerLevelStyle = PerLevelPoiStyle(iconStyle: hairIconStyle, level: 0)  // 이 스타일이 적용되기 시작할 레벨.
+            let hairPoiStyle = PoiStyle(styleID: "hair", styles: [hairPerLevelStyle])
+            manager.addPoiStyle(hairPoiStyle)
+            
+            let cafeIconStyle = PoiIconStyle(symbol: UIImage(named: "cafe_pin"), anchorPoint: CGPoint(x: 0.0, y: 0.5))
+            let cafePerLevelStyle = PerLevelPoiStyle(iconStyle: cafeIconStyle, level: 0)  // 이 스타일이 적용되기 시작할 레벨.
+            let cafePoiStyle = PoiStyle(styleID: "cafe", styles: [cafePerLevelStyle])
+            manager.addPoiStyle(cafePoiStyle)
+            
+            let foodIconStyle = PoiIconStyle(symbol: UIImage(named: "food_pin"), anchorPoint: CGPoint(x: 0.0, y: 0.5))
+            let foodPerLevelStyle = PerLevelPoiStyle(iconStyle: foodIconStyle, level: 0)  // 이 스타일이 적용되기 시작할 레벨.
+            let foodPoiStyle = PoiStyle(styleID: "food", styles: [foodPerLevelStyle])
+            manager.addPoiStyle(foodPoiStyle)
+            
+            let hospitalIconStyle = PoiIconStyle(symbol: UIImage(named: "hospital_pin"), anchorPoint: CGPoint(x: 0.0, y: 0.5))
+            let hospitalPerLevelStyle = PerLevelPoiStyle(iconStyle: hospitalIconStyle, level: 0)  // 이 스타일이 적용되기 시작할 레벨.
+            let hospitalPoiStyle = PoiStyle(styleID: "hospital", styles: [hospitalPerLevelStyle])
+            manager.addPoiStyle(hospitalPoiStyle)
         }
         
         // POI를 생성한다.
-        func createPois() {
+        func createAllPois() {
             let view = controller?.getView("mapview") as! KakaoMap
             let manager = view.getLabelManager()
-            let layer = manager.getLabelLayer(layerID: "PoiLayer")   // 생성한 POI를 추가할 레이어를 가져온다.
-            let poiOption = PoiOptions(styleID: "customStyle1") // 생성할 POI의 Option을 지정하기 위한 자료를 담는 클래스를 생성. 사용할 스타일의 ID를 지정한다.
-            poiOption.rank = 0
-            poiOption.clickable = true // clickable 옵션을 true로 설정한다. default는 false로 설정되어있다.
+            let layer = manager.getLabelLayer(layerID: "PoiLayer")
             
-            let poi1 = layer?.addPoi(option: poiOption, at: MapPoint(longitude: coord!.0, latitude: coord!.1), callback: {(_ poi: (Poi?)) -> Void in
-                print("")
-            }
-            )   //레이어에 지정한 옵션 및 위치로 POI를 추가한다.
-            poi1?.show()
+            
+            let hairPoiOption = PoiOptions(styleID: "hair")
+            hairPoiOption.rank = 0
+            hairPoiOption.clickable = true
+            
+            let foodPoiOption = PoiOptions(styleID: "food")
+            foodPoiOption.rank = 0
+            foodPoiOption.clickable = true
+            
+            let cafePoiOption = PoiOptions(styleID: "cafe")
+            cafePoiOption.rank = 0
+            cafePoiOption.clickable = true
+            
+            let hospitalPoiOption = PoiOptions(styleID: "hospital")
+            hospitalPoiOption.rank = 0
+            hospitalPoiOption.clickable = true
+            
+            createPois(poiOption: hairPoiOption, locations: viewModel!.hairLocation, layer: layer!)
+            createPois(poiOption: foodPoiOption, locations: viewModel!.foodLocation, layer: layer!)
+            createPois(poiOption: cafePoiOption, locations: viewModel!.cafeLocation, layer: layer!)
+            createPois(poiOption: hospitalPoiOption, locations: viewModel!.hospitalLocation, layer: layer!)
+            
+            
         }
         
+        func createPois(poiOption: PoiOptions, locations: [Document], layer: LabelLayer) {
+            var points: [MapPoint] = []
+            
+            locations.forEach { location in
+                points.append(MapPoint(longitude: Double(location.x!)!, latitude: Double(location.y!)!))
+            }
+            
+            
+            let pois = layer.addPois(option: poiOption, at: points)  //레이어에 지정한 옵션 및 위치로 POI를 추가한다.
+            pois?.forEach({ poi in
+                let _ = poi.addPoiTappedEventHandler(target: self, handler: KakaoMapCoordinator.poiTappedHandler(_:))
+                
+                poi.show()
+            })
+        }
+        
+        
         func poiTappedHandler(_ param: PoiInteractionEventParam) {
-            param.poiItem.hide()
+            print(param.poiItem.itemID)
         }
         
         
